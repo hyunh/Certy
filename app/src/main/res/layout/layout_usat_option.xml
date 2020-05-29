@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    >
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/checkbox_option"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_option_id"
+            android:layout_width="30sp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:layout_margin="@dimen/usat_margin"
+            android:textAppearance="?attr/textAppearanceListItem"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_option_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/usat_margin"
+            android:textAppearance="?attr/textAppearanceListItem"
+            />
+</LinearLayout>

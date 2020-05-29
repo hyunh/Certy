@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <data>
+        <variable name="onClickListener" type="android.view.View.OnClickListener" />
+        <variable name="rel" type="String" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorForeground"
+        android:onClick="@{onClickListener}"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_sub_container_height"
+            style="@style/listContainerStyle"
+            >
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/list_sub_item_text_margin"
+                android:layout_marginEnd="@dimen/list_sub_item_text_margin"
+                android:text="@{rel}"
+                style="@style/listSubItemTextStyle"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<spec>
+    <item name="ETSI TS 131 124" fragment="com.hyunh.certy.ts31124.UsatFragment">
+        <rel ver="v15.2.0" />
+    </item>
+
+    <item name="GSMA SGP.23" fragment="com.hyunh.certy.sgp23.RspFragment">
+        <rel ver="v1.3" />
+        <rel ver="v1.6" />
+    </item>
+</spec>
+

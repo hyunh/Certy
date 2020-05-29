@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Certy</string>
+
+    <string name="action_search">Search</string>
+
+    <string name="usat_option">Option</string>
+    <string name="usat_testcase">Test Case</string>
+
+    <string name="rsp_option">OPTION</string>
+    <string name="rsp_condition">CONDITION</string>
+    <string name="rsp_testcase">TESTCASE</string>
+</resources>

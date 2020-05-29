@@ -1,0 +1,33 @@
+<resources>
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:windowLightStatusBar">@bool/windowLightStatusBar</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="listContainerStyle">
+        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="listItemTextStyle">
+        <item name="android:textAppearance">?attr/textAppearanceListItem</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="listSubItemTextStyle">
+        <item name="android:textAppearance">?attr/textAppearanceListItemSecondary</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="rspButtonStyle" parent="@style/Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textColor">@color/controlColorPrimary</item>
+    </style>
+</resources>

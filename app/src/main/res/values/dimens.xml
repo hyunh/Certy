@@ -1,0 +1,12 @@
+<resources>
+    <dimen name="cardview_corner_radius">20dp</dimen>
+
+    <dimen name="list_container_height">66dp</dimen>
+    <dimen name="list_sub_container_height">48dp</dimen>
+    <dimen name="list_item_text_margin">24sp</dimen>
+    <dimen name="list_sub_item_text_margin">36sp</dimen>
+
+    <dimen name="usat_margin">10sp</dimen>
+    <dimen name="rsp_option_margin_start">12dp</dimen>
+    <dimen name="rsp_option_margin_end">12dp</dimen>
+</resources>

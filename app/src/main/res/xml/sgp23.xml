@@ -1,0 +1,875 @@
+<?xml version="1.0" encoding="utf-8"?>
+<specification>
+    <SGP.23 version="1.6">
+        <table_4>
+            <item type="euicc" option="The eUICC supports NIST P-256 [11] for signing and for verification (see Note 2)" mnemonic="O_E_NIST" />
+            <item type="euicc" option="The eUICC supports brainpoolP256r1 [8] for signing and for verification (see Note 2)" mnemonic="O_E_BRP" />
+            <item type="euicc" option="The eUICC supports FRP256V1 [9] for signing and for verification (see Note 2)" mnemonic="O_E_FRP" />
+            <item type="euicc" option="The eUICC supports Test Profiles" mnemonic="O_E_TEST_PROF" />
+            <item type="euicc" option="The eUICC supports CRL" mnemonic="O_E_CRL" />
+            <item type="euicc" option="The eUICC supports the LPAe" mnemonic="O_E_LPAe" />
+            <item type="euicc" option="The eUICC stores the otPK.eUICC.ECKA / otSK.eUICC.ECKA from previous unsuccessful download attempt for future retry" mnemonic="O_E_REUSE_OTPK" />
+            <item type="euicc" option="The eUICC can hold two PIR" mnemonic="O_E_2_PIR" />
+            <item type="device" option="The Device supports LPAd" mnemonic="O_D_LPAD" />
+            <item type="device" option="The Device supports GSM/GERAN" mnemonic="O_D_GSM_GERAN" />
+            <item type="device" option="The Device supports UMTS/UTRAN" mnemonic="O_D_UMTS_UTRAN" />
+            <item type="device" option="The Device supports cdma2000 1X" mnemonic="O_D_CDMA2000_1X" />
+            <item type="device" option="The Device supports cdma2000 HRPD" mnemonic="O_D_CDMA2000_HRPD" />
+            <item type="device" option="The Device supports cdma2000 eHRPD" mnemonic="O_D_CDMA2000_EHRPD" />
+            <item type="device" option="The Device supports LTE/E-UTRAN" mnemonic="O_D_LTE" />
+            <item type="device" option="The Device supports NFC as defined in TS26" mnemonic="O_D_NFC_TS26" />
+            <item type="device" option="The Device supports eUICC CRL" mnemonic="O_D_CRL" />
+            <item type="device" option="Initiation of the Enable Profile procedure is allowed on a Profile that is enabled already" mnemonic="O_D_ENPROF" />
+            <item type="device" option="Initiation of the Enable Profile procedure is allowed even if the currently enabled Profile has PPR1" mnemonic="O_D_ENPREVPPR1" />
+            <item type="device" option="Device supports only cellular connectivity (see Note 1)" mnemonic="O_D_ONLY_CELLULAR_CONNECTIVITY" />
+            <item type="device" option="Device offers a user interface to enter a PIN for user authentication" mnemonic="O_D_PIN" />
+            <item type="device" option="Device allows the End User to initiate the disabling or deletion of an enabled Profile with ppr1" mnemonic="O_D_DISDELPPR1" />
+            <item type="device" option="Device allows the End User to initiate the deletion of a Profile with ppr2" mnemonic="O_D_DELPPR2" />
+            <item type="device" option="Initiation of the Disable Profile procedure is allowed on a Profile that is disabled already" mnemonic="O_D_DISPROF" />
+            <item type="device" option="Initiation of Disable Profile procedure is allowed even if the currently enabled Profile has PPR1" mnemonic="O_D_DISPPR1" />
+            <item type="device" option="Device retries after unsuccessful CC entry attempt" mnemonic="O_D_CC_RETRY" />
+            <item type="device" option="The Device provides the LUI functionality to postpone Profile Download" mnemonic="O_D_EU_POSTPONED" />
+            <item type="device" option="Device supports Power-on Profile discovery" mnemonic="O_D_POW_ON_PROF_DISCOVERY" />
+            <item type="device" option="Initiation of the Enable Profile procedure is allowed only if no Profile is enabled already" mnemonic="O_D_ENPROF1ST" />
+            <item type="device" option="The Device provides the LUI functionality to reject Profile Download" mnemonic="O_D_EU_REJECT" />
+            <item type="device" option="The Device supports Set/Edit Nickname procedure" mnemonic="O_D_NICKNAME" />
+            <item type="smdp" option="SM-DP+ reuses otPK.eUICC.ECKA from previous unsuccessful download attempt" mnemonic="O_P_REUSE_OTPK" />
+            <item type="smdp" option="SM-DP+ supports usage of session keys (S-ENC, S-MAC) for profile protection" mnemonic="O_P_SESSION_KEYS" />
+            <item type="smds" option="SM-DS is an Alternative SM-DS. NOTE: If an SM-DS is not an Alternative SM-DS then it is a Root SM-DS." mnemonic="O_S_ALT" />
+            <!--
+                Note 1: Devices which supports O_D_ONLY_CELLULAR_CONNECTIVITY are out of scope of the current version of this document.
+                Note 2: For this version of test specification:
+                    - O_E_FRP is not applicable
+                    - The eUICC SHALL support either O_E_NIST or O_E_BRP or both
+            -->
+        </table_4>
+
+        <table_5>
+            <item id="4.2.1.2.1" name="TC_eUICC_ATR_And_ISDR_Selection" roles="eUICC" testenv="TE_eUICC">
+                <condition condition="C006" version="2.1" />
+                <condition condition="C006" version="2.2" />
+            </item>
+            <item id="4.2.2.2.1" name="TC_eUICC_ES6.UpdateMetadata" roles="eUICC" testenv="TE_eUICC">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="4.2.3.2.1" name="TC_eUICC_ES8+.InitialiseSecureChannel" roles="eUICC" testenv="TE_eUICC">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="4.2.4.2.1" name="TC_eUICC_ES8+.ConfigureISDP" roles="eUICC" testenv="TE_eUICC">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="4.2.5.2.1" name="TC_eUICC_ES8+.StoreMetadata" roles="eUICC" testenv="TE_eUICC">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="4.2.6.2.1" name="TC_eUICC_ES8+.ReplaceSessionKeys" roles="eUICC" testenv="TE_eUICC">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="4.2.7.2.1" name="TC_eUICC_ES8+.LoadProfileElements" roles="eUICC" testenv="TE_eUICC">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="4.2.8.2.1" name="TC_eUICC_ES10a.GetEuiccConfiguredAddresses" roles="eUICC" testenv="TE_eUICC">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="4.2.9.2.1" name="TC_eUICC_ES10a.SetDefaultDpAddress" roles="eUICC" testenv="TE_eUICC">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="4.2.10.2.1" name="TC_eUICC_ES10b.PrepareDownloadNIST" roles="eUICC" testenv="TE_eUICC">
+                <condition condition="C001" version="2.1" />
+                <condition condition="C001" version="2.2" />
+            </item>
+            <item id="4.2.10.2.2" name="TC_eUICC_ES10b.PrepareDownloadBRP" roles="eUICC" testenv="TE_eUICC">
+                <condition condition="C002" version="2.1" />
+                <condition condition="C002" version="2.2" />
+            </item>
+            <item id="4.2.10.2.3" name="TC_eUICC_ES10b.PrepareDownloadFRP" roles="eUICC" testenv="TE_eUICC">
+                <condition condition="C003" version="2.1" />
+                <condition condition="C003" version="2.2" />
+            </item>
+            <item id="4.2.10.2.4" name="TC_eUICC_ES10b.PrepareDownloadErrorCases" roles="eUICC" testenv="TE_eUICC">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="4.2.11.2.1" name="TC_eUICC_ES10b.LoadBoundProfilePackageNIST" roles="eUICC" testenv="TE_eUICC">
+                <condition condition="C001" version="2.1" />
+                <condition condition="C001" version="2.2" />
+            </item>
+            <item id="4.2.11.2.2" name="TC_eUICC_ES10b.LoadBoundProfilePackageBRP" roles="eUICC" testenv="TE_eUICC">
+                <condition condition="C002" version="2.1" />
+                <condition condition="C002" version="2.2" />
+            </item>
+            <item id="4.2.11.2.3" name="TC_eUICC_ES10b.LoadBoundProfilePackageFRP" roles="eUICC" testenv="TE_eUICC">
+                <condition condition="C003" version="2.1" />
+                <condition condition="C003" version="2.2" />
+            </item>
+            <item id="4.2.11.2.4" name="TC_eUICC_ES10b.LoadBoundProfilePackage_ErrorCases" roles="eUICC" testenv="TE_eUICC">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="4.2.12.2.1" name="TC_eUICC_ES10b.GetEUICCChallenge" roles="eUICC" testenv="TE_eUICC">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="4.2.13.2.1" name="TC_eUICC_ES10b.GetEUICCInfo1" roles="eUICC" testenv="TE_eUICC">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="4.2.13.2.2" name="TC_eUICC_ES10b.GetEUICCInfo2_RSP_V2.1" roles="eUICC" testenv="TE_eUICC">
+                <condition condition="M" version="2.1" />
+                <condition condition="N/A" version="2.2" />
+            </item>
+            <item id="4.2.13.2.3" name="TC_eUICC_ES10b.GetEUICCInfo2_RSP_V2.2" roles="eUICC" testenv="TE_eUICC">
+                <condition condition="N/A" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="4.2.13.2.4" name="TC_eUICC_ES10b.GetEUICCInfo2" roles="eUICC" testenv="TE_eUICC">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="4.2.14.2.1" name="TC_eUICC_ES10b.ListNotification" roles="eUICC" testenv="TE_eUICC">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="4.2.14.2.1" name="TC_eUICC_ES10b.ListNotification" sequence="5" roles="eUICC" testenv="TE_eUICC">
+                <condition condition="C025" version="2.1" />
+                <condition condition="C025" version="2.2" />
+            </item>
+            <item id="4.2.15.2.1" name="TC_eUICC_ES10b.RetrieveNotificationsList" roles="eUICC" testenv="TE_eUICC">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="4.2.15.2.1" name="TC_eUICC_ES10b.RetrieveNotificationsList" sequence="5 15" roles="eUICC" testenv="TE_eUICC">
+                <condition condition="C025" version="2.1" />
+                <condition condition="C025" version="2.2" />
+            </item>
+            <item id="4.2.16.2.1" name="TC_eUICC_ES10b.RemoveNotificationFromList" roles="eUICC" testenv="TE_eUICC">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="4.2.16.2.1" name="TC_eUICC_ES10b.RemoveNotificationFromList" sequence="5" roles="eUICC" testenv="TE_eUICC">
+                <condition condition="C025" version="2.1" />
+                <condition condition="C025" version="2.2" />
+            </item>
+            <item id="4.2.18.2.1" name="TC_eUICC_ES10b.AuthenticateServer_SM-DP+_NIST" roles="eUICC" testenv="TE_eUICC">
+                <condition condition="C001" version="2.1" />
+                <condition condition="C001" version="2.2" />
+            </item>
+            <item id="4.2.18.2.2" name="TC_eUICC_ES10b.AuthenticateServer_SM-DP+_BRP" roles="eUICC" testenv="TE_eUICC">
+                <condition condition="C002" version="2.1" />
+                <condition condition="C002" version="2.2" />
+            </item>
+            <item id="4.2.18.2.3" name="TC_eUICC_ES10b.AuthenticateServer_SM-DP+_FRP" roles="eUICC" testenv="TE_eUICC">
+                <condition condition="C003" version="2.1" />
+                <condition condition="C003" version="2.2" />
+            </item>
+            <item id="4.2.18.2.4" name="TC_eUICC_ES10b.AuthenticateServer_SM-DP+_ErrorCases" roles="eUICC" testenv="TE_eUICC">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="4.2.18.2.5" name="TC_eUICC_ES10b.AuthenticateServer_SM-DS_BRP" roles="eUICC" testenv="TE_eUICC">
+                <condition condition="C002" version="2.1" />
+                <condition condition="C002" version="2.2" />
+            </item>
+            <item id="4.2.18.2.6" name="TC_eUICC_ES10b.AuthenticateServer_SM-DS_NIST" roles="eUICC" testenv="TE_eUICC">
+                <condition condition="C001" version="2.1" />
+                <condition condition="C001" version="2.2" />
+            </item>
+            <item id="4.2.18.2.7" name="TC_eUICC_ES10b.AuthenticateServer_SM-DS_FRP" roles="eUICC" testenv="TE_eUICC">
+                <condition condition="C003" version="2.1" />
+                <condition condition="C003" version="2.2" />
+            </item>
+            <item id="4.2.18.2.8" name="TC_eUICC_ES10b.AuthenticateServer_SM-DS_ErrorCases" roles="eUICC" testenv="TE_eUICC">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="4.2.19.2.1" name="TC_eUICC_ES10b.CancelSessionNIST" roles="eUICC" testenv="TE_eUICC">
+                <condition condition="C001" version="2.1" />
+                <condition condition="C001" version="2.2" />
+            </item>
+            <item id="4.2.19.2.2" name="TC_eUICC_ES10b.CancelSessionBRP" roles="eUICC" testenv="TE_eUICC">
+                <condition condition="C002" version="2.1" />
+                <condition condition="C002" version="2.2" />
+            </item>
+            <item id="4.2.19.2.3" name="TC_eUICC_ES10b.CancelSessionFRP" roles="eUICC" testenv="TE_eUICC">
+                <condition condition="C003" version="2.1" />
+                <condition condition="C003" version="2.2" />
+            </item>
+            <item id="4.2.19.2.4" name="TC_eUICC_ES10b.CancelSession_ErrorCase" roles="eUICC" testenv="TE_eUICC">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="4.2.20.2.1" name="TC_eUICC_ES10c.GetProfilesInfo" roles="eUICC" testenv="TE_eUICC">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="4.2.21.2.1" name="TC_eUICC_ES10c.EnableProfile_Case3" roles="eUICC" testenv="TE_eUICC">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="4.2.21.2.2" name="TC_eUICC_ES10c.EnableProfile_ErrorCases_Case3" roles="eUICC" testenv="TE_eUICC">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="4.2.21.2.3" name="TC_eUICC_ES10c.EnableProfile_Case4" roles="eUICC" testenv="TE_eUICC">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="4.2.21.2.4" name="TC_eUICC_ES10c.EnableProfile_ErrorCases_Case4" roles="eUICC" testenv="TE_eUICC">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="4.2.22.2.1" name="TC_eUICC_ES10c.DisableProfile_Case3" roles="eUICC" testenv="TE_eUICC">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="4.2.22.2.2" name="TC_eUICC_ES10c.DisableProfile_ErrorCases_Case3" roles="eUICC" testenv="TE_eUICC">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="4.2.22.2.3" name="TC_eUICC_ES10c.DisableProfile_Case4" roles="eUICC" testenv="TE_eUICC">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="4.2.22.2.4" name="TC_eUICC_ES10c.DisableProfile_ErrorCases_Case4" roles="eUICC" testenv="TE_eUICC">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="4.2.23.2.1" name="TC_eUICC_ES10c.DeleteProfile_Case3" roles="eUICC" testenv="TE_eUICC">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="4.2.23.2.2" name="TC_eUICC_ES10c.DeleteProfile_ErrorCases_Case3" roles="eUICC" testenv="TE_eUICC">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="4.2.23.2.3" name="TC_eUICC_ES10c.DeleteProfile_Case4" roles="eUICC" testenv="TE_eUICC">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="4.2.23.2.4" name="TC_eUICC_ES10c.DeleteProfile_ErrorCases_Case4" roles="eUICC" testenv="TE_eUICC">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="4.2.24.2.1" name="TC_eUICC_ES10c.eUICCMemoryReset" roles="eUICC" testenv="TE_eUICC">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="4.2.24.2.2" name="TC_eUICC_ES10c.eUICCMemoryReset_ErrorCases" roles="eUICC" testenv="TE_eUICC">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="4.2.25.2.1" name="TC_eUICC_ES10c.GetEID" roles="eUICC" testenv="TE_eUICC">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="4.2.26.2.1" name="TC_eUICC_ES10c.SetNickname" roles="eUICC" testenv="TE_eUICC">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="4.2.27.2.1" name="TC_eUICC_ES10b.GetRAT" roles="eUICC" testenv="TE_eUICC">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="4.3.12.2.1" name="TC_SM-DP+_ES9+.InitiateAuthenticationNIST" roles="SM-DP+" testenv="TE_P2">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="4.3.12.2.2" name="TC_SM-DP+_ES9+.InitiateAuthenticationFRP" roles="SM-DP+" testenv="TE_P2">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="4.3.12.2.3" name="TC_SM-DP+_ES9+.InitiateAuthenticationBRP" roles="SM-DP+" testenv="TE_P2">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="4.3.13.2.1" name="TC_SM-DP+_ES9+.GetBoundProfilePackageNIST" roles="SM-DP+" testenv="TE_P2">
+                <condition condition="C028" version="2.1" />
+                <condition condition="C028" version="2.2" />
+            </item>
+            <item id="4.3.13.2.1" name="TC_SM-DP+_ES9+.GetBoundProfilePackageNIST" sequence="1 2 5" roles="SM-DP+" testenv="TE_P2">
+                <condition condition="C028" version="2.1" />
+                <condition condition="C028" version="2.2" />
+            </item>
+            <item id="4.3.13.2.1" name="TC_SM-DP+_ES9+.GetBoundProfilePackageNIST" sequence="3 4 6" roles="SM-DP+" testenv="TE_P2">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="4.3.13.2.2" name="TC_SM-DP+_ES9+.GetBoundProfilePackageFRP" roles="SM-DP+" testenv="TE_P2">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="4.3.13.2.3" name="TC_SM-DP+_ES9+.GetBoundProfilePackageBRP" sequence="1" roles="SM-DP+" testenv="TE_P2">
+                <condition condition="C028" version="2.1" />
+                <condition condition="C028" version="2.2" />
+            </item>
+            <item id="4.3.13.2.3" name="TC_SM-DP+_ES9+.GetBoundProfilePackageBRP" sequence="2" roles="SM-DP+" testenv="TE_P2">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="4.3.13.2.4" name="TC_SM-DP+_ES9+.GetBoundProfilePackage_RetryCases_ReuseOTPK_NIST" sequence="1 2 5 6" roles="SM-DP+" testenv="TE_P2">
+                <condition condition="C029" version="2.1" />
+                <condition condition="C029" version="2.2" />
+            </item>
+            <item id="4.3.13.2.4" name="TC_SM-DP+_ES9+.GetBoundProfilePackage_RetryCases_ReuseOTPK_NIST" sequence="3 4 7 8 9" roles="SM-DP+" testenv="TE_P2">
+                <condition condition="C015" version="2.1" />
+                <condition condition="C015" version="2.2" />
+            </item>
+            <item id="4.3.13.2.7" name="TC_SM-DP+_ES9+.GetBoundProfilePackage_RetryCases_DifferentOTPK_NIST" sequence="1 2" roles="SM-DP+" testenv="TE_P2">
+                <condition condition="C030" version="2.1" />
+                <condition condition="C030" version="2.2" />
+            </item>
+            <item id="4.3.13.2.7" name="TC_SM-DP+_ES9+.GetBoundProfilePackage_RetryCases_DifferentOTPK_NIST" sequence="3 4" roles="SM-DP+" testenv="TE_P2">
+                <condition condition="C016" version="2.1" />
+                <condition condition="C016" version="2.2" />
+            </item>
+            <item id="4.3.13.2.10" name="TC_SM-DP+_ES9+.GetBoundProfilePackage_ErrorCasesNIST" roles="SM-DP+" testenv="TE_P2">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="4.3.14.2.1" name="TC_SM-DP+_ES9+.AuthenticateClientNIST" roles="SM-DP+" testenv="TE_P2">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="4.3.14.2.2" name="TC_SM-DP+_ES9+.AuthenticateClientNIST_ErrorCases" roles="SM-DP+" testenv="TE_P2">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="4.3.14.2.3" name="TC_SM-DP+_ES9+.AuthenticateClientFRP" roles="SM-DP+" testenv="TE_P2">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="4.3.14.2.5" name="TC_SM-DP+_ES9+.AuthenticateClientBRP" roles="SM-DP+" testenv="TE_P2">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="4.3.14.2.6" name="TC_SM-DP+_ES9+.AuthenticateClient_RetryCases_Reuse_OTPK" roles="SM-DP+" testenv="TE_P2">
+                <condition condition="C015" version="2.1" />
+                <condition condition="C015" version="2.2" />
+            </item>
+            <item id="4.3.15.2.1" name="TC_SM-DP+_ES9+_HandleNotificationNIST" roles="SM-DP+" testenv="TE_P2">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="4.3.15.2.2" name="TC_SM_DP+_ES9+_HandleNotificationFRP" roles="SM-DP+" testenv="TE_P2">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="4.3.15.2.3" name="TC_SM-DP+_ES9+_HandleNotificationBRP" roles="SM-DP+" testenv="TE_P2">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="4.3.16.2.1" name="TC_SM-DP+_ES9+.CancelSession_After_AuthenticateClientNIST" roles="SM-DP+" testenv="TE_P2">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="4.3.16.2.2" name="TC_SM-DP+_ES9+.CancelSession_After_GetBoundProfilePackageNIST" roles="SM-DP+" testenv="TE_P2">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="4.3.16.2.3" name="TC_SM_DP+_ES9+.CancelSession_After_AuthenticateClientFRP" roles="SM-DP+" testenv="TE_P2">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="4.3.16.2.4" name="TC_SM_DP+_ES9+.CancelSession_After_GetBoundProfilePackageFRP" roles="SM-DP+" testenv="TE_P2">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="4.3.16.2.5" name="TC_SM-DP+_ES9+.CancelSession_After_AuthenticateClientBRP" roles="SM-DP+" testenv="TE_P2">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="4.3.16.2.6" name="TC_SM-DP+_ES9+.CancelSession_After_GetBoundProfilePackageBRP" roles="SM-DP+" testenv="TE_P2">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="4.3.17.1" name="TC_SM-DP+_ES9+_Server_Authentication_for_HTTPS_EstablishmentNIST" roles="SM-DP+" testenv="TE_P2">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="4.3.17.2" name="TC_SM-DP+_ES9+_Server_Authentication_for_HTTPS_EstablishmentBRP" roles="SM-DP+" testenv="TE_P2">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="4.3.20.1" name="TC_SM-DP+_ES12_Client_Mutual_Authentication_for_HTTPS_EstablishmentNIST" roles="SM-DP+" testenv="TE_P2">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="4.3.20.2" name="TC_SM-DP+_ES12_Client_Mutual_Authentication_for_HTTPS_EstablishmentBRP" roles="SM-DP+" testenv="TE_P2">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="4.4.21.2.1" name="TC_LPAd_InitiateAuthentication_Nominal" roles="LPAd" testenv="">
+                <condition condition="C007" version="2.1" />
+                <condition condition="C007" version="2.2" />
+            </item>
+            <item id="4.4.21.2.2" name="TC_LPAd_InitiateAuthentication_ErrorCases" roles="LPAd" testenv="">
+                <condition condition="C007" version="2.1" />
+                <condition condition="C007" version="2.2" />
+            </item>
+            <item id="4.4.22.2.1" name="TC_LPAd_ES9+_GetBoundProfilePackage_Nominal" roles="LPAd" testenv="">
+                <condition condition="C007" version="2.1" />
+                <condition condition="C007" version="2.2" />
+            </item>
+            <item id="4.4.22.2.2" name="TC_LPAd_ES9+_GetBoundProfilePackage_Retry_oldOTPK" roles="LPAd" testenv="">
+                <condition condition="C005" version="2.1" />
+                <condition condition="C005" version="2.2" />
+            </item>
+            <item id="4.4.22.2.3" name="TC_LPAd_ES9+_GetBoundProfilePackage_Error" roles="LPAd" testenv="">
+                <condition condition="C007" version="2.1" />
+                <condition condition="C007" version="2.2" />
+            </item>
+            <item id="4.4.23.2.1" name="TC_LPAd_AuthenticatClient_Nominal" roles="LPAd" testenv="">
+                <condition condition="C007" version="2.1" />
+                <condition condition="C007" version="2.2" />
+            </item>
+            <item id="4.4.23.2.2" name="TC_LPAd_AuthenticateClient_ErrorCases" roles="LPAd" testenv="">
+                <condition condition="C007" version="2.1" />
+                <condition condition="C007" version="2.2" />
+            </item>
+            <item id="4.4.24.2.1" name="TC_LPAd_ES9+_HandleNotification_Nominal" roles="LPAd" testenv="">
+                <condition condition="C007" version="2.1" />
+                <condition condition="C007" version="2.2" />
+            </item>
+            <item id="4.4.25.2.1" name="TC_LPAd_ES9+_CancelSession_Nominal" roles="LPAd" testenv="">
+                <condition condition="C007" version="2.1" />
+                <condition condition="C007" version="2.2" />
+            </item>
+            <item id="4.4.25.2.1" name="TC_LPAd_ES9+_CancelSession_Nominal" sequence="2" roles="LPAd" testenv="">
+                <condition condition="C023" version="2.1" />
+                <condition condition="C023" version="2.2" />
+            </item>
+            <item id="4.4.25.2.2" name="TC_LPAd_ES9+_CancelSession_EndUserPostponed_Nominal" roles="LPAd" testenv="">
+                <condition condition="C008" version="2.1" />
+                <condition condition="C008" version="2.2" />
+            </item>
+            <item id="4.4.25.2.3" name="TC_LPAd_ES9+_CancelSession_Error" roles="LPAd" testenv="">
+                <condition condition="C026" version="2.1" />
+                <condition condition="C026" version="2.2" />
+            </item>
+            <item id="4.4.25.2.4" name="TC_LPAd_ES9+_CancelSession_PPRs" roles="LPAd" testenv="">
+                <condition condition="C026" version="2.1" />
+                <condition condition="C026" version="2.2" />
+            </item>
+            <item id="4.4.26.2.1" name="TC_LPAd_HTTPS_Nominal" roles="LPAd" testenv="">
+                <condition condition="C007" version="2.1" />
+                <condition condition="C007" version="2.2" />
+            </item>
+            <item id="4.4.26.2.2" name="TC_LPAd_HTTPS_ErrorCases" roles="LPAd" testenv="">
+                <condition condition="C007" version="2.1" />
+                <condition condition="C007" version="2.2" />
+            </item>
+            <item id="4.4.27.2.1" name="TC_LPAd_ES11_InitiateAuthentication_Nominal" roles="LPAd" testenv="">
+                <condition condition="C007" version="2.1" />
+                <condition condition="C007" version="2.2" />
+            </item>
+            <item id="4.4.27.2.2" name="TC_LPAd_ES11_InitiateAuthentication_ErrorCases" roles="LPAd" testenv="">
+                <condition condition="C007" version="2.1" />
+                <condition condition="C007" version="2.2" />
+            </item>
+            <item id="4.4.28.2.1" name="TC_LPAd_ES11_AuthenticateClient_Nominal" roles="LPAd" testenv="">
+                <condition condition="C007" version="2.1" />
+                <condition condition="C007" version="2.2" />
+            </item>
+            <item id="4.4.28.2.2" name="TC_LPAd_ES11_AuthenticateClient_ErrorCases" roles="LPAd" testenv="">
+                <condition condition="C007" version="2.1" />
+                <condition condition="C007" version="2.2" />
+            </item>
+            <item id="4.4.29.2.1" name="TC_LPAd_HTTPS_Nominal" roles="LPAd" testenv="">
+                <condition condition="C007" version="2.1" />
+                <condition condition="C007" version="2.2" />
+            </item>
+            <item id="4.4.29.2.2" name="TC_LPAd_HTTPS_Error" roles="LPAd" testenv="">
+                <condition condition="C007" version="2.1" />
+                <condition condition="C007" version="2.2" />
+            </item>
+            <item id="4.5.1.2.1" name="TC_ROOT_SM_DS_ES12.RegisterEvent" roles="SM-DS" testenv="TE_S3">
+                <condition condition="C024" version="2.1" />
+                <condition condition="C024" version="2.2" />
+            </item>
+            <item id="4.5.1.2.2" name="TC_ALT_SM_DS_ES12.RegisterEvent" roles="SM-DS" testenv="TE_SA1">
+                <condition condition="C021" version="2.1" />
+                <condition condition="C021" version="2.2" />
+            </item>
+            <item id="4.5.2.2.1" name="TC_ROOT_SM_DS_ES12.DeleteEvent" roles="SM-DS" testenv="TE_S3">
+                <condition condition="C024" version="2.1" />
+                <condition condition="C024" version="2.2" />
+            </item>
+            <item id="4.5.2.2.2" name="TC_ALT_SM_DS_ES12.DeleteEvent" roles="SM-DS" testenv="TE_SA1">
+                <condition condition="C021" version="2.1" />
+                <condition condition="C021" version="2.2" />
+            </item>
+            <item id="4.5.2.2.3" name="TC_ALT_SM_DS_ES12.DeleteEvent_Error_Nonexistant_EventID" roles="SM-DS" testenv="TE_S2">
+                <condition condition="C021" version="2.1" />
+                <condition condition="C021" version="2.2" />
+            </item>
+            <item id="4.5.3.2.1" name="TC_ROOT_SM_DS_ES15.RegisterEvent" roles="SM-DS" testenv="TE_SR2">
+                <condition condition="C024" version="2.1" />
+                <condition condition="C024" version="2.2" />
+            </item>
+            <item id="4.5.4.2.1" name="TC_ROOT_SM_DS_ES15.DeleteEvent" roles="SM-DS" testenv="TE_SR2">
+                <condition condition="C024" version="2.1" />
+                <condition condition="C024" version="2.2" />
+            </item>
+            <item id="4.5.5.2.1" name="TC_SM_DS_ES11.InitiateAuthenticationNIST" roles="SM-DS" testenv="TE_S1">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="4.5.6.2.1" name="TC_SM_DS_ES11.AuthenticateClientNIST" roles="SM-DS" testenv="TE_S1">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="4.5.6.2.2" name="TC_SM_DS_ES11.AuthenticateClientBRP" roles="SM-DS" testenv="TE_S1">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="4.5.7.1" name="TC_ALT_SM_DS_ES15_Client_Mutual_Authentication_for_HTTPS_EstablishmentNIST" roles="SM-DS" testenv="TE_SA1">
+                <condition condition="C021" version="2.1" />
+                <condition condition="C021" version="2.2" />
+            </item>
+            <item id="4.5.7.2" name="TC_ALT_SM_DS_ES15_Client_Mutual_Authentication_for_HTTPS_EstablishmentBRP" roles="SM-DS" testenv="TE_SA1">
+                <condition condition="C021" version="2.1" />
+                <condition condition="C021" version="2.2" />
+            </item>
+            <item id="4.5.8.1" name="TC_SM_DS_ES12_Server_Mutual_Authentication_for_HTTPS_EstablishmentNIST" roles="SM-DS" testenv="TE_S2">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="4.5.8.2" name="TC_SM_DS_ES12_Server_Mutual_Authentication_for_HTTPS_EstablishmentBRP" roles="SM-DS" testenv="TE_S2">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="4.5.9.1" name="TC_ROOT_SM_DS_ES15_Server_Mutual_Authentication_for_HTTPS_EstablishmentNIST" roles="SM-DS" testenv="TE_SR1">
+                <condition condition="C024" version="2.1" />
+                <condition condition="C024" version="2.2" />
+            </item>
+            <item id="4.5.9.2" name="TC_ROOT_SM_DS_ES15_Server_Mutual_Authentication_for_HTTPS_EstablishmentBRP" roles="SM-DS" testenv="TE_SR1">
+                <condition condition="C024" version="2.1" />
+                <condition condition="C024" version="2.2" />
+            </item>
+            <item id="4.5.10.1" name="TC_SM_DS_ES11_Server_Mutual_Authentication_for_HTTPS_EstablishmentNIST" roles="SM-DS" testenv="TE_S1">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="4.5.10.2" name="TC_SM_DS_ES11_Server_Mutual_Authentication_for_HTTPS_EstablishmentBRP" roles="SM-DS" testenv="TE_S1">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="5.2.1.2.1" name="TC_eUICC_PrepareDownload_Retry_ReuseOTKeys" roles="eUICC" testenv="TE_eUICC">
+                <condition condition="C019" version="2.1" />
+                <condition condition="C019" version="2.2" />
+            </item>
+            <item id="5.2.1.2.2" name="TC_eUICC_PrepareDownload_Retry_NewOTKeys" roles="eUICC" testenv="TE_eUICC">
+                <condition condition="C020" version="2.1" />
+                <condition condition="C020" version="2.2" />
+            </item>
+            <item id="5.2.2.2.1" name="TC_eUICC_ForbiddenPPRs" roles="eUICC" testenv="TE_eUICC">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="5.2.3.2.1" name="TC_eUICC_GetProfilesInfo_GetRAT_RSPSession" roles="eUICC" testenv="TE_eUICC">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="5.2.4.2.1" name="TC_eUICC_Default_FileSystem" roles="eUICC" testenv="TE_eUICC">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="5.2.5.2.1" name="TC_eUICC_DeleteProfile_ISDP_And_Components" roles="eUICC" testenv="TE_eUICC">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="5.2.6.2.1" name="TC_eUICC_EnableProfile_Twice_Notifications" roles="eUICC" testenv="TE_eUICC">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="5.2.7.2.1" name="TC_eUICC_DisableProfile_ApplicationManagement" roles="eUICC" testenv="TE_eUICC">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="5.2.8.2.1" name="TC_eUICC_Enable_Disable_Delete_Notifications" roles="eUICC" testenv="TE_eUICC">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="5.3.3.2.1" name="TC_SM-DP+_ProfileMetadata" roles="SM-DP+" testenv="">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+            <item id="5.4.1.2.1" name="TC_LPAd_AddProfile_Manual_Entry" roles="LPAd" testenv="">
+                <condition condition="C007" version="2.1" />
+                <condition condition="C007" version="2.2" />
+            </item>
+            <item id="5.4.1.2.2" name="TC_LPAd_AddProfile_QRcode_scanning" roles="LPAd" testenv="">
+                <condition condition="C007" version="2.1" />
+                <condition condition="C007" version="2.2" />
+            </item>
+            <item id="5.4.1.2.3" name="TC_LPAd_AddProfile_ActivationCode_InvalidFormat_QRcode" roles="LPAd" testenv="">
+                <condition condition="C007" version="2.1" />
+                <condition condition="C007" version="2.2" />
+            </item>
+            <item id="5.4.1.2.4" name="TC_LPAd_AddProfile_ActivationCode_InvalidFormat_ManualEntry" roles="LPAd" testenv="">
+                <condition condition="C007" version="2.1" />
+                <condition condition="C007" version="2.2" />
+            </item>
+            <item id="5.4.1.2.5" name="TC_LPAd_AddProfile_ConfirmationCode_smdpSigned2_QR" roles="LPAd" testenv="">
+                <condition condition="C007" version="2.1" />
+                <condition condition="C007" version="2.2" />
+            </item>
+            <item id="5.4.1.2.6" name="TC_LPAd_AddProfile_ConfirmationCode_smdpSigned2_Manual_Entry" roles="LPAd" testenv="">
+                <condition condition="C007" version="2.1" />
+                <condition condition="C007" version="2.2" />
+            </item>
+            <item id="5.4.1.2.7" name="TC_LPAd_AddProfile_default_SM-DP+_address" roles="LPAd" testenv="">
+                <condition condition="C007" version="2.1" />
+                <condition condition="C007" version="2.2" />
+            </item>
+            <item id="5.4.1.2.8" name="TC_LPAd_AddProfile_QRCode_with_ConfirmationCode" roles="LPAd" testenv="">
+                <condition condition="C007" version="2.1" />
+                <condition condition="C007" version="2.2" />
+            </item>
+            <item id="5.4.1.2.9" name="TC_LPAd_AddProfile_PPRs" roles="LPAd" testenv="">
+                <condition condition="C007" version="2.1" />
+                <condition condition="C007" version="2.2" />
+            </item>
+            <item id="5.4.1.2.10" name="TC_LPAd_LUI_access_protected" roles="LPAd" testenv="">
+                <condition condition="C007" version="2.1" />
+                <condition condition="C007" version="2.2" />
+            </item>
+            <item id="5.4.1.2.11" name="TC_LPAd_AddProfile_Security_Errors" roles="LPAd" testenv="">
+                <condition condition="C007" version="2.1" />
+                <condition condition="C007" version="2.2" />
+            </item>
+            <item id="5.4.2.2.1" name="TC_LPAd_ListProfiles" roles="LPAd" testenv="">
+                <condition condition="C007" version="2.1" />
+                <condition condition="C007" version="2.2" />
+            </item>
+            <item id="5.4.3.2.1" name="TC_LPAd_SetNickname" roles="LPAd" testenv="">
+                <condition condition="C027" version="2.1" />
+                <condition condition="C027" version="2.2" />
+            </item>
+            <item id="5.4.3.2.2" name="TC_LPAd_EditNickname" roles="LPAd" testenv="">
+                <condition condition="C027" version="2.1" />
+                <condition condition="C027" version="2.2" />
+            </item>
+            <item id="5.4.4.2.1" name="TC_LPAd_DeleteProfile_Disabled_without_PPR" roles="LPAd" testenv="">
+                <condition condition="C007" version="2.1" />
+                <condition condition="C007" version="2.2" />
+            </item>
+            <item id="5.4.4.2.2" name="TC_LPAd_DeleteProfile_Enabled_without_PPR" roles="LPAd" testenv="">
+                <condition condition="C009" version="2.1" />
+                <condition condition="C009" version="2.2" />
+            </item>
+            <item id="5.4.4.2.3" name="TC_LPAd_DeleteProfile_Error_with_PPR1" roles="LPAd" testenv="">
+                <condition condition="C012" version="2.1" />
+                <condition condition="C012" version="2.2" />
+            </item>
+            <item id="5.4.4.2.4" name="TC_LPAd_DeleteProfile_Error_Disabled_with_PPR2" roles="LPAd" testenv="">
+                <condition condition="C013" version="2.1" />
+                <condition condition="C013" version="2.2" />
+            </item>
+            <item id="5.4.4.2.5" name="TC_LPAd_DeleteProfile_Error_Enabled_with_PPR2" roles="LPAd" testenv="">
+                <condition condition="C014" version="2.1" />
+                <condition condition="C014" version="2.2" />
+            </item>
+            <item id="5.4.4.2.6" name="TC_LPAd_DeleteProfile_Security_Errors" roles="LPAd" testenv="">
+                <condition condition="C007" version="2.1" />
+                <condition condition="C007" version="2.2" />
+            </item>
+            <item id="5.4.5.2.1" name="TC_LPAd_EnableProfile" roles="LPAd" testenv="">
+                <condition condition="C009" version="2.1" />
+                <condition condition="C009" version="2.2" />
+            </item>
+            <item id="5.4.5.2.2" name="TC_LPAd_EnableProfile_ImplicitDisable" roles="LPAd" testenv="">
+                <condition condition="C009" version="2.1" />
+                <condition condition="C009" version="2.2" />
+            </item>
+            <item id="5.4.5.2.3" name="TC_LPAd_EnableProfile_Error_ProfileAlreadyEnabled" roles="LPAd" testenv="">
+                <condition condition="C010" version="2.1" />
+                <condition condition="C010" version="2.2" />
+            </item>
+            <item id="5.4.5.2.4" name="TC_LPAd_EnableProfile_Error_PPR1Set" roles="LPAd" testenv="">
+                <condition condition="C011" version="2.1" />
+                <condition condition="C011" version="2.2" />
+            </item>
+            <item id="5.4.5.2.5" name="TC_LPAd_EnableProfile_Security_Errors" roles="LPAd" testenv="">
+                <condition condition="C007" version="2.1" />
+                <condition condition="C007" version="2.2" />
+            </item>
+            <item id="5.4.6.2.1" name="TC_LPAd_DisableProfile" roles="LPAd" testenv="">
+                <condition condition="C009" version="2.1" />
+                <condition condition="C009" version="2.2" />
+            </item>
+            <item id="5.4.6.2.2" name="TC_LPAd_DisableProfile_Error_ProfileAlreadyDisabled" roles="LPAd" testenv="">
+                <condition condition="C017" version="2.1" />
+                <condition condition="C017" version="2.2" />
+            </item>
+            <item id="5.4.6.2.3" name="TC_LPAd_DisableProfile_Error_PPR1Set" roles="LPAd" testenv="">
+                <condition condition="C018" version="2.1" />
+                <condition condition="C018" version="2.2" />
+            </item>
+            <item id="5.4.6.2.4" name="TC_LPAd_DisableProfile_Security_Errors" roles="LPAd" testenv="">
+                <condition condition="C007" version="2.1" />
+                <condition condition="C007" version="2.2" />
+            </item>
+            <item id="5.4.7.2.1" name="TC_LPAd_RetrieveEID" roles="LPAd" testenv="">
+                <condition condition="C004" version="2.1" />
+                <condition condition="C004" version="2.2" />
+            </item>
+            <item id="5.4.8.2.1" name="TC_LPAd_eUICCMemoryReset" roles="LPAd" testenv="">
+                <condition condition="C007" version="2.1" />
+                <condition condition="C007" version="2.2" />
+            </item>
+            <item id="5.4.8.2.2" name="TC_LPAd_eUICCMemoryResetWithPINVerification" roles="LPAd" testenv="">
+                <condition condition="C009" version="2.1" />
+                <condition condition="C009" version="2.2" />
+            </item>
+            <item id="5.4.10.2.1" name="TC_LPAd_Set/Edit Default SM-DP+ Address" roles="LPAd" testenv="">
+                <condition condition="C007" version="2.1" />
+                <condition condition="C007" version="2.2" />
+            </item>
+            <item id="5.4.11.2.1" name="TC_LPAd_DevicePowerOnProfileDiscovery_SM-DP+_address" roles="LPAd" testenv="">
+                <condition condition="C022" version="2.1" />
+                <condition condition="C022" version="2.2" />
+            </item>
+            <item id="5.4.11.2.2" name="TC_LPAd_DevicePowerOnProfileDiscovery_SM-DS" roles="LPAd" testenv="">
+                <condition condition="C022" version="2.1" />
+                <condition condition="C022" version="2.2" />
+            </item>
+            <item id="7.1" name="SIMAlliance eUICC Profile Package Test Specification" roles="LPAd" testenv="">
+                <condition condition="M" version="2.1" />
+                <condition condition="M" version="2.2" />
+            </item>
+        </table_5>
+
+        <table_6>
+            <item id="C001" condition="IF (O_E_NIST) THEN M ELSE N/A">
+                <mnemonic id="O_E_NIST" />
+            </item>
+            <item id="C002" condition="IF (O_E_BRP) THEN M ELSE N/A">
+                <mnemonic id="O_E_BRP" />
+            </item>
+            <item id="C003" condition="IF (O_E_FRP) THEN M ELSE N/A">
+                <mnemonic id="O_E_FRP" />
+            </item>
+            <item id="C004" condition="IF (O_D_LPAD) THEN M ELSE N/A">
+                <mnemonic id="O_D_LPAD" />
+            </item>
+            <item id="C005" condition="IF (O_D_CC_RETRY AND NOT O_D_ONLY_CELLULAR_CONNECTIVITY) THEN M ELSE N/A">
+                <mnemonic id="O_D_CC_RETRY" />
+                <mnemonic id="O_D_ONLY_CELLULAR_CONNECTIVITY" />
+            </item>
+            <item id="C006" condition="IF (NOT O_E_LPAe) THEN M ELSE N/A">
+                <mnemonic id="O_E_LPAe" />
+            </item>
+            <item id="C007" condition="IF (O_D_LPAD AND NOT O_D_ONLY_CELLULAR_CONNECTIVITY) THEN M ELSE N/A">
+                <mnemonic id="O_D_LPAD" />
+                <mnemonic id="O_D_ONLY_CELLULAR_CONNECTIVITY" />
+            </item>
+            <item id="C008" condition="IF (O_D_LPAD AND O_D_EU_POSTPONED AND NOT O_D_ONLY_CELLULAR_CONNECTIVITY) THEN M ELSE N/A">
+                <mnemonic id="O_D_LPAD" />
+                <mnemonic id="O_D_EU_POSTPONED" />
+                <mnemonic id="O_D_ONLY_CELLULAR_CONNECTIVITY" />
+            </item>
+            <item id="C009" condition="IF (O_D_LPAD AND O_D_PIN AND NOT O_D_ONLY_CELLULAR_CONNECTIVITY) THEN M ELSE N/A">
+                <mnemonic id="O_D_LPAD" />
+                <mnemonic id="O_D_PIN" />
+                <mnemonic id="O_D_ONLY_CELLULAR_CONNECTIVITY" />
+            </item>
+            <item id="C010" condition="IF (O_D_LPAD AND O_D_ENPROF AND NOT O_D_ENPROF1ST) THEN M ELSE N/A">
+                <mnemonic id="O_D_LPAD" />
+                <mnemonic id="O_D_ENPROF" />
+                <mnemonic id="O_D_ENPROF1ST" />
+            </item>
+            <item id="C011" condition="IF (O_D_LPAD AND O_D_ENPREVPPR1 AND NOT O_D_ONLY_CELLULAR_CONNECTIVITY) THEM M ELSE N/A">
+                <mnemonic id="O_D_LPAD" />
+                <mnemonic id="O_D_ENPREVPPR1" />
+                <mnemonic id="O_D_ONLY_CELLULAR_CONNECTIVITY" />
+            </item>
+            <item id="C012" condition="IF (O_D_LPAD AND O_D_DISDELPPR1 AND NOT O_D_ONLY_CELLULAR_CONNECTIVITY) THEN M ELSE N/A">
+                <mnemonic id="O_D_LPAD" />
+                <mnemonic id="O_D_DISDELPPR1" />
+                <mnemonic id="O_D_ONLY_CELLULAR_CONNECTIVITY" />
+            </item>
+            <item id="C013" condition="IF (O_D_LPAD AND O_D_DELPPR2 AND NOT O_D_ONLY_CELLULAR_CONNECTIVITY) THEN M ELSE N/A">
+                <mnemonic id="O_D_LPAD" />
+                <mnemonic id="O_D_DELPPR2" />
+                <mnemonic id="O_D_ONLY_CELLULAR_CONNECTIVITY" />
+            </item>
+            <item id="C014" condition="IF (O_D_LPAD AND O_D_PIN AND O_D_DELPPR2 AND NOT O_D_ONLY_CELLULAR_CONNECTIVITY) THEN M ELSE N/A">
+                <mnemonic id="O_D_LPAD" />
+                <mnemonic id="O_D_PIN" />
+                <mnemonic id="O_D_DELPPR2" />
+                <mnemonic id="O_D_ONLY_CELLULAR_CONNECTIVITY" />
+            </item>
+            <item id="C015" condition="IF (O_P_REUSE_OTPK) THEN M ELSE N/A">
+                <mnemonic id="O_P_REUSE_OTPK" />
+            </item>
+            <item id="C016" condition="IF (NOT O_P_REUSE_OTPK) THEN M ELSE N/A">
+                <mnemonic id="O_P_REUSE_OTPK" />
+            </item>
+            <item id="C017" condition="IF (O_D_LPAD AND NOT O_D_ONLY_CELLULAR_CONNECTIVITY AND O_D_DISPROF) THEN M ELSE N/A">
+                <mnemonic id="O_D_LPAD" />
+                <mnemonic id="O_D_ONLY_CELLULAR_CONNECTIVITY" />
+                <mnemonic id="O_D_DISPROF" />
+            </item>
+            <item id="C018" condition="IF (O_D_LPAD AND NOT O_D_ONLY_CELLULAR_CONNECTIVITY AND O_D_DISPPR1) THEN M ELSE N/A">
+                <mnemonic id="O_D_LPAD" />
+                <mnemonic id="O_D_ONLY_CELLULAR_CONNECTIVITY" />
+                <mnemonic id="O_D_DISPPR1" />
+            </item>
+            <item id="C019" condition="IF (O_E_REUSE_OTPK) THEN M ELSE N/A">
+                <mnemonic id="O_E_REUSE_OTPK" />
+            </item>
+            <item id="C020" condition="IF (NOT O_E_REUSE_OTPK) THEN M ELSE N/A">
+                <mnemonic id="O_E_REUSE_OTPK" />
+            </item>
+            <item id="C021" condition="IF (O_S_ALT) THEN M ELSE N/A">
+                <mnemonic id="O_S_ALT" />
+            </item>
+            <item id="C022" condition="IF (O_D_LPAD AND O_D_POW_ON_PROF_DISCOVERY AND NOT O_D_ONLY_CELLULAR_CONNECTIVITY) THEN M ELSE N/A">
+                <mnemonic id="O_D_LPAD" />
+                <mnemonic id="O_D_POW_ON_PROF_DISCOVERY" />
+                <mnemonic id="O_D_ONLY_CELLULAR_CONNECTIVITY" />
+            </item>
+            <item id="C023" condition="IF (O_D_LPAD AND O_D_EU_REJECT AND NOT O_D_ONLY_CELLULAR_CONNECTIVITY) THEN M ELSE N/A">
+                <mnemonic id="O_D_LPAD" />
+                <mnemonic id="O_D_EU_REJECT" />
+                <mnemonic id="O_D_ONLY_CELLULAR_CONNECTIVITY" />
+            </item>
+            <item id="C024" condition="IF (NOT O_S_ALT) THEN M ELSE N/A">
+                <mnemonic id="O_S_ALT" />
+            </item>
+            <item id="C025" condition="IF (O_E_2_PIR) THEN M ELSE N/A">
+                <mnemonic id="O_E_2_PIR" />
+            </item>
+            <item id="C026" condition="IF ((O_D_LPAD AND NOT O_D_ONLY_CELLULAR_CONNECTIVITY) AND (O_D_EU_POSTPONED OR O_D_EU_REJECT)) THEN M ELSE N/A">
+                <mnemonic id="O_D_LPAD" />
+                <mnemonic id="O_D_ONLY_CELLULAR_CONNECTIVITY" />
+                <mnemonic id="O_D_EU_POSTPONED" />
+                <mnemonic id="O_D_EU_REJECT" />
+            </item>
+            <item id="C027" condition="IF (O_D_LPAD AND NOT O_D_ONLY_CELLULAR_CONNECTIVITY AND O_D_NICKNAME) THEN M ELSE N/A">
+                <mnemonic id="O_D_LPAD" />
+                <mnemonic id="O_D_ONLY_CELLULAR_CONNECTIVITY" />
+                <mnemonic id="O_D_NICKNAME" />
+            </item>
+            <item id="C028" condition="IF (O_P_SESSION_KEYS) THEN M ELSE N/A">
+                <mnemonic id="O_P_SESSION_KEYS" />
+            </item>
+            <item id="C029" condition="IF (O_P_SESSION_KEYS AND O_P_REUSE_OTPK) THEN M ELSE N/A">
+                <mnemonic id="O_P_SESSION_KEYS" />
+                <mnemonic id="O_P_REUSE_OTPK" />
+            </item>
+            <item id="C030" condition="IF (O_P_SESSION_KEYS AND NOT O_P_REUSE_OTPK) THEN M ELSE N/A">
+                <mnemonic id="O_P_SESSION_KEYS" />
+                <mnemonic id="O_P_REUSE_OTPK" />
+            </item>
+        </table_6>
+    </SGP.23>
+</specification>

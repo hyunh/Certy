@@ -1,0 +1,659 @@
+<?xml version="1.0" encoding="utf-8"?>
+<spec>
+    <ts31124 rel="v15.2.0">
+        <condition>
+            <item id="C101" mnemonic="O_Cap_Conf" />
+            <item id="C102" mnemonic="" />
+            <item id="C103" mnemonic="" />
+            <item id="C104" mnemonic="O_Sust_text" />
+            <item id="C105" mnemonic="O_Ucs2_Entry O_UCS2_Cyrillic" />
+            <item id="C106" mnemonic="O_Ext_Str" />
+            <item id="C107" mnemonic="O_Help" />
+            <item id="C108" mnemonic="O_Icons" />
+            <item id="C109" mnemonic="O_Dual_Slot" />
+            <item id="C110" mnemonic="O_Run_At O_+CIMI" />
+            <item id="C111" mnemonic="O_LB" />
+            <item id="C112" mnemonic="O_Soft_key" />
+            <item id="C113" mnemonic="" />
+            <item id="C114" mnemonic="O_Run_At O_+CIMI O_Icons" />
+            <item id="C115" mnemonic="O_LB O_Icons" />
+            <item id="C116" mnemonic="O_Dual_Slot O_Detach_Rdr" />
+            <item id="C117" mnemonic="" />
+            <item id="C118" mnemonic="O_Ucs2_Disp O_UCS2_Cyrillic" />
+            <item id="C119" mnemonic="O_Redial" />
+            <item id="C120" mnemonic="O_D_NoResp" />
+            <item id="C121" mnemonic="O_BIP_GPRS O_UDP" />
+            <item id="C122" mnemonic="O_LB O_GPRS" />
+            <item id="C123" mnemonic="" />
+            <item id="C124" mnemonic="O_CP_Subaddr" />
+            <item id="C125" mnemonic="O_Imm_Resp" />
+            <item id="C126" mnemonic="O_Duration" />
+            <item id="C127" mnemonic="" />
+            <item id="C128" mnemonic="" />
+            <item id="C129" mnemonic="" />
+            <item id="C130" mnemonic="" />
+            <item id="C131" mnemonic="" />
+            <item id="C132" mnemonic="O_BIP_Local" />
+            <item id="C133" mnemonic="" />
+            <item id="C134" mnemonic="O_MMS" />
+            <item id="C135" mnemonic="" />
+            <item id="C136" mnemonic="" />
+            <item id="C137" mnemonic="" />
+            <item id="C138" mnemonic="" />
+            <item id="C139" mnemonic="O_Batt" />
+            <item id="C140" mnemonic="O_UC_Before_EnvCC" />
+            <item id="C141" mnemonic="O_UC_After_EnvCC" />
+            <item id="C142" mnemonic="O_UCS2_Entry O_UCS2_Chinese" />
+            <item id="C143" mnemonic="O_UCS2_Disp O_UCS2_Chinese" />
+            <item id="C144" mnemonic="O_UCS2_Entry O_UCS2_Katakana" />
+            <item id="C145" mnemonic="O_UCS2_Disp O_UCS2_Katakana" />
+            <item id="C146" mnemonic="O_FDN" />
+            <item id="C147" mnemonic="O_BDN" />
+            <item id="C148" mnemonic="O_Run_At O_+CGMI" />
+            <item id="C149" mnemonic="O_Run_At O_+CGMI O_ O_Ucs2_Disp O_Ucs2_Cyrillic" />
+            <item id="C150" mnemonic="O_Run_At O_+CGMI O_ O_Ucs2_Disp O_Ucs2_Chinese" />
+            <item id="C151" mnemonic="O_Run_At O_+CGMI O_ O_Ucs2_Disp O_Ucs2_Katakana" />
+            <item id="C152" mnemonic="O_BIP_GPRS O_UDP O_BUFFER_SIZE" />
+            <item id="C153" mnemonic="O_TAT_AL" />
+            <item id="C154" mnemonic="O_TAT_AC" />
+            <item id="C155" mnemonic="O_TAT_AR" />
+            <item id="C156" mnemonic="O_TAT_FSN" />
+            <item id="C157" mnemonic="O_TAT_FSL" />
+            <item id="C158" mnemonic="O_TAT_FSS" />
+            <item id="C159" mnemonic="O_TAT_SN" />
+            <item id="C160" mnemonic="O_TAT_SB" />
+            <item id="C161" mnemonic="O_TAT_SI" />
+            <item id="C162" mnemonic="O_TAT_SU" />
+            <item id="C163" mnemonic="O_TAT_SS" />
+            <item id="C164" mnemonic="O_TAT_STFC" />
+            <item id="C165" mnemonic="O_TAT_STBC" />
+            <item id="C166" mnemonic="O_longFTN" />
+            <item id="C167" mnemonic="O_GERAN" />
+            <item id="C168" mnemonic="O_Global_PB" />
+            <item id="C169" mnemonic="(O_BIP_GPRS AND O_UDP AND O_User_Confirm_Before_PDP_Context_Request) OR (O_BIP_GPRS AND O_UDP AND NOT O_User_Confirm_Before_PDP_Context_Request)" />
+            <item id="C170" mnemonic="O_Serv_SS_HOLD" />
+            <item id="C171" mnemonic="O_Icons" />
+            <item id="C172" mnemonic="O_Icons" />
+            <item id="C173" mnemonic="O_Run_At O_+CIMI O_Icons" />
+            <item id="C174" mnemonic="O_AddInfo_SS O_Serv_SS_CFU" />
+            <item id="C175" mnemonic="O_AddInfo_SS AND O_Serv_SS_CLIR" />
+            <item id="C176" mnemonic="O_BDN" />
+            <item id="C177" mnemonic="O_No_Type_ND" />
+            <item id="C178" mnemonic="O_No_Type_NK" />
+            <item id="C179" mnemonic="O_No_Type_NA" />
+            <item id="C180" mnemonic="O_No_Type_NS" />
+            <item id="C181" mnemonic="O_No_Type_NL" />
+            <item id="C182" mnemonic="O_TCP AND (pc_BIP_eFDD OR pc_BIP_eTDD)" />
+            <item id="C183" mnemonic="(NOT O_EUTRAN_NO_UTRAN_NO_GERAN) AND (O_GERAN OR O_UTRAN)" />
+            <item id="C184" mnemonic="O_UTRAN" />
+            <item id="C185" mnemonic="O_Icons O_Icon_Rec1_Send_SS" />
+            <item id="C186" mnemonic="O_Icons O_Icon_Rec2_Send_USSD" />
+            <item id="C187" mnemonic="O_Icons O_Icon_Rec1_Send_USSD" />
+            <item id="C188" mnemonic="O_Icons O_Icon_Rec1_Set_Up_Idle_Mode_Text" />
+            <item id="C189" mnemonic="O_Run_At O_+CIMI O_IconsND O_Icon_Rec1_Run_AT_Cmd" />
+            <item id="C190" mnemonic="pc_eTDD OR pc_eFDD" />
+            <item id="C191" mnemonic="O_BIP_GPRS O_TCP" />
+            <item id="C192" mnemonic="O_BIP_GPRS O_TCP O_BIP_UICCServer" />
+            <item id="C193" mnemonic="O_LB" />
+            <item id="C194" mnemonic="O_Select_Item_Default_Item" />
+            <item id="C195" mnemonic="O_CSG_Cell_Discovery" />
+            <item id="C196" mnemonic="O_pc_MO_SM-over-IMS AND (pc_eFDD OR pc_eTDD)" />
+            <item id="C197" mnemonic="O_pc_MO_SM-over-IMS O_UTRAN" />
+            <item id="C198" mnemonic="O_pc_SM-over-IP-receiver AND (pc_eFDD OR pc_eTDD)" />
+            <item id="C199" mnemonic="O_pc_SM-over-IP-receiver O_UTRAN" />
+            <item id="C200" mnemonic="O_Event_CSG_Cell_Selection" />
+            <item id="C201" mnemonic="O_GERAN O_SMS-CB_Data_Download" />
+            <item id="C202" mnemonic="(pc_eFDD OR pc_eTDD) AND O_IMS" />
+            <item id="C203" mnemonic="O_UTRAN O_IMS" />
+            <item id="C204" mnemonic="O_PS_OPMODE" />
+            <item id="C205" mnemonic="(pc_eFDD OR pc_eTDD) AND O_SMS_SGs_MT" />
+            <item id="C206" mnemonic="(pc_eFDD OR pc_eTDD) AND O_SMS_SGs_MO" />
+            <item id="C207" mnemonic="O_Event_IMS_Registration O_UICC_ACCESS_IMS O_IMS" />
+            <item id="C208" mnemonic="O_Event_Incoming_IMS_Data O_Event_IMS_Registration O_UICC_ACCESS_IMS O_IMS" />
+            <item id="C209" mnemonic="(pc_SMS_CS_MO OR pc_SMS_PS_MO)" />
+            <item id="C210" mnemonic="(NOT (O_EUTRAN_NO_UTRAN NO_GERAN) AND (O_GERAN OR O_UTRAN)) AND (pc_SMS_CS_MO OR pc_SMS_PS_MO)" />
+            <item id="C211" mnemonic="(pc_SMS_CS_MT OR pc_SMS_PS_MT)" />
+            <item id="C212" mnemonic="(NOT (O_EUTRAN_NO_UTRAN NO_GERAN) AND (O_GERAN OR O_UTRAN)) AND (pc_SMS_CS_MT OR pc_SMS_PS_MT)" />
+            <item id="C213" mnemonic="NOT O_Rej_Launch_Browser_with DefURL" />
+            <item id="C214" mnemonic="O_Rej_Launch_Browser_with DefURL" />
+            <item id="C215" mnemonic="O_GPRS" />
+            <item id="C216" mnemonic="O_Lang_Select" />
+            <item id="C217" mnemonic="O_Provide_Local_LS" />
+            <item id="C218" mnemonic="O_Lang_Notif" />
+            <item id="C219" mnemonic="O_Refresh_AlphaIdentifier" />
+            <item id="C220" mnemonic="(pc_eFDD OR pc_eTDD OR pc_NB) AND O_SMS_SGs_MO" />
+            <item id="C221" mnemonic="(pc_eFDD OR pc_eTDD OR pc_NB) AND O_SMS_SGs_MT" />
+            <item id="C222" mnemonic="pc_eTDD OR pc_eFDD OR pc_NB" />
+            <item id="C223" mnemonic="O_TCP AND (pc_BIP_eFDD OR pc_BIP_eTDD OR pc_BIP_NB)" />
+            <item id="C224" mnemonic="O_TCP AND pc_Multiple_PDN AND (pc_BIP_eFDD OR pc_BIP_eTDD OR pc_BIP_NB)" />
+            <item id="C225" mnemonic="O_TCP AND (pc_BIP_eFDD OR pc_BIP_eTDD OR pc_BIP_NB) AND O_PSM_ SUSPEND_UICC" />
+            <item id="C226" mnemonic="O_TCP AND (pc_BIP_eFDD OR pc_BIP_eTDD OR pc_BIP_NB) AND O_PSM_DEAC_UICC" />
+            <item id="C227" mnemonic="O_TCP AND (pc_BIP_eFDD OR pc_BIP_eTDD OR pc_BIP_NB) AND O_eDRX_ SUSPEND_UICC" />
+            <item id="C228" mnemonic="(pc_BIP_eFDD OR pc_BIP_eTDD) AND O_SMS_SGs_MT AND O_PS_Data_Off" />
+            <item id="C229" mnemonic="(pc_BIP_eFDD OR pc_BIP_eTDD) OR pc_BIP_NB" />
+        </condition>
+
+        <table_a_1 name="Options">
+            <item id="1" option="Capability Configuration parameter" status="M" mnemonic="O_Cap_Conf" />
+            <item id="2" option="Sustained text" status="C002" mnemonic="O_sust_text" />
+            <item id="3" option="UCS2 coding scheme for Entry" status="O" mnemonic="O_Ucs2_Entry" />
+            <item id="4" option="Extended Text String" status="C002" mnemonic="O_Ext_Str" />
+            <item id="5" option="Help information" status="O" mnemonic="O_Help" />
+            <item id="6" option="Icons" status="O" mnemonic="O_Icons" />
+            <item id="7" option="Class A: Dual Slot" status="O" mnemonic="O_Dual_Slot" />
+            <item id="8" option="Detachable reader" status="O" mnemonic="O_Detach_Rdr" />
+            <item id="9" option="Class B: RUN AT" status="O" mnemonic="O_Run_At" />
+            <item id="10" option="Class C: LAUNCH BROWSER" status="O" mnemonic="O_LB" />
+            <item id="11" option="Class D: Soft keys" status="O" mnemonic="O_Soft_key" />
+            <item id="12" option="Class E: B.I.P related to CSD" status="O" mnemonic="O_BIP_CSD" />
+            <item id="13" option="Screen sizing parameters" status="O" mnemonic="O_Scr_Siz" />
+            <item id="14" option="Screen Resizing" status="O" mnemonic="O_Scr_Resiz" />
+            <item id="15" option="UCS2 coding scheme for Display" status="O" mnemonic="O_Ucs2_Disp" />
+            <item id="16" option="Mobile supporting GPRS" status="O" mnemonic="O_GPRS" />
+            <item id="17" option="Mobile supporting UDP" status="O" mnemonic="O_UDP" />
+            <item id="18" option="Mobile supporting TCP" status="O" mnemonic="O_TCP" />
+            <item id="19" option="Redial in Set Up Call" status="O" mnemonic="O_Redial" />
+            <item id="20" option="Mobile decision to respond with &quot;No response from user&quot; in finite time" status="O" mnemonic="O_D_NoResp" />
+            <item id="21" option="Class E: B.I.P related to GPRS" status="O" mnemonic="O_BIP_GPRS" />
+            <item id="22" option="Mobile supporting Called Party Subaddress" status="O" mnemonic="O_CP_Subaddr" />
+            <item id="23" option="Immediate response" status="O" mnemonic="O_Imm_Resp" />
+            <item id="24" option="Variable Timeout" status="O" mnemonic="O_Duration" />
+            <item id="25" option="" status="O" mnemonic="" />
+            <item id="26" option="Class F: B.I.P related to local bearer" status="O" mnemonic="O_BIP_Local" />
+            <item id="27" option="BlueTooth Support" status="O" mnemonic="O_BT" />
+            <item id="28" option="IrDA Support" status="O" mnemonic="O_IrDA" />
+            <item id="29" option="RS232 Support" status="O" mnemonic="O_RS232" />
+            <item id="30" option="USB Support" status="O" mnemonic="O_USB" />
+            <item id="31" option="WML Browser Support" status="O" mnemonic="O_WML" />
+            <item id="32" option="XHTML Browser Support" status="O" mnemonic="O_XHTML" />
+            <item id="33" option="HTML Browser Support" status="O" mnemonic="O_HTML" />
+            <item id="34" option="CHTML Browser Support" status="O" mnemonic="O_CHTML" />
+            <item id="35" option="Class G: Battery Data" status="O" mnemonic="O_Batt" />
+            <item id="36" option="Class H: Multimedia Call Support" status="O" mnemonic="O_Xmedia_Call" />
+            <item id="37" option="Class I: Frame support" status="O" mnemonic="O_Frames" />
+            <item id="38" option="Class J: Multimedia Messaging Support" status="O" mnemonic="O_MMS" />
+            <item id="39" option="ME requesting for user confirmation before sending the Envelope Call Control command" status="O" mnemonic="O_UC_Before_EnvCC" />
+            <item id="40" option="ME requesting for user confirmation after sending the Envelope Call Control command" status="O" mnemonic="O_UC_After_EnvCC" />
+            <item id="41" option="UCS2 in Cyrillic" status="O" mnemonic="O_UCS2_Cyrillic" />
+            <item id="42" option="UCS2 in Chinese" status="O" mnemonic="O_UCS2_Chinese" />
+            <item id="43" option="UCS2 in Katakana" status="O" mnemonic="O_UCS2_Katakana" />
+            <item id="44" option="Mobile supporting Barred Dialling Numbers" status="O" mnemonic="O_BDN" />
+            <item id="45" option="Mobile supporting Fixed dialling numbers" status="O" mnemonic="O_FDN" />
+            <item id="46" option="Mobile supporting &quot;+CIMI&quot; in combination with Run AT Command" status="O" mnemonic="O_+CIMI" />
+            <item id="47" option="Mobile supporting &quot;+CGMI&quot; in combination with Run AT Command" status="O" mnemonic="O_+CGMI" />
+            <item id="48" option="Mobile supporting Open Channel (GPRS) not containing a Network Access Name TLV when no default Access Point Name is set in the terminal configuration" status="O" mnemonic="O_Open_Channel_GPRS_without_DefaultAPN" />
+            <item id="49" option="Preferred buffer size supported by the terminal for Open Channel command is greater than 0 byte and less than 65535 bytes" status="O" mnemonic="O_BUFFER_SIZE" />
+            <item id="50" option="Text attributes – Alignment left" status="O" mnemonic="O_TAT_AL" />
+            <item id="51" option="Text attributes – Alignment center" status="O" mnemonic="O_TAT_AC" />
+            <item id="52" option="Text attributes – Alignment right" status="O" mnemonic="O_TAT_AR" />
+            <item id="53" option="Text attributes – Font size normal" status="O" mnemonic="O_TAT_FSN" />
+            <item id="54" option="Text attributes – Font size large" status="O" mnemonic="O_TAT_FSL" />
+            <item id="55" option="Text attributes – Font size small" status="O" mnemonic="O_TAT_FSS" />
+            <item id="56" option="Text attributes – Style normal" status="O" mnemonic="O_TAT_SN" />
+            <item id="57" option="Text attributes – Style bold" status="O" mnemonic="O_TAT_SB" />
+            <item id="58" option="Text attributes – Style italic" status="O" mnemonic="O_TAT_SI" />
+            <item id="59" option="Text attributes – Style underlined" status="O" mnemonic="O_TAT_SU" />
+            <item id="60" option="Text attributes – Style strikethrough" status="O" mnemonic="O_TAT_SS" />
+            <item id="61" option="Text attributes – Style foreground colour" status="O" mnemonic="O_TAT_STFC" />
+            <item id="62" option="Text attributes – Style background colour" status="O" mnemonic="O_TAT_STFB" />
+            <item id="63" option="Text attributes – Style ForwardToNumber" status="O" mnemonic="O_longFTN" />
+            <item id="64" option="Mobile supporting GERAN" status="O" mnemonic="O_GERAN" />
+            <item id="65" option="Support of global phonebook" status="C001" mnemonic="O_Global_PB" />
+            <item id="66" option="HSDPA Support" status="O" mnemonic="O_HSDPA" />
+            <item id="67" option="UTRAN PS with extended parameters Support" status="O" mnemonic="O_UTRAN_PS_Ext_Param" />
+            <item id="68" option="Terminal executes User confirmation phase before sending PDP context activation request" status="O" mnemonic="O_User_Confirm_Before_PDP_Context_Request" />
+            <item id="69" option="ME supports Call Hold Supplementary Service" status="O" mnemonic="O_Serv_SS_HOLD" />
+            <item id="70" option="Class E: B.I.P. related to I-WLAN" status="O" mnemonic="O_I-WLAN" />
+            <item id="71" option="Class K: Terminal Applications support" status="O" mnemonic="O_Terminal_Applications" />
+            <item id="72" option="Class E: Terminal supports TCP, UICC in Server Mode" status="O" mnemonic="O_TCP_UICC_ServerMode" />
+            <item id="73" option="Class E: Terminal supports TCP, Terminal in Server Mode" status="O" mnemonic="O_TCP_Terminal_ServerMode" />
+            <item id="74" option="Class E: Terminal supports UDP, Terminal in Server Mode" status="O" mnemonic="O_UDP_Terminal_ServerMode" />
+            <item id="75" option="" status="O" mnemonic="" />
+            <item id="76" option="" status="O" mnemonic="" />
+            <item id="77" option="" status="O" mnemonic="" />
+            <item id="78" option="Terminal supports at least one supplementary service." status="O" mnemonic="O_AddInfo_SS" />
+            <item id="79" option="Terminal supports &quot;Call Forwarding Unconditional&quot;" status="O" mnemonic="O_ Serv_SS_CFU" />
+            <item id="80" option="Terminal supports &quot;Calling Line Identification Restriction&quot;" status="O" mnemonic="O_Serv_SS_CLIR" />
+            <item id="81" option="Class N:Terminal supports &quot;Geographical location discovery&quot;" status="O" mnemonic="O_Geo_Location_Discovery" />
+            <item id="82" option="Terminal supports melody and theme tones" status="O" mnemonic="O_M_T_Tones" />
+            <item id="83" option="Terminal supports Toolkit-initiated GBA" status="O" mnemonic="O_Toolkit_GBA" />
+            <item id="84" option="Terminal supports display capability" status="C002" mnemonic="O_ No_Type_ND" />
+            <item id="85" option="Terminal supports keypad" status="C002" mnemonic="O_No_Type_NK" />
+            <item id="86" option="Terminal supports audio alerting" status="C002" mnemonic="O_No_Type_NA" />
+            <item id="87" option="Terminal supports speech call" status="C002" mnemonic="O_No_Type_NS" />
+            <item id="88" option="Terminal supports multiple languages" status="C002" mnemonic="O_No_Type_NL" />
+            <item id="89" option="Class P:USSD Data Download and application mode" status="O" mnemonic="O_USSD_Data_DL" />
+            <item id="90" option="Terminal displays icons as defined in record 1 of EF(IMG) for Display Text command" status="O" mnemonic="O_Icon Rec1_Disp_Text" />
+            <item id="91" option="Terminal displays icons as defined in record 2 of EF(IMG) for Display Text command" status="O" mnemonic="O_Icon Rec2_Disp_Text" />
+            <item id="92" option="Terminal displays icons as defined in record 5 of EF(IMG) for Display Text command" status="O" mnemonic="O_Icon Rec5_Disp_Text" />
+            <item id="93" option="Terminal displays icons as defined in record 1 of EF(IMG) for Get Inkey command" status="O" mnemonic="O_Icon Rec1_Get_Inkey" />
+            <item id="94" option="Terminal displays icons as defined in record 2 of EF(IMG) for Get Inkey command" status="O" mnemonic="O_Icon Rec2_Get_Inkey" />
+            <item id="95" option="Terminal displays icons as defined in record 5 of EF(IMG) for Get Inkey command" status="O" mnemonic="O_Icon Rec5_Get_Inkey" />
+            <item id="96" option="Terminal displays icons as defined in record 1 of EF(IMG) for Get Input command" status="O" mnemonic="O_Icon Rec1_Get_Input" />
+            <item id="97" option="Terminal displays icons as defined in record 2 of EF(IMG) for Get Input command" status="O" mnemonic="O_Icon Rec2_Get_Input" />
+            <item id="98" option="Terminal displays icons as defined in record 5 of EF(IMG) for Get Input command" status="O" mnemonic="O_Icon Rec5_Get_Input" />
+            <item id="99" option="Terminal displays icons as defined in record 1 of EF(IMG) for Play Tone command" status="O" mnemonic="O_Icon Rec1_Play_Tone" />
+            <item id="100" option="Terminal displays icons as defined in record 2 of EF(IMG) for Play Tone command" status="O" mnemonic="O_Icon Rec2_Play_Tone" />
+            <item id="101" option="Terminal displays icons as defined in record 5 of EF(IMG) for Play Tone command" status="O" mnemonic="O_Icon Rec5_Play_Tone" />
+            <item id="102" option="Terminal displays icons as defined in record 1 of EF(IMG) for Set Up Menu command" status="O" mnemonic="O_Icon_ Rec1_Set_Up_Menu" />
+            <item id="103" option="Terminal displays icons as defined in record 2 of EF(IMG) for Set Up Menu command" status="O" mnemonic="O_Icon_ Rec2_Set_Up_Menu" />
+            <item id="104" option="Terminal displays icons as defined in record 5 of EF(IMG) for Set Up Menu command" status="O" mnemonic="O_Icon_ Rec5_Set_Up_Menu" />
+            <item id="105" option="Terminal displays icons as defined in record 1 of EF(IMG) for Select Item command" status="O" mnemonic="O_Icon_ Rec1_Select_Item" />
+            <item id="106" option="Terminal displays icons as defined in record 2 of EF(IMG) for Select Item command" status="O" mnemonic="O_Icon_ Rec2_Select_Item" />
+            <item id="107" option="Terminal displays icons as defined in record 5 of EF(IMG) for Select Item command" status="O" mnemonic="O_Icon_ Rec5_Select_Item" />
+            <item id="108" option="Terminal displays icons as defined in record 1 of EF(IMG) for Send Short Message command" status="O" mnemonic="O_Icon_ Rec1_Send_SM" />
+            <item id="109" option="Terminal displays icons as defined in record 2 of EF(IMG) for Send Short Message command" status="O" mnemonic="O_Icon_ Rec2_Send_SM" />
+            <item id="110" option="Terminal displays icons as defined in record 5 of EF(IMG) for Send Short Message command" status="O" mnemonic="O_Icon_ Rec5_Send_SM" />
+            <item id="111" option="Terminal displays icons as defined in record 1 of EF(IMG) for Send SS command" status="O" mnemonic="O_Icon_ Rec1_Send_SS" />
+            <item id="112" option="Terminal displays icons as defined in record 2 of EF(IMG) for Send SS command" status="O" mnemonic="O_Icon_ Rec2_Send_SS" />
+            <item id="113" option="Terminal displays icons as defined in record 5 of EF(IMG) for Send SS command" status="O" mnemonic="O_Icon_ Rec5_Send_SS" />
+            <item id="114" option="Terminal displays icons as defined in record 1 of EF(IMG) for Send USSD command" status="O" mnemonic="O_Icon_ Rec1_Send_USSD" />
+            <item id="115" option="Terminal displays icons as defined in record 2 of EF(IMG) for Send USSD command" status="O" mnemonic="O_Icon_ Rec2_Send_USSD" />
+            <item id="116" option="Terminal displays icons as defined in record 5 of EF(IMG) for Send USSD command" status="O" mnemonic="O_Icon_ Rec5_Send_USSD" />
+            <item id="117" option="Terminal displays icons as defined in record 1 of EF(IMG) for Set Up Call command" status="O" mnemonic="O_Icon_ Rec1_Set_Up_Call" />
+            <item id="118" option="Terminal displays icons as defined in record 2 of EF(IMG) for Set Up Call command" status="O" mnemonic="O_Icon_ Rec2_Set_Up_Call" />
+            <item id="119" option="Terminal displays icons as defined in record 5 of EF(IMG) for Set Up Call command" status="O" mnemonic="O_Icon_ Rec5_Set_Up_Call" />
+            <item id="120" option="Terminal displays icons as defined in record 1 of EF(IMG) for Set Up Idle Mode Text command" status="O" mnemonic="O_Icon_ Rec1_Set_Up_Idle_Mode_Text" />
+            <item id="121" option="Terminal displays icons as defined in record 2 of EF(IMG) for Set Up Idle Mode Text command" status="O" mnemonic="O_Icon_ Rec2_Set_Up_Idle_Mode_Text" />
+            <item id="122" option="Terminal displays icons as defined in record 5 of EF(IMG) for Set Up Idle Mode Text command" status="O" mnemonic="O_Icon_ Rec5_Set_Up_Idle_Mode_Text" />
+            <item id="123" option="Terminal displays icons as defined in record 1 of EF(IMG) for Run AT Command command" status="O" mnemonic="O_Icon_ Rec1_Run_AT_Cmd" />
+            <item id="124" option="Terminal displays icons as defined in record 2 of EF(IMG) for Run AT Command command" status="O" mnemonic="O_Icon_ Rec2_Run_AT_Cmd" />
+            <item id="125" option="Terminal displays icons as defined in record 5 of EF(IMG) for Run AT Command command" status="O" mnemonic="O_Icon_ Rec5_Run_AT_Cmd" />
+            <item id="126" option="Terminal displays icons as defined in record 1 of EF(IMG) for Send DTMF command" status="O" mnemonic="O_Icon_ Rec1_Send_DTMF" />
+            <item id="127" option="Terminal displays icons as defined in record 2 of EF(IMG) for Send DTMF command" status="O" mnemonic="O_Icon_ Rec2_Send_DTMF" />
+            <item id="128" option="Terminal displays icons as defined in record 5 of EF(IMG) for Send DTMF command" status="O" mnemonic="O_Icon_ Rec5_Send_DTMF" />
+            <item id="129" option="Terminal displays icons as defined in record 1 of EF(IMG) for Launch Browser command" status="O" mnemonic="O_Icon_ Rec1_Launch_Browser" />
+            <item id="130" option="Terminal displays icons as defined in record 2 of EF(IMG) for Launch Browser command" status="O" mnemonic="O_Icon_ Rec2_Launch_Browser" />
+            <item id="131" option="Terminal displays icons as defined in record 5 of EF(IMG) for Launch Browser command" status="O" mnemonic="O_Icon_ Rec5_Launch_Browser" />
+            <item id="132" option="Class E: Terminal does support eFDD" status="O" mnemonic="pc_BIP_eFDD" />
+            <item id="133" option="Class E: Terminal does support eTDD" status="O" mnemonic="pc_BIP_eTDD" />
+            <item id="134" option="Terminal supports UTRAN" status="O" mnemonic="O_UTRAN" />
+            <item id="135" option="Terminal supports E-UTRAN but neither UTRAN nor GERAN" status="C003" mnemonic="O_EUTRAN_NO_UTRAN_NO_GERAN" />
+            <item id="136" option="CLASS Q: Terminal supports Event CSG Cell Selection" status="O" mnemonic="O_Event_CSG_Cell_Selection" />
+            <item id="137" option="CLASS Q: Terminal supports CSG Cell Discovery" status="O" mnemonic="O_CSG_Cell_Discovery" />
+            <item id="138" option="Terminal supports selection of default item in Select Item" status="O" mnemonic="O_Select_Item_Default_Item" />
+            <item id="139" option="Terminal supports eFDD" status="O" mnemonic="pc_eFDD" />
+            <item id="140" option="Terminal supports eTDD" status="O" mnemonic="pc_eTDD" />
+            <item id="141" option="Terminal supports SM-over-IP-receiver" status="O" mnemonic="pc_SM-over-IP-receiver" />
+            <item id="142" option="Terminal supports MO SMS over IMS" status="O" mnemonic="pc_MO_SM-over-IMS" />
+            <item id="143" option="Class K: Terminal supports Direct Communication Channel" status="O" mnemonic="O_Direct_Com_Channel" />
+            <item id="144" option="Terminal supports Communication Control for IMS" status="O" mnemonic="O_CC_IMS" />
+            <item id="145" option="Class S: Terminal supports CAT over modem interface" status="O" mnemonic="O_CAT_Modem_Interface" />
+            <item id="146" option="Class E and T: Event Incoming IMS Data" status="O" mnemonic="O_Event_Incoming_IMS_Data" />
+            <item id="147" option="Class E and T: Event IMS Registration" status="O" mnemonic="O_Event_IMS_Registration" />
+            <item id="148" option="Class E and T: UICC Access to IMS support" status="O" mnemonic="O_UICC_ACCESS_IMS" />
+            <item id="149" option="Terminal supports SMS Cell Broadcast Data Download" status="O" mnemonic="O_SMS-CB_Data_Download" />
+            <item id="150" option="Terminal supports IMS" status="O" mnemonic="O_IMS" />
+            <item id="151" option="Terminal operating in PS mode" status="O" mnemonic="O_PS_OPMODE" />
+            <item id="152" option="Terminal supports Short Message Service (SMS) MT over SGs" status="O" mnemonic="O_SMS_SGs_MT" />
+            <item id="153" option="Terminal supports Short Message Service (SMS) MO over SGs" status="O" mnemonic="O_SMS_SGs_MO" />
+            <item id="154" option="Terminal sends RP-ACK for '62XX' and '63XX' for SMS-PP download" status="C004" mnemonic="O_RP-ACK_for_SMS-PP_ error" />
+            <item id="155" option="Terminal supports browser with multiple sessions/tabs" status="O" mnemonic="O_Browser_tabs" />
+            <item id="156" option="Terminal supports Short Message Service (SMS) MT over CS" status="O" mnemonic="pc_SMS_CS_MT" />
+            <item id="157" option="Terminal supports Short Message Service (SMS) MO over CS" status="O" mnemonic="pc_SMS_CS_MO" />
+            <item id="158" option="Terminal supports Short Message Service (SMS) MT over PS" status="O" mnemonic="pc_SMS_PS_MT" />
+            <item id="159" option="Terminal supports Short Message Service (SMS) MO over PS" status="O" mnemonic="pc_SMS_PS_MO" />
+            <item id="160" option="Terminal rejects Launch Browser with Default URL" status="C005" mnemonic="O_Rej_Launch_Browser_with DefURL" />
+            <item id="161" option="Terminal supports Event Language Selection" status="O" mnemonic="O_Lang_Select" />
+            <item id="162" option="Terminal supports Provide Local Information (Language)" status="O" mnemonic="O_Provide_Local_LS" />
+            <item id="163" option="Terminal supports Language Notification" status="O" mnemonic="O_Lang_Notif" />
+            <item id="164" option="Terminal supports Alpha Identifier in REFRESH command" status="O" mnemonic="O_Refresh_AlphaIdentifier" />
+            <item id="165" option="ProSe usage information reporting" status="O" mnemonic="O_ProSE" />
+            <item id="166" option="Event: WLAN Access status" status="O" mnemonic="O_WLAN_Access_Status" />
+            <item id="167" option="Class E: WLAN bearer support" status="O" mnemonic="O_WLAN_Bearer" />
+            <item id="168" option="Terminal supports to a I-WLAN or a WLAN" status="O" mnemonic="O_I-WLAN_OR_WLAN" />
+            <item id="169" option="Terminal supports Media Type &quot;Voice&quot; for SET UP CALL and Call Control by USIM" status="O" mnemonic="O_Media_Type_Voice" />
+            <item id="170" option="Terminal supports Media Type &quot;Video&quot; for SET UP CALL and Call Control by USIM" status="O" mnemonic="O_Media_Type_Video" />
+            <item id="171" option="Terminal supports sending location status and access technology that is already available" status="C006" mnemonic="O_LS_and_ATC_events" />
+            <item id="172" option="Terminal performs USIM deactivation during 3G Session Reset REFRESH" status="O" mnemonic="O_USIM_Deact_during_Refresh" />
+            <item id="173" option="Terminal does support NB-IoT" status="O" mnemonic="pc_NB" />
+            <item id="174" option="Terminal supports EMMREGISTERED with PDN" status="O" mnemonic="pc_AttachWithPDN" />
+            <item id="175" option="" status="O" mnemonic="" />
+            <item id="176" option="" status="O" mnemonic="" />
+            <item id="177" option="Class E: Terminal does support NB-IoT" status="O" mnemonic="pc_BIP_NB" />
+            <item id="178" option="Support for multiple PDN connections" status="O" mnemonic="pc_Multiple_PDN" />
+            <item id="179" option="Support for SM-over-IP without MSISDN" status="O" mnemonic="O_SM-over-IP_without_MSISDN" />
+            <item id="180" option="Class ae: Originate voice call with URI" status="O" mnemonic="O_Voice_Call_with_URI" />
+            <item id="181" option="Terminal does support deactivation of the UICC in PSM." status="O" mnemonic="O_PSM_DEAC_UICC" />
+            <item id="182" option="Terminal does support the UICC suspension mechanism in PSM." status="O" mnemonic="O_PSM_ SUSPEND_UICC" />
+            <item id="183" option="Terminal does support the UICC suspension mechanism during extended DRX" status="O" mnemonic="O_eDRX_ SUSPEND_UICC" />
+            <item id="184" option="Terminal supports 3GPP PS data off" status="O" mnemonic="O_PS_Data_Off" />
+            <item id="185" option="Terminal supports Date-Time and Time zone" status="O" mnemonic="O_DateTime_ Time_zone" />
+        </table_a_1>
+
+        <table_e_1 name="TERMINAL PROFILE support">
+            <item id="1" byte="1.1" terminal_profile="Profile Download" status="M" mnemonic="PD_Pro_Dvnl" />
+            <item id="2" byte="1.2" terminal_profile="SMS-PP data download" status="C279" mnemonic="PD_SMS_PP" />
+            <item id="3" byte="1.3" terminal_profile="Cell Broadcast data download" status="C279" mnemonic="PD_CB" />
+            <item id="4" byte="1.4" terminal_profile="Menu selection" status="C267 C268" mnemonic="PD_Menu_sel" />
+            <item id="5" byte="1.5" terminal_profile="Bit =1 if SMS-PP data Download supported" status="C279" mnemonic="PD_SMS_PP" />
+            <item id="6" byte="1.6" terminal_profile="Timer expiration" status="M" mnemonic="PD_TExpir" />
+            <item id="7" byte="1.7" terminal_profile="Bit=1 if Call control supported" status="C304 C279" mnemonic="PD_CC" />
+            <item id="8" byte="1.8" terminal_profile="Bit=1 if Call control supported" status="C304 C279" mnemonic="PD_CC" />
+            <item id="9" byte="2.1" terminal_profile="Command result" status="M" mnemonic="PD_Cmd_Res" />
+            <item id="10" byte="2.2" terminal_profile="Call Control by USIM" status="C304 C279" mnemonic="PD_CC" />
+            <item id="11" byte="2.3" terminal_profile="Bit=1 if Call control supported" status="C304 C279" mnemonic="PD_CC" />
+            <item id="12" byte="2.4" terminal_profile="MO short message control by USIM" status="C279" mnemonic="PD_MO_SMS_CC" />
+            <item id="13" byte="2.5" terminal_profile="Bit=1 if Call control supported" status="C304 C279" mnemonic="PD_CC" />
+            <item id="14" byte="2.6" terminal_profile="UCS2 Entry supported" status="C203 C268" mnemonic="PD_UCS2_entry" />
+            <item id="15" byte="2.7" terminal_profile="UCS2 Display supported" status="C204 C267" mnemonic="PD_UCS2_Display" />
+            <item id="16" byte="2.8" terminal_profile="Bit=1 if Display Text supported" status="C267" mnemonic="PD_Display_Text" />
+            <item id="17" byte="3.1" terminal_profile="DISPLAY TEXT" status="C267" mnemonic="PD_Display_Text" />
+            <item id="18" byte="3.2" terminal_profile="GET INKEY" status="C267 C268" mnemonic="PD_Get_Inkey" />
+            <item id="19" byte="3.3" terminal_profile="GET INPUT" status="C267 C268" mnemonic="PD_Get_Input" />
+            <item id="20" byte="3.4" terminal_profile="MORE TIME" status="M" mnemonic="PD_Get_Input" />
+            <item id="21" byte="3.5" terminal_profile="PLAY TONE" status="C269" mnemonic="PD_Play_Tone" />
+            <item id="22" byte="3.6" terminal_profile="POLL INTERVAL" status="M" mnemonic="PD_Poll_interval" />
+            <item id="23" byte="3.7" terminal_profile="POLLING OFF" status="M" mnemonic="PD_Polling_Off" />
+            <item id="24" byte="3.8" terminal_profile="REFRESH" status="M" mnemonic="PD_Refresh" />
+            <item id="25" byte="4.1" terminal_profile="SELECT ITEM" status="C267 C268" mnemonic="PD_Select_Item" />
+            <item id="26" byte="4.2" terminal_profile="SEND SHORT MESSAGE" status="C279" mnemonic="PD_Send_SMS" />
+            <item id="27" byte="4.3" terminal_profile="SEND SS" status="C279" mnemonic="PD_Send_SS" />
+            <item id="28" byte="4.4" terminal_profile="SEND USSD" status="C279" mnemonic="PD_Send_USSD" />
+            <item id="29" byte="4.5" terminal_profile="SET UP CALL" status="C291" mnemonic="PD_SetUp_Call" />
+            <item id="30" byte="4.6" terminal_profile="SET UP MENU" status="C267ND C268" mnemonic="PD_SetUp_Menu" />
+            <item id="31" byte="4.7" terminal_profile="PROVIDE LOCAL INFORMATION (LOCI &amp; IMEI)" status="M" mnemonic="PD_Provide_Local" />
+            <item id="32" byte="4.8" terminal_profile="PROVIDE LOCAL INFORMATION (NMR)" status="C279" mnemonic="PD_Provide_Local_NMR" />
+            <item id="33" byte="5.1" terminal_profile="SET UP EVENT LIST" status="M" mnemonic="PD_Setup_Evt_List" />
+            <item id="34" byte="5.2" terminal_profile="Event: MT call" status="C270 C279" mnemonic="PD_MT_Call" />
+            <item id="35" byte="5.3" terminal_profile="Event: Call connected" status="C279 C279" mnemonic="PD_Call_Conn" />
+            <item id="36" byte="5.4" terminal_profile="Event: Call disconnected" status="C270 C279" mnemonic="PD_Call_Disc" />
+            <item id="37" byte="5.5" terminal_profile="Event: Location status" status="M" mnemonic="PD_Loc_Status" />
+            <item id="38" byte="5.6" terminal_profile="Event: User activity" status="C268" mnemonic="PD_User_Act" />
+            <item id="39" byte="5.7" terminal_profile="Event: Idle screen available" status="C267" mnemonic="PD_Idle_Scr_Avail" />
+            <item id="40" byte="5.8" terminal_profile="Event: Card reader status" status="C206" mnemonic="PD_Evt_Rdr_Status" />
+            <item id="41" byte="6.1" terminal_profile="Event: Language selection" status="C271" mnemonic="PD_Lang_Select" />
+            <item id="42" byte="6.2" terminal_profile="Event: Browser Termination" status="C212 C267 C268" mnemonic="PD_Browser_Term" />
+            <item id="43" byte="6.3" terminal_profile="Event: Data available" status="C223" mnemonic="PD_Data_Avail" />
+            <item id="44" byte="6.4" terminal_profile="Event: Channel status" status="C223" mnemonic="PD_Evt_Ch_Status" />
+            <item id="45" byte="6.5" terminal_profile="Event:Access Technology Change" status="M" mnemonic="PD_Evt_ATC" />
+            <item id="46" byte="6.6" terminal_profile="Event: Display Parameters Changed" status="C218 C267" mnemonic="PD_Disp_Resiz" />
+            <item id="47" byte="6.7" terminal_profile="Event: Local Connection" status="C224" mnemonic="PD_Evt_LC" />
+            <item id="48" byte="6.8" terminal_profile="Event: Network Search Mode Change" status="M" mnemonic="PD_Evt_NSMC" />
+            <item id="49" byte="7.1" terminal_profile="POWER ON CARD" status="C206" mnemonic="PD_C_On" />
+            <item id="50" byte="7.2" terminal_profile="POWER OFF CARD" status="C206" mnemonic="PD_C_Off" />
+            <item id="51" byte="7.3" terminal_profile="PERFORM CARD APDU" status="C206" mnemonic="PD_C_APDU" />
+            <item id="52" byte="7.4" terminal_profile="GET READER STATUS (Card reader status)" status="C206" mnemonic="PD_Get_Rdr_Status" />
+            <item id="53" byte="7.5" terminal_profile="GET READER STATUS (Card reader identifier)" status="C208" mnemonic="PD_Get_Rdr_Id" />
+            <item id="54" byte="7.6" terminal_profile="RFU" status="" mnemonic="PD_RFU_54" />
+            <item id="55" byte="7.7" terminal_profile="RFU" status="" mnemonic="PD_RFU_55" />
+            <item id="56" byte="7.8" terminal_profile="RFU" status="" mnemonic="PD_RFU_56" />
+            <item id="57" byte="8.1" terminal_profile="TIMER MANAGEMENT (start, stop)" status="M" mnemonic="PD_Timer_Mgt_Start_Stop" />
+            <item id="58" byte="8.2" terminal_profile="TIMER MANAGEMENT (get current value)" status="M" mnemonic="PD_Timer_Val" />
+            <item id="59" byte="8.3" terminal_profile="PROVIDE LOCAL INFORMATION (date, time and time zone)" status="M" mnemonic="PD_Provide_Local_D_Time" />
+            <item id="60" byte="8.4" terminal_profile="Bit=1 if Get Inkey" status="C268" mnemonic="PD_Get_Inkey" />
+            <item id="61" byte="8.5" terminal_profile="SET UP IDLE MODE TEXT" status="C267" mnemonic="PD_Stup_Id_Mod_Txt" />
+            <item id="62" byte="8.6" terminal_profile="RUN AT COMMAND (i.e. class &quot;b&quot; is supported)" status="C209" mnemonic="PD_Run_AT" />
+            <item id="63" byte="8.7" terminal_profile="Bit=1 if Set UpCall" status="C267 C268 C270" mnemonic="PD_SetUp_Call" />
+            <item id="64" byte="8.8" terminal_profile="Bit=1 if Call Control" status="C304 C279" mnemonic="PD_CC" />
+            <item id="65" byte="9.1" terminal_profile="Bit=1 if Display Text" status="C267" mnemonic="PD_Display_Text" />
+            <item id="66" byte="9.2" terminal_profile="SEND DTMF command" status="C270 C279" mnemonic="PD_Send_DTMF" />
+            <item id="67" byte="9.3" terminal_profile="Bit = 1 if Provide Local Information (NMR) supported" status="C279" mnemonic="PD_Provide_Local" />
+            <item id="68" byte="9.4" terminal_profile="PROVIDE LOCAL INFORMATION (language)" status="C292" mnemonic="PD_Provide_Local_LS" />
+            <item id="69" byte="9.5" terminal_profile="PROVIDE LOCAL INFORMATION (Timing Advance)" status="C280" mnemonic="PD_Provide_Local_TA" />
+            <item id="70" byte="9.6" terminal_profile="LANGUAGE NOTIFICATION" status="C293" mnemonic="PD_Lang_Notif" />
+            <item id="71" byte="9.7" terminal_profile="LAUNCH BROWSER" status="C212 C267 C268" mnemonic="PD_Launch_Brws" />
+            <item id="72" byte="9.8" terminal_profile="PROVIDE LOCAL INFORMATION (Access Technology)" status="M" mnemonic="PD_Provide_Local_AT" />
+            <item id="73" byte="10.1" terminal_profile="Soft keys support for SELECT ITEM" status="C213" mnemonic="PD_Softkey_Select_Item" />
+            <item id="74" byte="10.2" terminal_profile="Soft Keys support for SET UP MENU" status="C213" mnemonic="PD_Softkey_SetUp_Menu" />
+            <item id="75" byte="10.3" terminal_profile="RFU" status="" mnemonic="PD_RFU_75" />
+            <item id="76" byte="10.4" terminal_profile="RFU" status="" mnemonic="PD_RFU_76" />
+            <item id="77" byte="10.5" terminal_profile="RFU" status="" mnemonic="PD_RFU_77" />
+            <item id="78" byte="10.6" terminal_profile="RFU" status="" mnemonic="PD_RFU_78" />
+            <item id="79" byte="10.7" terminal_profile="RFU" status="" mnemonic="PD_RFU_79" />
+            <item id="80" byte="10.8" terminal_profile="RFU" status="" mnemonic="PD_RFU_80" />
+            <item id="81" byte="11.1" terminal_profile="Maximum number of soft keys available ('FF' = RFU)" status="C214" mnemonic="PD_Max_SoftKey" />
+            <item id="82" byte="11.2" terminal_profile="Maximum number of soft keys available ('FF' = RFU)" status="C214" mnemonic="PD_Max_SoftKey" />
+            <item id="83" byte="11.3" terminal_profile="Maximum number of soft keys available ('FF' = RFU)" status="C214" mnemonic="PD_Max_SoftKey" />
+            <item id="84" byte="11.4" terminal_profile="Maximum number of soft keys available ('FF' = RFU)" status="C214" mnemonic="PD_Max_SoftKey" />
+            <item id="85" byte="11.5" terminal_profile="Maximum number of soft keys available ('FF' = RFU)" status="C214" mnemonic="PD_Max_SoftKey" />
+            <item id="86" byte="11.6" terminal_profile="Maximum number of soft keys available ('FF' = RFU)" status="C214" mnemonic="PD_Max_SoftKey" />
+            <item id="87" byte="11.7" terminal_profile="Maximum number of soft keys available ('FF' = RFU)" status="C214" mnemonic="PD_Max_SoftKey" />
+            <item id="88" byte="11.8" terminal_profile="Maximum number of soft keys available ('FF' = RFU)" status="C214" mnemonic="PD_Max_SoftKey" />
+            <item id="89" byte="12.1" terminal_profile="OPEN CHANNEL" status="C223" mnemonic="PD_Open_Ch" />
+            <item id="90" byte="12.2" terminal_profile="CLOSE CHANNEL" status="C223" mnemonic="PD_Close_Ch" />
+            <item id="91" byte="12.3" terminal_profile="RECEIVE DATA" status="C223" mnemonic="PD_Rx_Data" />
+            <item id="92" byte="12.4" terminal_profile="SEND DATA" status="C223" mnemonic="PD_Send_Data" />
+            <item id="93" byte="12.5" terminal_profile="GET CHANNEL STATUS" status="C223" mnemonic="PD_Get_Ch_Status" />
+            <item id="94" byte="12.6" terminal_profile="SERVICE SEARCH" status="C224" mnemonic="PD_Serv_Search" />
+            <item id="95" byte="12.7" terminal_profile="GET SERVICE INFORMATION" status="C224" mnemonic="PD_Get_Serv_Info" />
+            <item id="96" byte="12.8" terminal_profile="DECLARE SERVICE" status="C224" mnemonic="PD_Declare_Serv" />
+            <item id="97" byte="13.1" terminal_profile="CSD supported by ME" status="C207" mnemonic="PD_CSD" />
+            <item id="98" byte="13.2" terminal_profile="GPRS supported by ME" status="C222" mnemonic="PD_GPRS" />
+            <item id="99" byte="13.3" terminal_profile="Bluetooth supported by terminal" status="C225" mnemonic="PD_BT" />
+            <item id="100" byte="13.4" terminal_profile="IrDA Supported by terminal" status="C226" mnemonic="PD_IrDA" />
+            <item id="101" byte="13.5" terminal_profile="RS232 Supported by terminal" status="C227" mnemonic="PD_RS232" />
+            <item id="102" byte="13.6" terminal_profile="Number of channels supported by ME" status="C257" mnemonic="PD_Nb_Channel" />
+            <item id="103" byte="13.7" terminal_profile="Number of channels supported by ME" status="C257" mnemonic="PD_Nb_Channel" />
+            <item id="104" byte="13.8" terminal_profile="Number of channels supported by ME" status="C257" mnemonic="PD_Nb_Channel" />
+            <item id="105" byte="14.1" terminal_profile="Number of characters supported down the ME" status="C274" mnemonic="PD_Nb_Char" />
+            <item id="106" byte="14.2" terminal_profile="Number of characters supported down the ME" status="C274" mnemonic="PD_Nb_Char" />
+            <item id="107" byte="14.3" terminal_profile="Number of characters supported down the ME" status="C274" mnemonic="PD_Nb_Char" />
+            <item id="108" byte="14.4" terminal_profile="Number of characters supported down the ME" status="C274" mnemonic="PD_Nb_Char" />
+            <item id="109" byte="14.5" terminal_profile="Number of characters supported down the ME" status="C274" mnemonic="PD_Nb_Char" />
+            <item id="110" byte="14.6" terminal_profile="No display capability (i.e class &quot;ND&quot; is indicated)" status="C276" mnemonic="PD_Type_ND" />
+            <item id="111" byte="14.7" terminal_profile="No keypad available (i.e. class &quot;NK&quot; is indicated)" status="C277" mnemonic="PD_Type_NK" />
+            <item id="112" byte="14.8" terminal_profile="Screen Sizing Parameters" status="C216" mnemonic="PD_Screen_Siz" />
+            <item id="113" byte="15.1" terminal_profile="Number of characters supported across the ME display" status="C274" mnemonic="PD_Nb_Char_Disp" />
+            <item id="114" byte="15.2" terminal_profile="Number of characters supported across the ME display" status="C274" mnemonic="PD_Nb_Char_Disp" />
+            <item id="115" byte="15.3" terminal_profile="Number of characters supported across the ME display" status="C274" mnemonic="PD_Nb_Char_Disp" />
+            <item id="116" byte="15.4" terminal_profile="Number of characters supported across the ME display" status="C274" mnemonic="PD_Nb_Char_Disp" />
+            <item id="117" byte="15.5" terminal_profile="Number of characters supported across the ME display" status="C274" mnemonic="PD_Nb_Char_Disp" />
+            <item id="118" byte="15.6" terminal_profile="Number of characters supported across the ME display" status="C274" mnemonic="PD_Nb_Char_Disp" />
+            <item id="119" byte="15.7" terminal_profile="Number of characters supported across the ME display" status="C274" mnemonic="PD_Nb_Char_Disp" />
+            <item id="120" byte="15.8" terminal_profile="Variable size fonts Supported" status="C274" mnemonic="PD_Var_Font" />
+            <item id="121" byte="16.1" terminal_profile="Display can be resized" status="C218" mnemonic="PD_Disp_Resiz" />
+            <item id="122" byte="16.2" terminal_profile="Text Wrapping supported" status="C273" mnemonic="PD_Txt_Wrap" />
+            <item id="123" byte="16.3" terminal_profile="Text Scrolling supported" status="C273" mnemonic="PD_Txt_Scroll" />
+            <item id="124" byte="16.4" terminal_profile="Text attributes supported" status="C228" mnemonic="PD_Text_Attrib" />
+            <item id="125" byte="16.5" terminal_profile="RFU" status="" mnemonic="PD_RFU_125" />
+            <item id="126" byte="16.6" terminal_profile="Width reduction when in a menu" status="C274" mnemonic="PD_Width_Reduc" />
+            <item id="127" byte="16.7" terminal_profile="Width reduction when in a menu" status="C274" mnemonic="PD_Width_Reduc" />
+            <item id="128" byte="16.8" terminal_profile="Width reduction when in a menu" status="C274" mnemonic="PD_Width_Reduc" />
+            <item id="129" byte="17.1" terminal_profile="TCP, UICC in client mode" status="C220" mnemonic="PD_TCP" />
+            <item id="130" byte="17.2" terminal_profile="UDP, UICC in client mode" status="C221" mnemonic="PD_UDP" />
+            <item id="131" byte="17.3" terminal_profile="TCP, UICC in server mode (i.e. class &quot;k&quot; is supported)" status="C262" mnemonic="PD_TCP_UICC_ServerMode" />
+            <item id="132" byte="17.4" terminal_profile="TCP, Terminal in server mode (i.e. class &quot;k&quot; is supported)" status="C263" mnemonic="PD_TCP_Terminal_ServerMode" />
+            <item id="133" byte="17.5" terminal_profile="UDP, Terminal in server mode (i.e. class &quot;k&quot; is supported)" status="C264" mnemonic="PD_UDP_Terminal_ServerMode" />
+            <item id="134" byte="17.6" terminal_profile="Direct communication channel (i.e. class &quot;k&quot; is supported)" status="C284" mnemonic="Direct_Com_Channel" />
+            <item id="135" byte="17.7" terminal_profile="E- UTRAN (i.e. if class &quot;e&quot; is supported)" status="C275" mnemonic="PD_E_UTRAN" />
+            <item id="136" byte="17.8" terminal_profile="HSDPA supported by ME" status="C258" mnemonic="PD_ HSDPA" />
+            <item id="137" byte="18.1" terminal_profile="DISPLAY TEXT (Variable time out)" status="C229" mnemonic="PD_Disp_Var_Timeout" />
+            <item id="138" byte="18.2" terminal_profile="GET INKEY (help is supported while waiting for immediate response or variable time out)" status="C231" mnemonic="PD_Get_Inkey_Help" />
+            <item id="139" byte="18.3" terminal_profile="USB (Bearer Independent protocol supported bearers, class &quot;e&quot;)" status="C232" mnemonic="PD_USB" />
+            <item id="140" byte="18.4" terminal_profile="GET INKEY (Variable time out)" status="C229 C267 C268" mnemonic="PD_Get_Inkey_Var_Timeout" />
+            <item id="141" byte="18.5" terminal_profile="Reserved for 3GPP2: PROVIDE LOCAL INFORMATION (ESN)" status="" mnemonic="Reserved" />
+            <item id="142" byte="18.6" terminal_profile="CALL CONTROL on GPRS" status="C242" mnemonic="PD_CC_GPRS" />
+            <item id="143" byte="18.7" terminal_profile="PROVIDE LOCAL INFORMATION (IMEISV)" status="M" mnemonic="PD_Provide_Local_SV" />
+            <item id="144" byte="18.8" terminal_profile="PROVIDE LOCAL INFORMATION (search mode change)" status="M" mnemonic="PD_Provide_Local_SMC" />
+            <item id="145" byte="19.1" terminal_profile="Protocol Version" status="" mnemonic="Reserved" />
+            <item id="146" byte="19.2" terminal_profile="Protocol Version" status="" mnemonic="Reserved" />
+            <item id="147" byte="19.3" terminal_profile="Protocol Version" status="" mnemonic="Reserved" />
+            <item id="148" byte="19.4" terminal_profile="Protocol Version" status="" mnemonic="Reserved" />
+            <item id="149" byte="19.5" terminal_profile="RFU" status="" mnemonic="PD_RFU_149" />
+            <item id="150" byte="19.6" terminal_profile="RFU" status="" mnemonic="PD_RFU_150" />
+            <item id="151" byte="19.7" terminal_profile="RFU" status="" mnemonic="PD_RFU_151" />
+            <item id="152" byte="19.8" terminal_profile="RFU" status="" mnemonic="PD_RFU_152" />
+            <item id="153" byte="20.1" terminal_profile="Reserved by TIA/EIA/IS-820 [25]" status="" mnemonic="Reserved" />
+            <item id="154" byte="20.2" terminal_profile="Reserved by TIA/EIA/IS-820 [25]" status="" mnemonic="Reserved" />
+            <item id="155" byte="20.3" terminal_profile="Reserved by TIA/EIA/IS-820 [25]" status="" mnemonic="Reserved" />
+            <item id="156" byte="20.4" terminal_profile="Reserved by TIA/EIA/IS-820 [25]" status="" mnemonic="Reserved" />
+            <item id="157" byte="20.5" terminal_profile="Reserved by TIA/EIA/IS-820 [25]" status="" mnemonic="Reserved" />
+            <item id="158" byte="20.6" terminal_profile="Reserved by TIA/EIA/IS-820 [25]" status="" mnemonic="Reserved" />
+            <item id="159" byte="20.7" terminal_profile="Reserved by TIA/EIA/IS-820 [25]" status="" mnemonic="Reserved" />
+            <item id="160" byte="20.8" terminal_profile="Reserved by TIA/EIA/IS-820 [25]" status="" mnemonic="Reserved" />
+            <item id="161" byte="21.1" terminal_profile="WML browser supported" status="C233 C278" mnemonic="PD_WML" />
+            <item id="162" byte="21.2" terminal_profile="XHTML browser supported" status="C234 C267" mnemonic="PD_XHTML" />
+            <item id="163" byte="21.3" terminal_profile="HTML browser supported" status="C235 C267" mnemonic="PD_HTML" />
+            <item id="164" byte="21.4" terminal_profile="CHTML browser supported" status="C236 C267" mnemonic="PD_CHTML" />
+            <item id="165" byte="21.5" terminal_profile="RFU" status="" mnemonic="PD_RFU_165" />
+            <item id="166" byte="21.6" terminal_profile="RFU" status="" mnemonic="PD_RFU_166" />
+            <item id="167" byte="21.7" terminal_profile="RFU" status="" mnemonic="PD_RFU_167" />
+            <item id="168" byte="21.8" terminal_profile="RFU" status="" mnemonic="PD_RFU_168" />
+            <item id="169" byte="22.1" terminal_profile="Support of UTRAN PS with extended parameters" status="C259" mnemonic="PD_UTRAN_PS_Ext_Param" />
+            <item id="170" byte="22.2" terminal_profile="PROVIDE LOCAL INFORMATION (Battery state) if class &quot;g&quot; supported" status="C239" mnemonic="PD_Provide_Local_Batt" />
+            <item id="171" byte="22.3" terminal_profile="PLAY TONE (Melody tones &amp; themed tones supported)" status="C241" mnemonic="PD_M_T_Tones" />
+            <item id="172" byte="22.4" terminal_profile="Multi-media in SET UP CALL supported (if class &quot;h&quot; supported)" status="C240" mnemonic="PD_Xmedia_Call" />
+            <item id="173" byte="22.5" terminal_profile="Toolkit-initiated GBA" status="C266" mnemonic="PD_Toolkit_GBA" />
+            <item id="174" byte="22.6" terminal_profile="RETRIEVE MULTIMEDIA MESSAGE, (if class &quot;j&quot; is supported)" status="C238" mnemonic="PD_Retrieve_MMS" />
+            <item id="175" byte="22.7" terminal_profile="SUBMIT MULTIMEDIA MESSAGE, (if class &quot;j&quot; is supported)" status="C238" mnemonic="PD_Submit_MMS" />
+            <item id="176" byte="22.8" terminal_profile="DISPLAY MULTIMEDIA MESSAGE, (if class &quot;j&quot; is supported)" status="C238 C267" mnemonic="PD_Display_MMS" />
+            <item id="177" byte="23.1" terminal_profile="SET FRAMES supported (if class &quot;i&quot; supported)" status="C237" mnemonic="PD_Set_Frames" />
+            <item id="178" byte="23.2" terminal_profile="GET FRAMES STATUS supported (if class &quot;i&quot; supported)" status="C237" mnemonic="PD_Get_Frames_Stat" />
+            <item id="179" byte="23.3" terminal_profile="MMS notification download (if class &quot;j&quot; is supported)" status="C238" mnemonic="PD_MMS_Notification" />
+            <item id="180" byte="23.4" terminal_profile="Alpha Identifier in REFRESH command supported by terminal" status="C294" mnemonic="PD_Refresh_AlphaIdentifier" />
+            <item id="181" byte="23.5" terminal_profile="Geographical Location Reporting (if class &quot;n&quot; is supported)" status="C265" mnemonic="PD_Geo_Loaction_Reporting" />
+            <item id="182" byte="23.6" terminal_profile="Reserved for 3GPP2: PROVIDE LOCAL INFORMATION (MEID)" status="" mnemonic="Reserved" />
+            <item id="183" byte="23.7" terminal_profile="PROVIDE LOCAL INFORMATION (NMR (UTRAN/E-UTRAN))" status="C278" mnemonic="PD_Provide_Local_NMR" />
+            <item id="184" byte="23.8" terminal_profile="USSD Data Download and application mode" status="C272" mnemonic="PD_USSD_DD" />
+            <item id="185" byte="24.1" terminal_profile="Maximum number of frames supported (if class &quot;i&quot; supported)" status="C256" mnemonic="PD_Max_Frames" />
+            <item id="186" byte="24.2" terminal_profile="Maximum number of frames supported (if class &quot;i&quot; supported)" status="C256" mnemonic="PD_Max_Frames" />
+            <item id="187" byte="24.3" terminal_profile="Maximum number of frames supported (if class &quot;i&quot; supported)" status="C256" mnemonic="PD_Max_Frames" />
+            <item id="188" byte="24.4" terminal_profile="Maximum number of frames supported (if class &quot;i&quot; supported)" status="C256" mnemonic="PD_Max_Frames" />
+            <item id="189" byte="24.5" terminal_profile="RFU" status="" mnemonic="PD_RFU_189" />
+            <item id="190" byte="24.6" terminal_profile="RFU" status="" mnemonic="PD_RFU_190" />
+            <item id="191" byte="24.7" terminal_profile="RFU" status="" mnemonic="PD_RFU_191" />
+            <item id="192" byte="24.8" terminal_profile="RFU" status="" mnemonic="PD_RFU_192" />
+            <item id="193" byte="25.1" terminal_profile="Event: browsing status" status="C212 C267 C268" mnemonic="PD_Browser_Stat" />
+            <item id="194" byte="25.2" terminal_profile="Event: MMS Transfer status (if class &quot;j&quot; is supported)" status="C238" mnemonic="PD_MMS" />
+            <item id="195" byte="25.3" terminal_profile="Event Frame parameters changed (if class &quot;i&quot; supported)" status="C237" mnemonic="PD_Event_Frames" />
+            <item id="196" byte="25.4" terminal_profile="Event: I-WLAN Access status (if class &quot;e&quot; is supported)" status="C260" mnemonic="PD_RFU_Event_IWLAN" />
+            <item id="197" byte="25.5" terminal_profile="Event: Network Rejection" status="C279" mnemonic="PD_Event_NW_Rejection" />
+            <item id="198" byte="25.6" terminal_profile="Reserved by ETSI" status="O" mnemonic="PD_Reserved" />
+            <item id="199" byte="25.7" terminal_profile="Event: Network Rejection for E-UTRAN" status="C283" mnemonic="PD_Event_NW_Rejection_E_UTRAN" />
+            <item id="200" byte="25.8" terminal_profile="Multiple access technologies supported in Event Access Technology Change and Provide Local Information" status="O" mnemonic="PD_Multiple_ACT" />
+            <item id="201" byte="26.1" terminal_profile="Event : CSG Cell Selection (if class &quot;q&quot; is supported)" status="C281" mnemonic="PD_Event_CSG_Cell_Selection" />
+            <item id="202" byte="26.2" terminal_profile="Reserved by ETSI" status="O" mnemonic="PD_Reserved" />
+            <item id="203" byte="26.3" terminal_profile="RFU" status="" mnemonic="PD_RFU_203" />
+            <item id="204" byte="26.4" terminal_profile="RFU" status="" mnemonic="PD_RFU_204" />
+            <item id="205" byte="26.5" terminal_profile="RFU" status="" mnemonic="PD_RFU_205" />
+            <item id="206" byte="26.6" terminal_profile="RFU" status="" mnemonic="PD_RFU_206" />
+            <item id="207" byte="26.7" terminal_profile="RFU" status="" mnemonic="PD_RFU_207" />
+            <item id="208" byte="26.8" terminal_profile="RFU" status="" mnemonic="PD_RFU_208" />
+            <item id="209" byte="27.1" terminal_profile="RFU" status="" mnemonic="PD_RFU_209" />
+            <item id="210" byte="27.2" terminal_profile="RFU" status="" mnemonic="PD_RFU_210" />
+            <item id="211" byte="27.3" terminal_profile="RFU" status="" mnemonic="PD_RFU_211" />
+            <item id="212" byte="27.4" terminal_profile="RFU" status="" mnemonic="PD_RFU_212" />
+            <item id="213" byte="27.5" terminal_profile="RFU" status="" mnemonic="PD_RFU_213" />
+            <item id="214" byte="27.6" terminal_profile="RFU" status="" mnemonic="PD_RFU_214" />
+            <item id="215" byte="27.7" terminal_profile="RFU" status="" mnemonic="PD_RFU_215" />
+            <item id="216" byte="27.8" terminal_profile="RFU" status="" mnemonic="PD_RFU_216" />
+            <item id="217" byte="28.1" terminal_profile="Alignment left supported" status="C243" mnemonic="PD_Text_Attrib_Left" />
+            <item id="218" byte="28.2" terminal_profile="Alignment center supported" status="C244" mnemonic="PD_Text_Attrib_Center" />
+            <item id="219" byte="28.3" terminal_profile="Alignment right supported" status="C245" mnemonic="PD_Text_Attrib_Right" />
+            <item id="220" byte="28.4" terminal_profile="Font size normal supported" status="C246" mnemonic="PD_Text_Attrib_Normal" />
+            <item id="221" byte="28.5" terminal_profile="Font size large supported" status="C247" mnemonic="PD_Text_Attrib_Large" />
+            <item id="222" byte="28.6" terminal_profile="Font size small supported" status="C248" mnemonic="PD_Text_Attrib_Small" />
+            <item id="223" byte="28.7" terminal_profile="RFU" status="" mnemonic="PD_RFU_223" />
+            <item id="224" byte="28.8" terminal_profile="RFU" status="" mnemonic="PD_RFU_224" />
+            <item id="225" byte="29.1" terminal_profile="Style normal supported" status="C249" mnemonic="PD_Text_Attrib_Styl_Norm" />
+            <item id="226" byte="29.2" terminal_profile="Style bold supported" status="C250" mnemonic="PD_Text_Attrib_Styl_Bold" />
+            <item id="227" byte="29.3" terminal_profile="Style italic supported" status="C251" mnemonic="PD_Text_Attrib_Styl_Italic" />
+            <item id="228" byte="29.4" terminal_profile="Style underlined supported" status="C252" mnemonic="PD_Text_Attrib_Styl_Underl" />
+            <item id="229" byte="29.5" terminal_profile="Style strikethrough supported" status="C253" mnemonic="PD_Text_Attrib_Styl_Strik" />
+            <item id="230" byte="29.6" terminal_profile="Style text foreground colour supported" status="C254" mnemonic="PD_Text_Attrib_Styl_Text_Fore" />
+            <item id="231" byte="29.7" terminal_profile="Style text background colour supported" status="C255" mnemonic="PD_Text_Attrib_Styl_Text_Back" />
+            <item id="232" byte="29.8" terminal_profile="RFU" status="" mnemonic="PD_RFU_224" />
+            <item id="233" byte="30.1" terminal_profile="I-WLAN bearer support (if class &quot;e&quot; is supported)" status="C260" mnemonic="PD_I-WLAN" />
+            <item id="234" byte="30.2" terminal_profile="Proactive UICC: PROVIDE LOCAL INFORMATION (WSID of the current IWLAN connection)" status="C260" mnemonic="PD_Provide_Local_WSID_WLAN" />
+            <item id="235" byte="30.3" terminal_profile="TERMINAL APPLICATIONS (i.e. class &quot;k&quot; is supported)" status="C261" mnemonic="PD_Terminal_Applications" />
+            <item id="236" byte="30.4" terminal_profile="&quot;Steering of Roaming&quot; REFRESH support" status="M" mnemonic="PD_Steering_Of_Roaming" />
+            <item id="237" byte="30.5" terminal_profile="Reserved by ETSI" status="O" mnemonic="PD_Reserved" />
+            <item id="238" byte="30.6" terminal_profile="Proactive UICC: Geographical Location Request (if class &quot;n&quot; is supported)" status="C265" mnemonic="PD_Geo_Loaction_Request" />
+            <item id="239" byte="30.7" terminal_profile="Reserved by ETSI" status="O" mnemonic="PD_Reserved" />
+            <item id="240" byte="30.8" terminal_profile="&quot;Steering of Roaming for IWLAN&quot; REFRESH support" status="C260" mnemonic="PD_Steering_Of_Roaming _I-WLAN" />
+            <item id="241" byte="31.1" terminal_profile="Reserved by ETSI" status="O" mnemonic="PD_Reserved" />
+            <item id="242" byte="31.2" terminal_profile="Support of CSG cell discovery (if class &quot;q&quot; is supported)" status="C282" mnemonic="PS_CSG_Cell_Discovery" />
+            <item id="243" byte="31.3" terminal_profile="Confirmation parameters supported for OPEN CHANNEL in Terminal Server Mode" status="C285" mnemonic="PD_Open_Channel_Conf_Parameters" />
+            <item id="244" byte="31.4" terminal_profile="Communication Control for IMS" status="C286" mnemonic="PD_IMS_COMMUNICATION_CONTROL" />
+            <item id="245" byte="31.5" terminal_profile="Support of CAT over the modem interface (if class &quot;s&quot; is supported)" status="C287" mnemonic="PD_CAT_Modem_Interface" />
+            <item id="246" byte="31.6" terminal_profile="Support for Incoming IMS Data event (if classes &quot;e&quot; and &quot;t&quot; are supported)" status="C288" mnemonic="PD_Incoming_IMS_Data_Event" />
+            <item id="247" byte="31.7" terminal_profile="Support for IMS Registration event (if classes &quot;e&quot; and &quot;t&quot; are supported)" status="C289" mnemonic="PD_IMS_Reg_Event" />
+            <item id="248" byte="31.8" terminal_profile="Reserved by ETSI" status="O" mnemonic="PD_Reserved" />
+            <item id="249" byte="32.1" terminal_profile="IMS support (if class &quot;e&quot; and &quot;t&quot; are supported)" status="C290" mnemonic="PD_UICC_ACCESS_IMS" />
+            <item id="250" byte="32.2" terminal_profile="PROVIDE LOCATION INFORMATION, H(e)NB IP address support (if class &quot;v&quot; is supported))" status="" mnemonic="PD_PLI_HENB_IP_Adress_support" />
+            <item id="251" byte="32.3" terminal_profile="PROVIDE LOCATION INFORMATION, H(e)NB surrounding macrocells support (if class &quot;w&quot; is supported)" status="" mnemonic="PD_PLI_HENB_surrounding_Macrocell" />
+            <item id="252" byte="32.4" terminal_profile="Reserved by ETSI" status="O" mnemonic="PD_Reserved" />
+            <item id="253" byte="32.5" terminal_profile="Reserved by ETSI" status="O" mnemonic="PD_Reserved" />
+            <item id="254" byte="32.6" terminal_profile="Reserved by ETSI" status="O" mnemonic="PD_Reserved" />
+            <item id="255" byte="32.7" terminal_profile="Reserved by ETSI" status="O" mnemonic="PD_Reserved" />
+            <item id="256" byte="32.8" terminal_profile="Reserved by ETSI (Support of refresh enforcement policy)" status="M" mnemonic="PD_Refresh_Enforcement_Policy" />
+            <item id="257" byte="33.1" terminal_profile="Reserved by ETSI" status="O" mnemonic="PD_Reserved" />
+            <item id="258" byte="33.2" terminal_profile="Reserved by ETSI" status="O" mnemonic="PD_Reserved" />
+            <item id="259" byte="33.3" terminal_profile="Reserved by ETSI" status="O" mnemonic="PD_Reserved" />
+            <item id="260" byte="33.4" terminal_profile="ProSe usage information reporting (used only if class &quot;e&quot; is supported)" status="C295" mnemonic="PD_ProSE" />
+            <item id="261" byte="33.5" terminal_profile="Reserved by ETSI" status="O" mnemonic="PD_Reserved" />
+            <item id="262" byte="33.6" terminal_profile="Event: WLAN Access status (if class &quot;e&quot; is supported)" status="C296" mnemonic="PD_WLAN_Access_St" />
+            <item id="263" byte="33.7" terminal_profile="WLAN bearer support (if class &quot;e&quot; is supported)" status="C297" mnemonic="PD_WLAN_Bearer" />
+            <item id="264" byte="33.8" terminal_profile="Proactive UICC: PROVIDE LOCAL INFORMATION (WLAN identifier of the current WLAN connection)" status="C298" mnemonic="PD_Provide_Local_WLAN_ID" />
+            <item id="265" byte="34.1" terminal_profile="URI support for SEND SHORT MESSAGE" status="C299" mnemonic="PD_URI_Send_Short_IMS" />
+            <item id="266" byte="34.2" terminal_profile="IMS URI supported for SET UP CALL" status="C300" mnemonic="PD_IMS_URI_Setup_call" />
+            <item id="267" byte="34.3" terminal_profile="Media Type &quot;Voice&quot; supported for SET UP CALL and Call Control by USIM" status="C301" mnemonic="PD_Voice_Media_USIM" />
+            <item id="268" byte="34.4" terminal_profile="Media Type &quot;Video&quot; supported for SET UP CALL and Call Control by USIM" status="C302" mnemonic="PD_Video_Media_USIM" />
+            <item id="269" byte="34.5" terminal_profile="Proactive UICC: PROVIDE LOCAL INFORMATION (E-UTRAN Timing Advance Information)" status="C303" mnemonic="PD_Provide_Local_EUTRAN_TA" />
+            <item id="270" byte="34.6" terminal_profile="Reserved by ETSI" status="O" mnemonic="PD_Reserved" />
+            <item id="271" byte="34.7" terminal_profile="Reserved by ETSI" status="O" mnemonic="PD_Reserved" />
+            <item id="272" byte="34.8" terminal_profile="Reserved by ETSI" status="O" mnemonic="PD_Reserved" />
+            <item id="273" byte="35.1" terminal_profile="Reserved by ETSI" status="O" mnemonic="PD_Reserved" />
+            <item id="274" byte="35.2" terminal_profile="Data Connection Status Change Event support – PDP Connection (if class &quot;e&quot; is supported)" status="C305" mnemonic="PD_Data_Connection_Status_Change_PDP" />
+            <item id="275" byte="35.3" terminal_profile="Data Connection Status Change Event support – PDN Connection (if class &quot;e&quot; is supported)" status="C283" mnemonic="PD_Data_Connection_Status_Change_PDN" />
+            <item id="276" byte="35.4" terminal_profile="Reserved by ETSI" status="O" mnemonic="PD_Reserved" />
+            <item id="277" byte="35.5" terminal_profile="Reserved by ETSI" status="O" mnemonic="PD_Reserved" />
+            <item id="278" byte="35.6" terminal_profile="Reserved by ETSI" status="O" mnemonic="PD_Reserved" />
+            <item id="279" byte="35.7" terminal_profile="Reserved by ETSI" status="O" mnemonic="PD_Reserved" />
+            <item id="280" byte="35.8" terminal_profile="Reserved by ETSI" status="O" mnemonic="PD_Reserved" />
+        </table_e_1>
+
+        <table_b_1>
+            <item id="1" number="27.22.1" description="PROFILE DOWNLOAD">
+                <seqquence number="1" condition="M" terminal_profile="1" />
+            </item>
+            <item id="2" number="27.22.2" description="Contents of the TERMINAL PROFILE command">
+                <seqquence number="1" condition="M" terminal_profile="1" />
+            </item>
+            <item id="3" number="27.22.3" description="Servicing of Proactive UICC Commands">
+                <seqquence number="1" condition="M" terminal_profile="1" />
+            </item>
+            <item id="4" number="27.22.4.1" description="DISPLAY TEXT">
+                <seqquence number="1.1" description="Unpacked" condition="C177" terminal_profile="17 110" />
+                <seqquence number="1.2" description="Screen busy" condition="C177" terminal_profile="17 110" />
+                <seqquence number="1.3" description="high priority" condition="C177" terminal_profile="17 110" />
+                <seqquence number="1.4" description="Packed" condition="C177" terminal_profile="17 110" />
+                <seqquence number="1.5" description="clear after delay" condition="C177" terminal_profile="17 110" />
+                <seqquence number="1.6" description="long text up to 160 bytes" condition="C177" terminal_profile="17 110" />
+                <seqquence number="1.7" description="Backwards move in USIM session" condition="C177 C178" terminal_profile="17 110 111" />
+                <seqquence number="1.8" description="Session terminated by user" condition="C177 C178" terminal_profile="17 110 111" />
+                <seqquence number="2.1" description="no response from user" condition="C120 C177 C178" terminal_profile="17 110 111" />
+                <seqquence number="3.1" description="Extension Text" condition="C177" terminal_profile="17 16 110" />
+                <seqquence number="4.1" description="sustained text" condition="C177" terminal_profile="17 65 110" />
+                <seqquence number="4.2" description="sustained text" condition="C177" terminal_profile="17 65 110" />
+                <seqquence number="4.3" description="sustained text" condition="C177 C178" terminal_profile="17 65 110 111" />
+                <seqquence number="4.4" description="sustained text" condition="C177 C180 C183" terminal_profile="17 65 110" />
+                <seqquence number="5.1" description="Icons - basic icon" condition="C108 C177" terminal_profile="17 110" />
+                <seqquence number="5.2" description="Icons - colour icon" condition="C171 C177" terminal_profile="17 110" />
+                <seqquence number="5.3" description="Icons - basic icon" condition="C108 C177" terminal_profile="17 110" />
+                <seqquence number="6.1" description="UCS2 display in Cyrillic" condition="C118 C177" terminal_profile="17 15 110" />
+                <seqquence number="7.1" description="Variable Timeout" condition="C126 C177 C178" terminal_profile="17 137 110 111" />
+                <seqquence number="8.1" description="Text attribute – left alignment" condition="C153 C177" terminal_profile="17 124 217 110" />
+                <seqquence number="8.2" description="Text attribute – center alignment" condition="C154 C177" terminal_profile="17 124 218 110" />
+                <seqquence number="8.3" description="Text attribute – right alignment" condition="C155 C177" terminal_profile="17 124 219 110 111" />
+                <seqquence number="8.4" description="Text attribute – large font size" condition="C157 C156 C177" terminal_profile="17 124 221 220 110" />
+                <seqquence number="8.5" description="Text attribute – small font size" condition="C158 C156 C177" terminal_profile="17 124 222 220 110" />
+                <seqquence number="8.6" description="Text attribute – bold on" condition="C160 C159 C177" terminal_profile="17 124 225 226 110" />
+                <seqquence number="8.7" description="Text attribute – italic on" condition="C161 C159 C177" terminal_profile="17 124 225 227 110" />
+                <seqquence number="8.8" description="Text attribute – underlined on" condition="C162 C159 C177" terminal_profile="17 124 225 228 110" />
+                <seqquence number="8.9" description="Text attribute – strikethrough on" condition="C163 C159 C177" terminal_profile="17 124 225 229 110" />
+                <seqquence number="8.10" description="Text attribute – foreground and background colours" condition="C164 C165 C177" terminal_profile="17 124 230 231 110" />
+                <seqquence number="9.1" description="UCS2 display in Chinese" condition="C143 C177" terminal_profile="17 15 110" />
+                <seqquence number="10.1" description="UCS2 display in Katakana" condition="C145 C177" terminal_profile="17 15 110" />
+                <!--
+                <seqquence number="" description="Frames" condition="" terminal_profile="17 177 178 110" />
+                -->
+            </item>
+
+            <item id="5" number="27.22.4.2" description="GET INKEY">
+            </item>
+        </table_b_1>
+    </ts31124>
+</spec>
+

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragment_spec"
+    >
+    <fragment
+        android:id="@+id/fragment_spec"
+        android:name="com.hyunh.certy.SpecFragment"
+        >
+        <action
+            android:id="@+id/action_to_rsp"
+            app:destination="@id/fragment_rsp"
+            />
+        <action
+            android:id="@+id/action_to_usat"
+            app:destination="@id/fragment_ts_131_124"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_rsp"
+        android:name="com.hyunh.certy.sgp23.RspFragment"
+        >
+        <argument android:name="name" app:argType="string" />
+        <argument android:name="rel" app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_ts_131_124"
+        android:name="com.hyunh.certy.ts31124.UsatFragment"
+        >
+    </fragment>
+</navigation>
