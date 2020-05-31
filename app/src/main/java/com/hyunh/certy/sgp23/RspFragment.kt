@@ -28,7 +28,7 @@ class RspFragment : Fragment() {
         listOf(
                 TabInfo(OptionFragment(), getString(R.string.rsp_option)),
                 TabInfo(ConditionFragment(), getString(R.string.rsp_condition)),
-                TabInfo(OptionFragment(), getString(R.string.rsp_testcase))
+                TabInfo(TestCaseFragment(), getString(R.string.rsp_testcase))
         )
     }
 

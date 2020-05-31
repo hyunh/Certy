@@ -1,8 +1,6 @@
 package com.hyunh.certy.sgp23
 
 import androidx.lifecycle.LifecycleObserver
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 class RspViewModel : ViewModel(), LifecycleObserver {

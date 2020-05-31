@@ -10,10 +10,10 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.RecyclerView
 import com.hyunh.certy.R
-import com.hyunh.certy.databinding.FragmentRspConditionBinding
-import com.hyunh.certy.databinding.LayoutRspConditionBinding
+import com.hyunh.certy.databinding.FragmentRspTestcaseBinding
+import com.hyunh.certy.databinding.LayoutRspTestcaseBinding
 
-class ConditionFragment : Fragment() {
+class TestCaseFragment : Fragment() {
 
     private val model: RspViewModel by viewModels()
 
@@ -22,23 +22,23 @@ class ConditionFragment : Fragment() {
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        val binding = DataBindingUtil.inflate<FragmentRspConditionBinding>(
-                inflater, R.layout.fragment_rsp_condition, container, false).apply {
-            layoutRoundList.recyclerview.setHasFixedSize(true)
-            layoutRoundList.recyclerview.adapter = ConditionRvAdapter().apply {
-                model.loadConditions().observe(viewLifecycleOwner, Observer {
-                    update(it)
-                })
-            }
+        val binding = DataBindingUtil.inflate<FragmentRspTestcaseBinding>(
+                inflater, R.layout.fragment_rsp_testcase, container, false)
+        binding.lifecycleOwner = viewLifecycleOwner
+        binding.layoutRoundList.recyclerview.setHasFixedSize(true)
+        binding.layoutRoundList.recyclerview.adapter = TestCaseRvAdapter().apply {
+            model.loadTestCases().observe(viewLifecycleOwner, Observer {
+                update(it)
+            })
         }
         return binding.root
     }
 
-    class ConditionRvAdapter : RecyclerView.Adapter<ConditionRvAdapter.ViewHolder>() {
+    class TestCaseRvAdapter : RecyclerView.Adapter<TestCaseRvAdapter.ViewHolder>() {
 
-        private val items: List<Rsp.Condition> = mutableListOf()
+        private val items: List<Rsp.TestCase> = mutableListOf()
 
-        fun update(new: List<Rsp.Condition>) {
+        fun update(new: List<Rsp.TestCase>) {
             if (items is MutableList) {
                 items.clear()
                 items.addAll(new)
@@ -47,8 +47,8 @@ class ConditionFragment : Fragment() {
         }
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-            val binding = DataBindingUtil.inflate<LayoutRspConditionBinding>(
-                    LayoutInflater.from(parent.context), R.layout.layout_rsp_condition, parent, false)
+            val binding = DataBindingUtil.inflate<LayoutRspTestcaseBinding>(
+                    LayoutInflater.from(parent.context), R.layout.layout_rsp_testcase, parent, false)
             return ViewHolder(binding)
         }
 
@@ -59,11 +59,11 @@ class ConditionFragment : Fragment() {
         }
 
         class ViewHolder(
-                private val binding: LayoutRspConditionBinding
+                private val binding: LayoutRspTestcaseBinding
         ) : RecyclerView.ViewHolder(binding.root) {
-            fun bind(item: Rsp.Condition) {
-                binding.tvConditionId.text = item.id
-                binding.tvConditionCondition.text = item.condition
+            fun bind(item: Rsp.TestCase) {
+                binding.tvTestcaseId.text = item.id
+                binding.tvTestcaseName.text = item.name
             }
         }
     }

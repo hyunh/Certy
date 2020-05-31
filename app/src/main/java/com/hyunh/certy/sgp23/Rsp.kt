@@ -164,7 +164,7 @@ object Rsp {
             }
             options[version] = opt
             (optionsLiveData[version] as? MutableLiveData)?.postValue(opt)
-                    ?: MutableLiveData<List<Option>>().also {
+                    ?: MutableLiveData<List<Option>>(opt).also {
                         optionsLiveData[version] = it
                     }
         }
@@ -180,9 +180,9 @@ object Rsp {
                     val mocs = mutableListOf<Pair<String, String>>()
                     while (parser.next() != XmlPullParser.END_TAG || parser.name != ITEM) {
                         if (parser.name == "condition" && parser.eventType == XmlPullParser.START_TAG) {
-                            val condition = parser.getAttributeValue(null, "condition")
-                            val version = parser.getAttributeValue(null, "version")
-                            mocs.add(Pair(condition, version))
+                            val pair = Pair(parser.getAttributeValue(null, "condition"),
+                                    parser.getAttributeValue(null, "version"))
+                            mocs.add(pair)
                         }
                     }
                     testCase.add(TestCase(id, name, roles, testEnv, mocs).also {
@@ -192,7 +192,7 @@ object Rsp {
             }
             testCases[version] = testCase
             (testCasesLiveData[version] as? MutableLiveData)?.postValue(testCase)
-                    ?: MutableLiveData<List<TestCase>>().also {
+                    ?: MutableLiveData<List<TestCase>>(testCase).also {
                         testCasesLiveData[version] = it
                     }
         }
@@ -217,7 +217,7 @@ object Rsp {
             }
             conditions[version] = cond
             (conditionsLiveData[version] as? MutableLiveData)?.postValue(cond)
-                    ?: MutableLiveData<List<Condition>>().also {
+                    ?: MutableLiveData<List<Condition>>(cond).also {
                         conditionsLiveData[version] = it
                     }
         }
