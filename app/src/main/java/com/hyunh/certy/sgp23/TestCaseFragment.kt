@@ -10,7 +10,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.RecyclerView
 import com.hyunh.certy.R
-import com.hyunh.certy.databinding.FragmentRspTestcaseBinding
+import com.hyunh.certy.databinding.FragmentRspContentBinding
 import com.hyunh.certy.databinding.LayoutRspTestcaseBinding
 
 class TestCaseFragment : Fragment() {
@@ -22,8 +22,8 @@ class TestCaseFragment : Fragment() {
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        val binding = DataBindingUtil.inflate<FragmentRspTestcaseBinding>(
-                inflater, R.layout.fragment_rsp_testcase, container, false)
+        val binding = DataBindingUtil.inflate<FragmentRspContentBinding>(
+                inflater, R.layout.fragment_rsp_content, container, false)
         binding.lifecycleOwner = viewLifecycleOwner
         binding.layoutRoundList.recyclerview.setHasFixedSize(true)
         binding.layoutRoundList.recyclerview.adapter = TestCaseRvAdapter().apply {

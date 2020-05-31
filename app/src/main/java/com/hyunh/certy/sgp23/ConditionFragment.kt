@@ -10,7 +10,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.RecyclerView
 import com.hyunh.certy.R
-import com.hyunh.certy.databinding.FragmentRspConditionBinding
+import com.hyunh.certy.databinding.FragmentRspContentBinding
 import com.hyunh.certy.databinding.LayoutRspConditionBinding
 
 class ConditionFragment : Fragment() {
@@ -22,8 +22,8 @@ class ConditionFragment : Fragment() {
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        val binding = DataBindingUtil.inflate<FragmentRspConditionBinding>(
-                inflater, R.layout.fragment_rsp_condition, container, false).apply {
+        val binding = DataBindingUtil.inflate<FragmentRspContentBinding>(
+                inflater, R.layout.fragment_rsp_content, container, false).apply {
             layoutRoundList.recyclerview.setHasFixedSize(true)
             layoutRoundList.recyclerview.adapter = ConditionRvAdapter().apply {
                 model.loadConditions().observe(viewLifecycleOwner, Observer {

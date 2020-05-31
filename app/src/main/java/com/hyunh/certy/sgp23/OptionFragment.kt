@@ -4,15 +4,14 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.widget.AppCompatCheckBox
-import androidx.appcompat.widget.AppCompatTextView
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.RecyclerView
 import com.hyunh.certy.R
-import com.hyunh.certy.databinding.FragmentRspOptionBinding
+import com.hyunh.certy.databinding.FragmentRspContentBinding
+import com.hyunh.certy.databinding.LayoutRspOptionBinding
 
 class OptionFragment : Fragment() {
 
@@ -23,8 +22,8 @@ class OptionFragment : Fragment() {
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        val binding = DataBindingUtil.inflate<FragmentRspOptionBinding>(
-                inflater, R.layout.fragment_rsp_option, container, false)
+        val binding = DataBindingUtil.inflate<FragmentRspContentBinding>(
+                inflater, R.layout.fragment_rsp_content, container, false)
         binding.lifecycleOwner = viewLifecycleOwner
         binding.layoutRoundList.recyclerview.setHasFixedSize(true)
         binding.layoutRoundList.recyclerview.adapter = OptionRvAdapter().apply {
@@ -36,35 +35,37 @@ class OptionFragment : Fragment() {
     }
 
     class OptionRvAdapter : RecyclerView.Adapter<OptionRvAdapter.ViewHolder>() {
-        private val options: List<Rsp.Option> = mutableListOf()
+
+        private val items: List<Rsp.Option> = mutableListOf()
 
         fun update(new: List<Rsp.Option>) {
-            if (options is MutableList) {
-                options.clear()
-                options.addAll(new)
+            if (items is MutableList) {
+                items.clear()
+                items.addAll(new)
                 notifyDataSetChanged()
             }
         }
 
-        override fun getItemCount() = options.size
+        override fun getItemCount() = items.size
 
         override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-            holder.type.text = options[position].type
-            holder.description.text = options[position].option
+            holder.bind(items[position])
         }
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-            val view = LayoutInflater.from(parent.context)
-                    .inflate(R.layout.layout_rsp_option, parent, false)
-            view.setOnClickListener {
-            }
-            return ViewHolder(view)
+            val binding = DataBindingUtil.inflate<LayoutRspOptionBinding>(
+                    LayoutInflater.from(parent.context), R.layout.layout_rsp_option, parent, false)
+            return ViewHolder(binding)
         }
 
-        class ViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
-            val checkbox: AppCompatCheckBox = view.findViewById(R.id.checkbox_option)
-            val type: AppCompatTextView = view.findViewById(R.id.tv_option_type)
-            val description: AppCompatTextView = view.findViewById(R.id.tv_option_description)
+        class ViewHolder(
+                private val binding: LayoutRspOptionBinding
+        ) : RecyclerView.ViewHolder(binding.root) {
+
+            fun bind(item: Rsp.Option) {
+                binding.tvOptionType.text = item.type
+                binding.tvOptionDescription.text = item.option
+            }
         }
     }
 }
