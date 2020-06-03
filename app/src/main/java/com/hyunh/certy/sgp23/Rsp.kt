@@ -16,11 +16,16 @@ import org.xmlpull.v1.XmlPullParser
 object Rsp {
 
     private const val TAG = "Rsp"
-    private const val SOURCE = R.xml.sgp23
+    private val sources = arrayOf(
+            R.xml.sgp23_v_1_3,
+            R.xml.sgp23_v_1_6
+    )
 
     init {
         CoroutineScope(Dispatchers.Default).launch {
-            Loader(SOURCE).load()
+            sources.forEach {
+                Loader(it).load()
+            }
         }
     }
 
@@ -40,7 +45,7 @@ object Rsp {
             val id: String,
             val name: String,
             val roles: String,
-            val testEnv: String,
+            val testEnv: String?,
             val mocs: List<Pair<String, String>>
     )
 
