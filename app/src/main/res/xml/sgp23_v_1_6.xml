@@ -574,187 +574,187 @@
             </item>
 
             <!-- Procedure - Behaviour Testing -->
-            <item id="5.2.1.2.1" name="TC_eUICC_PrepareDownload_Retry_ReuseOTKeys" rolse="eUICC" testenv="TE_eUICC">
+            <item id="5.2.1.2.1" name="TC_eUICC_PrepareDownload_Retry_ReuseOTKeys" roles="eUICC" testenv="TE_eUICC">
                 <condition condition="C019" version="2.1" />
                 <condition condition="C019" version="2.2" />
             </item>
-            <item id="5.2.1.2.2" name="TC_eUICC_PrepareDownload_Retry_NewOTKeys" rolse="eUICC" testenv="TE_eUICC">
+            <item id="5.2.1.2.2" name="TC_eUICC_PrepareDownload_Retry_NewOTKeys" roles="eUICC" testenv="TE_eUICC">
                 <condition condition="C020" version="2.1" />
                 <condition condition="C020" version="2.2" />
             </item>
-            <item id="5.2.2.2.1" name="TC_eUICC_ForbiddenPPRs" rolse="eUICC" testenv="TE_eUICC">
+            <item id="5.2.2.2.1" name="TC_eUICC_ForbiddenPPRs" roles="eUICC" testenv="TE_eUICC">
                 <condition condition="M" version="2.1" />
                 <condition condition="M" version="2.2" />
             </item>
-            <item id="5.2.3.2.1" name="TC_eUICC_GetProfilesInfo_GetRAT_RSPSession" rolse="eUICC" testenv="TE_eUICC">
+            <item id="5.2.3.2.1" name="TC_eUICC_GetProfilesInfo_GetRAT_RSPSession" roles="eUICC" testenv="TE_eUICC">
                 <condition condition="M" version="2.1" />
                 <condition condition="M" version="2.2" />
             </item>
-            <item id="5.2.4.2.1" name="TC_eUICC_Default_FileSystem" rolse="eUICC" testenv="TE_eUICC">
+            <item id="5.2.4.2.1" name="TC_eUICC_Default_FileSystem" roles="eUICC" testenv="TE_eUICC">
                 <condition condition="M" version="2.1" />
                 <condition condition="M" version="2.2" />
             </item>
-            <item id="5.2.5.2.1" name="TC_eUICC_DeleteProfile_ISDP_And_Components" rolse="eUICC" testenv="TE_eUICC">
+            <item id="5.2.5.2.1" name="TC_eUICC_DeleteProfile_ISDP_And_Components" roles="eUICC" testenv="TE_eUICC">
                 <condition condition="M" version="2.1" />
                 <condition condition="M" version="2.2" />
             </item>
-            <item id="5.2.6.2.1" name="TC_eUICC_EnableProfile_Twice_Notifications" rolse="eUICC" testenv="TE_eUICC">
+            <item id="5.2.6.2.1" name="TC_eUICC_EnableProfile_Twice_Notifications" roles="eUICC" testenv="TE_eUICC">
                 <condition condition="M" version="2.1" />
                 <condition condition="M" version="2.2" />
             </item>
-            <item id="5.2.7.2.1" name="TC_eUICC_DisableProfile_ApplicationManagement" rolse="eUICC" testenv="TE_eUICC">
+            <item id="5.2.7.2.1" name="TC_eUICC_DisableProfile_ApplicationManagement" roles="eUICC" testenv="TE_eUICC">
                 <condition condition="M" version="2.1" />
                 <condition condition="M" version="2.2" />
             </item>
-            <item id="5.2.8.2.1" name="TC_eUICC_Enable_Disable_Delete_Notifications" rolse="eUICC" testenv="TE_eUICC">
+            <item id="5.2.8.2.1" name="TC_eUICC_Enable_Disable_Delete_Notifications" roles="eUICC" testenv="TE_eUICC">
                 <condition condition="M" version="2.1" />
                 <condition condition="M" version="2.2" />
             </item>
-            <item id="5.3.3.2.1" name="TC_SM-DP+_ProfileMetadata" rolse="SM-DP+">
+            <item id="5.3.3.2.1" name="TC_SM-DP+_ProfileMetadata" roles="SM-DP+">
                 <condition condition="M" version="2.1" />
                 <condition condition="M" version="2.2" />
             </item>
-            <item id="5.4.1.2.1" name="TC_LPAd_AddProfile_Manual_Entry" rolse="LPAd">
+            <item id="5.4.1.2.1" name="TC_LPAd_AddProfile_Manual_Entry" roles="LPAd">
                 <condition condition="C007" version="2.1" />
                 <condition condition="C007" version="2.2" />
             </item>
-            <item id="5.4.1.2.2" name="TC_LPAd_AddProfile_QRcode_scanning" rolse="LPAd">
+            <item id="5.4.1.2.2" name="TC_LPAd_AddProfile_QRcode_scanning" roles="LPAd">
                 <condition condition="C007" version="2.1" />
                 <condition condition="C007" version="2.2" />
             </item>
-            <item id="5.4.1.2.3" name="TC_LPAd_AddProfile_ActivationCode_InvalidFormat_QRcode" rolse="LPAd">
+            <item id="5.4.1.2.3" name="TC_LPAd_AddProfile_ActivationCode_InvalidFormat_QRcode" roles="LPAd">
                 <condition condition="C007" version="2.1" />
                 <condition condition="C007" version="2.2" />
             </item>
-            <item id="5.4.1.2.4" name="TC_LPAd_AddProfile_ActivationCode_InvalidFormat_ManualEntry" rolse="LPAd">
+            <item id="5.4.1.2.4" name="TC_LPAd_AddProfile_ActivationCode_InvalidFormat_ManualEntry" roles="LPAd">
                 <condition condition="C007" version="2.1" />
                 <condition condition="C007" version="2.2" />
             </item>
-            <item id="5.4.1.2.5" name="TC_LPAd_AddProfile_ConfirmationCode_smdpSigned2_QR" rolse="LPAd">
+            <item id="5.4.1.2.5" name="TC_LPAd_AddProfile_ConfirmationCode_smdpSigned2_QR" roles="LPAd">
                 <condition condition="C007" version="2.1" />
                 <condition condition="C007" version="2.2" />
             </item>
-            <item id="5.4.1.2.6" name="TC_LPAd_AddProfile_ConfirmationCode_smdpSigned2_Manual_Entry" rolse="LPAd">
+            <item id="5.4.1.2.6" name="TC_LPAd_AddProfile_ConfirmationCode_smdpSigned2_Manual_Entry" roles="LPAd">
                 <condition condition="C007" version="2.1" />
                 <condition condition="C007" version="2.2" />
             </item>
-            <item id="5.4.1.2.7" name="TC_LPAd_AddProfile_default_SM-DP+_address" rolse="LPAd">
+            <item id="5.4.1.2.7" name="TC_LPAd_AddProfile_default_SM-DP+_address" roles="LPAd">
                 <condition condition="C007" version="2.1" />
                 <condition condition="C007" version="2.2" />
             </item>
-            <item id="5.4.1.2.8" name="TC_LPAd_AddProfile_QRCode_with_ConfirmationCode" rolse="LPAd">
+            <item id="5.4.1.2.8" name="TC_LPAd_AddProfile_QRCode_with_ConfirmationCode" roles="LPAd">
                 <condition condition="C007" version="2.1" />
                 <condition condition="C007" version="2.2" />
             </item>
-            <item id="5.4.1.2.9" name="TC_LPAd_AddProfile_PPRs" rolse="LPAd">
+            <item id="5.4.1.2.9" name="TC_LPAd_AddProfile_PPRs" roles="LPAd">
                 <condition condition="C007" version="2.1" />
                 <condition condition="C007" version="2.2" />
             </item>
-            <item id="5.4.1.2.10" name="TC_LPAd_LUI_access_protected" rolse="LPAd">
+            <item id="5.4.1.2.10" name="TC_LPAd_LUI_access_protected" roles="LPAd">
                 <condition condition="C007" version="2.1" />
                 <condition condition="C007" version="2.2" />
             </item>
-            <item id="5.4.1.2.11" name="TC_LPAd_AddProfile_Security_Errors" rolse="LPAd">
+            <item id="5.4.1.2.11" name="TC_LPAd_AddProfile_Security_Errors" roles="LPAd">
                 <condition condition="C007" version="2.1" />
                 <condition condition="C007" version="2.2" />
             </item>
-            <item id="5.4.1.2.12" name="TC_LPAd_AddProfile_Empty_MatchingID" rolse="LPAd">
+            <item id="5.4.1.2.12" name="TC_LPAd_AddProfile_Empty_MatchingID" roles="LPAd">
                 <condition condition="C007" version="2.1" />
                 <condition condition="C007" version="2.2" />
             </item>
-            <item id="5.4.2.2.1" name="TC_LPAd_ListProfiles" rolse="LPAd">
+            <item id="5.4.2.2.1" name="TC_LPAd_ListProfiles" roles="LPAd">
                 <condition condition="C007" version="2.1" />
                 <condition condition="C007" version="2.2" />
             </item>
-            <item id="5.4.3.2.1" name="TC_LPAd_SetNickname" rolse="LPAd">
+            <item id="5.4.3.2.1" name="TC_LPAd_SetNickname" roles="LPAd">
                 <condition condition="C027" version="2.1" />
                 <condition condition="C027" version="2.2" />
             </item>
-            <item id="5.4.3.2.2" name="TC_LPAd_EditNickname" rolse="LPAd">
+            <item id="5.4.3.2.2" name="TC_LPAd_EditNickname" roles="LPAd">
                 <condition condition="C027" version="2.1" />
                 <condition condition="C027" version="2.2" />
             </item>
-            <item id="5.4.4.2.1" name="TC_LPAd_DeleteProfile_Disabled_without_PPR" rolse="LPAd">
+            <item id="5.4.4.2.1" name="TC_LPAd_DeleteProfile_Disabled_without_PPR" roles="LPAd">
                 <condition condition="C007" version="2.1" />
                 <condition condition="C007" version="2.2" />
             </item>
-            <item id="5.4.4.2.2" name="TC_LPAd_DeleteProfile_Enabled_without_PPR" rolse="LPAd">
+            <item id="5.4.4.2.2" name="TC_LPAd_DeleteProfile_Enabled_without_PPR" roles="LPAd">
                 <condition condition="C009" version="2.1" />
                 <condition condition="C009" version="2.2" />
             </item>
-            <item id="5.4.4.2.3" name="TC_LPAd_DeleteProfile_Error_with_PPR1" rolse="LPAd">
+            <item id="5.4.4.2.3" name="TC_LPAd_DeleteProfile_Error_with_PPR1" roles="LPAd">
                 <condition condition="C012" version="2.1" />
                 <condition condition="C012" version="2.2" />
             </item>
-            <item id="5.4.4.2.4" name="TC_LPAd_DeleteProfile_Error_Disabled_with_PPR2" rolse="LPAd">
+            <item id="5.4.4.2.4" name="TC_LPAd_DeleteProfile_Error_Disabled_with_PPR2" roles="LPAd">
                 <condition condition="C013" version="2.1" />
                 <condition condition="C013" version="2.2" />
             </item>
-            <item id="5.4.4.2.5" name="TC_LPAd_DeleteProfile_Error_Enabled_with_PPR2" rolse="LPAd">
+            <item id="5.4.4.2.5" name="TC_LPAd_DeleteProfile_Error_Enabled_with_PPR2" roles="LPAd">
                 <condition condition="C014" version="2.1" />
                 <condition condition="C014" version="2.2" />
             </item>
-            <item id="5.4.4.2.6" name="TC_LPAd_DeleteProfile_Security_Errors" rolse="LPAd">
+            <item id="5.4.4.2.6" name="TC_LPAd_DeleteProfile_Security_Errors" roles="LPAd">
                 <condition condition="C007" version="2.1" />
                 <condition condition="C007" version="2.2" />
             </item>
-            <item id="5.4.5.2.1" name="TC_LPAd_EnableProfile" rolse="LPAd">
+            <item id="5.4.5.2.1" name="TC_LPAd_EnableProfile" roles="LPAd">
                 <condition condition="C009" version="2.1" />
                 <condition condition="C009" version="2.2" />
             </item>
-            <item id="5.4.5.2.2" name="TC_LPAd_EnableProfile_ImplicitDisable" rolse="LPAd">
+            <item id="5.4.5.2.2" name="TC_LPAd_EnableProfile_ImplicitDisable" roles="LPAd">
                 <condition condition="C009" version="2.1" />
                 <condition condition="C009" version="2.2" />
             </item>
-            <item id="5.4.5.2.3" name="TC_LPAd_EnableProfile_Error_ProfileAlreadyEnabled" rolse="LPAd">
+            <item id="5.4.5.2.3" name="TC_LPAd_EnableProfile_Error_ProfileAlreadyEnabled" roles="LPAd">
                 <condition condition="C010" version="2.1" />
                 <condition condition="C010" version="2.2" />
             </item>
-            <item id="5.4.5.2.4" name="TC_LPAd_EnableProfile_Error_PPR1Set" rolse="LPAd">
+            <item id="5.4.5.2.4" name="TC_LPAd_EnableProfile_Error_PPR1Set" roles="LPAd">
                 <condition condition="C011" version="2.1" />
                 <condition condition="C011" version="2.2" />
             </item>
-            <item id="5.4.5.2.5" name="TC_LPAd_EnableProfile_Security_Errors" rolse="LPAd">
+            <item id="5.4.5.2.5" name="TC_LPAd_EnableProfile_Security_Errors" roles="LPAd">
                 <condition condition="C007" version="2.1" />
                 <condition condition="C007" version="2.2" />
             </item>
-            <item id="5.4.6.2.1" name="TC_LPAd_DisableProfile" rolse="LPAd">
+            <item id="5.4.6.2.1" name="TC_LPAd_DisableProfile" roles="LPAd">
                 <condition condition="C009" version="2.1" />
                 <condition condition="C009" version="2.2" />
             </item>
-            <item id="5.4.6.2.2" name="TC_LPAd_DisableProfile_Error_ProfileAlreadyDisabled" rolse="LPAd">
+            <item id="5.4.6.2.2" name="TC_LPAd_DisableProfile_Error_ProfileAlreadyDisabled" roles="LPAd">
                 <condition condition="C017" version="2.1" />
                 <condition condition="C017" version="2.2" />
             </item>
-            <item id="5.4.6.2.3" name="TC_LPAd_DisableProfile_Error_PPR1Set" rolse="LPAd">
+            <item id="5.4.6.2.3" name="TC_LPAd_DisableProfile_Error_PPR1Set" roles="LPAd">
                 <condition condition="C018" version="2.1" />
                 <condition condition="C018" version="2.2" />
             </item>
-            <item id="5.4.6.2.4" name="TC_LPAd_DisableProfile_Security_Errors" rolse="LPAd">
+            <item id="5.4.6.2.4" name="TC_LPAd_DisableProfile_Security_Errors" roles="LPAd">
                 <condition condition="C007" version="2.1" />
                 <condition condition="C007" version="2.2" />
             </item>
-            <item id="5.4.7.2.1" name="TC_LPAd_RetrieveEID" rolse="LPAd">
+            <item id="5.4.7.2.1" name="TC_LPAd_RetrieveEID" roles="LPAd">
                 <condition condition="C004" version="2.1" />
                 <condition condition="C004" version="2.2" />
             </item>
-            <item id="5.4.8.2.1" name="TC_LPAd_eUICCMemoryReset" rolse="LPAd">
+            <item id="5.4.8.2.1" name="TC_LPAd_eUICCMemoryReset" roles="LPAd">
                 <condition condition="C007" version="2.1" />
                 <condition condition="C007" version="2.2" />
             </item>
-            <item id="5.4.8.2.2" name="TC_LPAd_eUICCMemoryResetWithPINVerification" rolse="LPAd">
+            <item id="5.4.8.2.2" name="TC_LPAd_eUICCMemoryResetWithPINVerification" roles="LPAd">
                 <condition condition="C009" version="2.1" />
                 <condition condition="C009" version="2.2" />
             </item>
-            <item id="5.4.10.2.1" name="TC_LPAd_Set/Edit Default SM-DP+ Address" rolse="LPAd">
+            <item id="5.4.10.2.1" name="TC_LPAd_Set/Edit Default SM-DP+ Address" roles="LPAd">
                 <condition condition="C007" version="2.1" />
                 <condition condition="C007" version="2.2" />
             </item>
-            <item id="5.4.11.2.1" name="TC_LPAd_DevicePowerOnProfileDiscovery_SM-DP+_address" rolse="LPAd">
+            <item id="5.4.11.2.1" name="TC_LPAd_DevicePowerOnProfileDiscovery_SM-DP+_address" roles="LPAd">
                 <condition condition="C022" version="2.1" />
                 <condition condition="C022" version="2.2" />
             </item>
-            <item id="5.4.11.2.2" name="TC_LPAd_DevicePowerOnProfileDiscovery_SM-DS" rolse="LPAd">
+            <item id="5.4.11.2.2" name="TC_LPAd_DevicePowerOnProfileDiscovery_SM-DS" roles="LPAd">
                 <condition condition="C022" version="2.1" />
                 <condition condition="C022" version="2.2" />
             </item>

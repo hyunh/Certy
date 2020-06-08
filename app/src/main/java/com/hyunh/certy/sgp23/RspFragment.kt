@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
 import androidx.viewpager2.adapter.FragmentStateAdapter
+import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.hyunh.certy.R
 import com.hyunh.certy.databinding.FragmentRspBinding
@@ -45,6 +46,20 @@ class RspFragment : Fragment() {
             lifecycleOwner = viewLifecycleOwner
             viewPager.adapter = RspPagerAdapter(this@RspFragment, tabInfos)
             toolbarTitle = "${args.name}  -  ${args.rel}"
+            tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
+                override fun onTabReselected(tab: TabLayout.Tab?) {
+                }
+                override fun onTabSelected(tab: TabLayout.Tab?) {
+                    tab?.position?.let {
+                        buttonRspLeft.text = loadRspLeftButton(tabInfos[it].fragment)
+                        buttonRspRight.text = loadRspRightButton(tabInfos[it].fragment)
+                    }
+                }
+                override fun onTabUnselected(tab: TabLayout.Tab?) {
+                }
+            })
+            buttonRspLeft.text = loadRspLeftButton(tabInfos[0].fragment)
+            buttonRspRight.text = loadRspRightButton(tabInfos[0].fragment)
         }
         model.setVersion(args.rel)
 
@@ -75,6 +90,24 @@ class RspFragment : Fragment() {
             else -> {
                 super.onOptionsItemSelected(item)
             }
+        }
+    }
+
+    private fun loadRspLeftButton(fragment: Fragment): String {
+        return when (fragment) {
+            is OptionFragment -> getString(R.string.rsp_condition)
+            is ConditionFragment -> getString(R.string.rsp_option)
+            is TestCaseFragment -> getString(R.string.rsp_option)
+            else -> throw IllegalStateException("Fragment can't be identified")
+        }
+    }
+
+    private fun loadRspRightButton(fragment: Fragment): String {
+        return when (fragment) {
+            is OptionFragment -> getString(R.string.rsp_testcase)
+            is ConditionFragment -> getString(R.string.rsp_testcase)
+            is TestCaseFragment -> getString(R.string.rsp_condition)
+            else -> throw IllegalStateException("Fragment can't be identified")
         }
     }
 
