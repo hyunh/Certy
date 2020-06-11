@@ -23,20 +23,33 @@ class OptionFragment : Fragment() {
             savedInstanceState: Bundle?
     ): View? {
         val binding = DataBindingUtil.inflate<FragmentRspContentBinding>(
-                inflater, R.layout.fragment_rsp_content, container, false)
-        binding.lifecycleOwner = viewLifecycleOwner
-        binding.layoutRoundList.recyclerview.setHasFixedSize(true)
-        binding.layoutRoundList.recyclerview.adapter = OptionRvAdapter().apply {
-            model.loadOptions().observe(viewLifecycleOwner, Observer {
-                update(it)
-            })
+                inflater, R.layout.fragment_rsp_content, container, false).apply {
+            vm = model
+            lifecycleOwner = viewLifecycleOwner
+            layoutRoundList.recyclerview.setHasFixedSize(true)
+            layoutRoundList.recyclerview.adapter = OptionRvAdapter(model).apply {
+                model.loadOptions().observe(viewLifecycleOwner, Observer {
+                    update(it)
+                })
+                model.selectedItems.observe(viewLifecycleOwner, Observer {
+                    updateSelectedItems(it)
+                })
+            }
         }
         return binding.root
     }
 
-    class OptionRvAdapter : RecyclerView.Adapter<OptionRvAdapter.ViewHolder>() {
+    override fun onResume() {
+        super.onResume()
+        model.reset()
+    }
+
+    class OptionRvAdapter(
+            private val model: RspViewModel
+    ): RecyclerView.Adapter<OptionRvAdapter.ViewHolder>() {
 
         private val items: List<Rsp.Option> = mutableListOf()
+        private val selectedItems: Set<Int> = mutableSetOf()
 
         fun update(new: List<Rsp.Option>) {
             if (items is MutableList) {
@@ -46,15 +59,26 @@ class OptionFragment : Fragment() {
             }
         }
 
+        fun updateSelectedItems(new: Set<Int>) {
+            if (selectedItems is MutableSet) {
+                selectedItems.clear()
+                selectedItems.addAll(new)
+                notifyDataSetChanged()
+            }
+        }
+
         override fun getItemCount() = items.size
 
+        override fun getItemViewType(position: Int) = position
+
         override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-            holder.bind(items[position])
+            holder.bind(items[position], position, selectedItems)
         }
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
             val binding = DataBindingUtil.inflate<LayoutRspOptionBinding>(
                     LayoutInflater.from(parent.context), R.layout.layout_rsp_option, parent, false)
+            binding.vm = model
             return ViewHolder(binding)
         }
 
@@ -62,9 +86,15 @@ class OptionFragment : Fragment() {
                 private val binding: LayoutRspOptionBinding
         ) : RecyclerView.ViewHolder(binding.root) {
 
-            fun bind(item: Rsp.Option) {
+            fun bind(item: Rsp.Option, position: Int, selectedItems: Set<Int>) {
                 binding.tvOptionType.text = item.type
                 binding.tvOptionDescription.text = item.option
+                binding.root.setBackgroundResource(if (selectedItems.contains(position)) {
+                    R.color.colorItemSelected
+                } else {
+                    R.color.colorForeground
+                })
+                binding.position = position
             }
         }
     }

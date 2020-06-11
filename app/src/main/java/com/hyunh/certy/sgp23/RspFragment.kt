@@ -44,6 +44,7 @@ class RspFragment : Fragment() {
         val binding = DataBindingUtil.inflate<FragmentRspBinding>(
                 inflater, R.layout.fragment_rsp, container, false).apply {
             lifecycleOwner = viewLifecycleOwner
+            vm = model
             viewPager.adapter = RspPagerAdapter(this@RspFragment, tabInfos)
             toolbarTitle = "${args.name}  -  ${args.rel}"
             tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {

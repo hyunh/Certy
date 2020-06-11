@@ -24,19 +24,32 @@ class ConditionFragment : Fragment() {
     ): View? {
         val binding = DataBindingUtil.inflate<FragmentRspContentBinding>(
                 inflater, R.layout.fragment_rsp_content, container, false).apply {
+            vm = model
+            lifecycleOwner = viewLifecycleOwner
             layoutRoundList.recyclerview.setHasFixedSize(true)
-            layoutRoundList.recyclerview.adapter = ConditionRvAdapter().apply {
+            layoutRoundList.recyclerview.adapter = ConditionRvAdapter(model).apply {
                 model.loadConditions().observe(viewLifecycleOwner, Observer {
                     update(it)
+                })
+                model.selectedItems.observe(viewLifecycleOwner, Observer {
+                    updateSelectedItems(it)
                 })
             }
         }
         return binding.root
     }
 
-    class ConditionRvAdapter : RecyclerView.Adapter<ConditionRvAdapter.ViewHolder>() {
+    override fun onResume() {
+        super.onResume()
+        model.reset()
+    }
+
+    class ConditionRvAdapter(
+            private val model: RspViewModel
+    ): RecyclerView.Adapter<ConditionRvAdapter.ViewHolder>() {
 
         private val items: List<Rsp.Condition> = mutableListOf()
+        private val selectedItems: Set<Int> = mutableSetOf()
 
         fun update(new: List<Rsp.Condition>) {
             if (items is MutableList) {
@@ -46,24 +59,42 @@ class ConditionFragment : Fragment() {
             }
         }
 
+        fun updateSelectedItems(new: Set<Int>) {
+            if (selectedItems is MutableSet) {
+                selectedItems.clear()
+                selectedItems.addAll(new)
+                notifyDataSetChanged()
+            }
+        }
+
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
             val binding = DataBindingUtil.inflate<LayoutRspConditionBinding>(
                     LayoutInflater.from(parent.context), R.layout.layout_rsp_condition, parent, false)
+            binding.vm = model
             return ViewHolder(binding)
         }
 
         override fun getItemCount() = items.size
 
+        override fun getItemViewType(position: Int) = position
+
         override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-            holder.bind(items[position])
+            holder.bind(items[position], position, selectedItems)
         }
 
         class ViewHolder(
                 private val binding: LayoutRspConditionBinding
         ) : RecyclerView.ViewHolder(binding.root) {
-            fun bind(item: Rsp.Condition) {
+
+            fun bind(item: Rsp.Condition, position: Int, selectedItems: Set<Int>) {
                 binding.tvConditionId.text = item.id
                 binding.tvConditionCondition.text = item.condition
+                binding.root.setBackgroundResource(if (selectedItems.contains(position)) {
+                    R.color.colorItemSelected
+                } else {
+                    R.color.colorForeground
+                })
+                binding.position = position
             }
         }
     }

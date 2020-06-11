@@ -5,7 +5,9 @@
 
     <color name="colorPrimary">@color/colorBackground</color>
     <color name="colorPrimaryDark">@color/colorBackground</color>
-    <color name="colorAccent">#AED581</color>
+    <color name="colorAccent">#4CAF50</color>
+
+    <color name="colorItemSelected">#88888888</color>
 
     <color name="controlColorPrimary">#252525</color>
     <color name="controlColorSecondary">#E7E7E7</color>

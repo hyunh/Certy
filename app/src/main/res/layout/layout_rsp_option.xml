@@ -3,10 +3,15 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     >
+    <data>
+        <variable name="vm" type="com.hyunh.certy.sgp23.RspViewModel" />
+        <variable name="position" type="Integer" />
+    </data>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/list_container_height"
         android:background="@color/colorForeground"
+        android:onClick="@{() -> vm.selectItem(position)}"
         >
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
