@@ -11,4 +11,7 @@
     <string name="rsp_testcase">TESTCASE</string>
 
     <string name="format_brackets">[%s]</string>
+
+    <string name="menu_search">Search</string>
+    <string name="menu_confirm">Confirm</string>
 </resources>

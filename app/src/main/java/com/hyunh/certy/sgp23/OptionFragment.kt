@@ -2,6 +2,8 @@ package com.hyunh.certy.sgp23
 
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.Menu
+import android.view.MenuInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
@@ -16,12 +18,14 @@ import com.hyunh.certy.databinding.LayoutRspOptionBinding
 class OptionFragment : Fragment() {
 
     private val model: RspViewModel by viewModels()
+    private var menu: Menu? = null
 
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
+        setHasOptionsMenu(true)
         val binding = DataBindingUtil.inflate<FragmentRspContentBinding>(
                 inflater, R.layout.fragment_rsp_content, container, false).apply {
             vm = model
@@ -33,6 +37,7 @@ class OptionFragment : Fragment() {
                 })
                 model.selectedItems.observe(viewLifecycleOwner, Observer {
                     updateSelectedItems(it)
+                    menu?.findItem(R.id.menu_confirm)?.isVisible = !it.isNullOrEmpty()
                 })
             }
         }
@@ -42,6 +47,11 @@ class OptionFragment : Fragment() {
     override fun onResume() {
         super.onResume()
         model.reset()
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.menu_confirm, menu)
+        this.menu = menu
     }
 
     class OptionRvAdapter(
