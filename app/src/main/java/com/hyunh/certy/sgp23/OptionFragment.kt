@@ -87,7 +87,9 @@ class OptionFragment : Fragment() {
         ) : RecyclerView.ViewHolder(binding.root) {
 
             fun bind(item: Rsp.Option, position: Int, selectedItems: Set<Int>) {
-                binding.tvOptionType.text = item.type
+                binding.tvOptionMnemonic.text = item.mnemonic
+                binding.tvOptionType.text = binding.root.resources.getString(
+                        R.string.format_brackets, item.type)
                 binding.tvOptionDescription.text = item.option
                 binding.root.setBackgroundResource(if (selectedItems.contains(position)) {
                     R.color.colorItemSelected

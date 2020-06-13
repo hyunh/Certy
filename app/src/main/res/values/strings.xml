@@ -9,4 +9,6 @@
     <string name="rsp_option">OPTION</string>
     <string name="rsp_condition">CONDITION</string>
     <string name="rsp_testcase">TESTCASE</string>
+
+    <string name="format_brackets">[%s]</string>
 </resources>
