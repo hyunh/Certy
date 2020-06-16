@@ -23,15 +23,15 @@ import com.hyunh.certy.supportActionBar
 class RspFragment : Fragment() {
 
     data class TabInfo(
-            val fragment: Fragment,
+            val viewType: RspViewModel.ViewType,
             val title: String
     )
 
     private val tabInfos by lazy {
         listOf(
-                TabInfo(OptionFragment(), getString(R.string.rsp_option)),
-                TabInfo(ConditionFragment(), getString(R.string.rsp_condition)),
-                TabInfo(TestCaseFragment(), getString(R.string.rsp_testcase))
+                TabInfo(RspViewModel.ViewType.OPTION, getString(R.string.rsp_option)),
+                TabInfo(RspViewModel.ViewType.CONDITION, getString(R.string.rsp_condition)),
+                TabInfo(RspViewModel.ViewType.TESTCASE, getString(R.string.rsp_testcase))
         )
     }
 
@@ -54,15 +54,15 @@ class RspFragment : Fragment() {
                 }
                 override fun onTabSelected(tab: TabLayout.Tab?) {
                     tab?.position?.let {
-                        buttonRspLeft.text = loadRspLeftButton(tabInfos[it].fragment)
-                        buttonRspRight.text = loadRspRightButton(tabInfos[it].fragment)
+                        buttonRspLeft.text = loadRspLeftButton(tabInfos[it].viewType)
+                        buttonRspRight.text = loadRspRightButton(tabInfos[it].viewType)
                     }
                 }
                 override fun onTabUnselected(tab: TabLayout.Tab?) {
                 }
             })
-            buttonRspLeft.text = loadRspLeftButton(tabInfos[0].fragment)
-            buttonRspRight.text = loadRspRightButton(tabInfos[0].fragment)
+            buttonRspLeft.text = loadRspLeftButton(tabInfos[0].viewType)
+            buttonRspRight.text = loadRspRightButton(tabInfos[0].viewType)
         }
         model.setVersion(args.rel)
 
@@ -100,21 +100,19 @@ class RspFragment : Fragment() {
         }
     }
 
-    private fun loadRspLeftButton(fragment: Fragment): String {
-        return when (fragment) {
-            is OptionFragment -> getString(R.string.rsp_condition)
-            is ConditionFragment -> getString(R.string.rsp_option)
-            is TestCaseFragment -> getString(R.string.rsp_option)
-            else -> throw IllegalStateException("Fragment can't be identified")
+    private fun loadRspLeftButton(viewType: RspViewModel.ViewType): String {
+        return when (viewType) {
+            RspViewModel.ViewType.OPTION -> getString(R.string.rsp_condition)
+            RspViewModel.ViewType.CONDITION -> getString(R.string.rsp_option)
+            RspViewModel.ViewType.TESTCASE -> getString(R.string.rsp_option)
         }
     }
 
-    private fun loadRspRightButton(fragment: Fragment): String {
-        return when (fragment) {
-            is OptionFragment -> getString(R.string.rsp_testcase)
-            is ConditionFragment -> getString(R.string.rsp_testcase)
-            is TestCaseFragment -> getString(R.string.rsp_condition)
-            else -> throw IllegalStateException("Fragment can't be identified")
+    private fun loadRspRightButton(viewType: RspViewModel.ViewType): String {
+        return when (viewType) {
+            RspViewModel.ViewType.OPTION -> getString(R.string.rsp_testcase)
+            RspViewModel.ViewType.CONDITION -> getString(R.string.rsp_testcase)
+            RspViewModel.ViewType.TESTCASE -> getString(R.string.rsp_condition)
         }
     }
 
@@ -125,8 +123,7 @@ class RspFragment : Fragment() {
 
         override fun getItemCount() = tabInfos.size
 
-        override fun createFragment(position: Int): Fragment {
-            return tabInfos[position].fragment
-        }
+        override fun createFragment(position: Int) =
+                RspContentFragment(tabInfos[position].viewType)
     }
 }

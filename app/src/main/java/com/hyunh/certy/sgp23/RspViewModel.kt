@@ -10,6 +10,9 @@ class RspViewModel : ViewModel(), LifecycleObserver {
     private val _selectedItems = mutableSetOf<Int>()
     val selectedItems: LiveData<Set<Int>> = MutableLiveData(_selectedItems)
 
+    enum class ViewType { OPTION, CONDITION, TESTCASE }
+    val viewType: LiveData<ViewType> = MutableLiveData(ViewType.OPTION)
+
     fun reset() {
         _selectedItems.clear()
         (selectedItems as MutableLiveData).postValue(_selectedItems)
