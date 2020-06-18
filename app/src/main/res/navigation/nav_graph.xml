@@ -24,6 +24,18 @@
         >
         <argument android:name="name" app:argType="string" />
         <argument android:name="rel" app:argType="string" />
+        <action
+            android:id="@+id/action_to_rsp_result"
+            app:destination="@id/fragment_rsp_result"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_rsp_result"
+        android:name="com.hyunh.certy.sgp23.RspResultFragment"
+        >
+        <argument
+            android:name="viewType"
+            app:argType="com.hyunh.certy.sgp23.RspViewModel$ViewType" />
     </fragment>
     <fragment
         android:id="@+id/fragment_ts_131_124"

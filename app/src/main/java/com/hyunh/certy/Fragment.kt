@@ -22,15 +22,3 @@ val Fragment.supportActionBar: ActionBar?
         }
         return null
     }
-
-fun Fragment.setFragment(
-        fragment: Fragment,
-        addToBackStack: Boolean = true
-) {
-    parentFragmentManager.beginTransaction().apply {
-        if (addToBackStack) {
-            addToBackStack(null)
-        }
-        replace(R.id.frame, fragment)
-    }.commit()
-}

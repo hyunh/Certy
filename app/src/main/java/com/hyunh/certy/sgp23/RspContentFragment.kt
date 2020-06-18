@@ -2,8 +2,6 @@ package com.hyunh.certy.sgp23
 
 import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.Menu
-import android.view.MenuInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
@@ -17,7 +15,6 @@ import com.hyunh.certy.databinding.FragmentRspContentBinding
 class RspContentFragment(viewType: RspViewModel.ViewType) : Fragment() {
 
     private val model: RspViewModel by viewModels()
-    private var menu: Menu? = null
     private val adapter by lazy { loadAdapter(viewType) }
 
     override fun onCreateView(
@@ -25,25 +22,22 @@ class RspContentFragment(viewType: RspViewModel.ViewType) : Fragment() {
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
+        model.reset()
         setHasOptionsMenu(true)
         val binding = DataBindingUtil.inflate<FragmentRspContentBinding>(
                 inflater, R.layout.fragment_rsp_content, container, false).apply {
-            vm = model
             lifecycleOwner = viewLifecycleOwner
             layoutRoundList.recyclerview.setHasFixedSize(true)
             layoutRoundList.recyclerview.adapter = adapter
         }
+        model.loadSelectedItems().observe(viewLifecycleOwner, Observer {
+            when (val adapter = this.adapter) {
+                is OptionRvAdapter -> adapter.updateSelectedItems(it)
+                is ConditionRvAdapter -> adapter.updateSelectedItems(it)
+                is TestCaseRvAdapter -> adapter.updateSelectedItems(it)
+            }
+        })
         return binding.root
-    }
-
-    override fun onResume() {
-        super.onResume()
-        model.reset()
-    }
-
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        inflater.inflate(R.menu.menu_confirm, menu)
-        this.menu = menu
     }
 
     private fun loadAdapter(viewType: RspViewModel.ViewType): RecyclerView.Adapter<*> {
@@ -53,10 +47,6 @@ class RspContentFragment(viewType: RspViewModel.ViewType) : Fragment() {
                     model.loadOptions().observe(viewLifecycleOwner, Observer {
                         update(it)
                     })
-                    model.selectedItems.observe(viewLifecycleOwner, Observer {
-                        updateSelectedItems(it)
-                        menu?.findItem(R.id.menu_confirm)?.isVisible = !it.isNullOrEmpty()
-                    })
                 }
             }
             RspViewModel.ViewType.CONDITION -> {
@@ -64,20 +54,12 @@ class RspContentFragment(viewType: RspViewModel.ViewType) : Fragment() {
                     model.loadConditions().observe(viewLifecycleOwner, Observer {
                         update(it)
                     })
-                    model.selectedItems.observe(viewLifecycleOwner, Observer {
-                        updateSelectedItems(it)
-                        menu?.findItem(R.id.menu_confirm)?.isVisible = !it.isNullOrEmpty()
-                    })
                 }
             }
             RspViewModel.ViewType.TESTCASE -> {
                 TestCaseRvAdapter(model).apply {
                     model.loadTestCases().observe(viewLifecycleOwner, Observer {
                         update(it)
-                    })
-                    model.selectedItems.observe(viewLifecycleOwner, Observer {
-                        updateSelectedItems(it)
-                        menu?.findItem(R.id.menu_confirm)?.isVisible = !it.isNullOrEmpty()
                     })
                 }
             }

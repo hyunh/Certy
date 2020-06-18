@@ -59,6 +59,26 @@ object Rsp {
     private val testCasesLiveData = mutableMapOf<String, LiveData<List<TestCase>>>()
     private val conditionsLiveData = mutableMapOf<String, LiveData<List<Condition>>>()
 
+    private val selectedItems = MutableLiveData<MutableSet<Int>>(mutableSetOf())
+
+    fun resetSelection() {
+        selectedItems.value?.clear()
+        selectedItems.postValue(selectedItems.value)
+    }
+
+    fun selectItem(item: Int) {
+        val sets = selectedItems.value ?: return
+
+        if (sets.contains(item)) {
+            sets.remove(item)
+        } else {
+            sets.add(item)
+        }
+        selectedItems.postValue(selectedItems.value)
+    }
+
+    fun loadSelectedItems() = selectedItems
+
     fun loadOptions(): LiveData<List<Option>> {
         return optionsLiveData[version] ?: run {
             MutableLiveData<List<Option>>().also {

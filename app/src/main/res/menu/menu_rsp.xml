@@ -8,4 +8,11 @@
         android:icon="@drawable/ic_search"
         app:showAsAction="ifRoom"
         />
+    <item
+        android:id="@+id/menu_confirm"
+        android:title="@string/menu_confirm"
+        android:icon="@drawable/ic_confirm"
+        android:visible="false"
+        app:showAsAction="ifRoom"
+        />
 </menu>
