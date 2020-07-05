@@ -52,10 +52,9 @@ class RspResultFragment : Fragment() {
     ): View? {
         val binding = DataBindingUtil.inflate<FragmentRspResultBinding>(
                 inflater, R.layout.fragment_rsp_result, container, false).apply {
-            viewPager.adapter = RspPagerAdapter(this@RspResultFragment, tabInfos)
+            viewPager.adapter = RspPagerAdapter(this@RspResultFragment, args.viewType, tabInfos)
             toolbarTitle = args.viewType.name
         }
-
         TabLayoutMediator(binding.tabLayout, binding.viewPager) { tab, position ->
             tab.customView = inflater.inflate(R.layout.layout_tab_text, container, false).also {
                 if (it is TextView) {
@@ -93,12 +92,13 @@ class RspResultFragment : Fragment() {
 
     class RspPagerAdapter(
             fragment: Fragment,
+            private val viewType: RspViewModel.ViewType,
             private val tabInfos: List<TabInfo>
     ) : FragmentStateAdapter(fragment) {
 
         override fun getItemCount() = tabInfos.size
 
         override fun createFragment(position: Int) =
-                RspContentFragment(tabInfos[position].viewType)
+                RspResultContentFragment(viewType, tabInfos[position].viewType)
     }
 }

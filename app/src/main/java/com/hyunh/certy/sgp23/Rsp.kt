@@ -1,5 +1,6 @@
 package com.hyunh.certy.sgp23
 
+import androidx.annotation.IntDef
 import androidx.annotation.XmlRes
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -16,14 +17,15 @@ import org.xmlpull.v1.XmlPullParser
 object Rsp {
 
     private const val TAG = "Rsp"
+
     private val sources = arrayOf(
             R.xml.sgp23_v_1_3,
             R.xml.sgp23_v_1_6
     )
 
     init {
-        CoroutineScope(Dispatchers.Default).launch {
-            sources.forEach {
+        sources.forEach {
+            CoroutineScope(Dispatchers.Default).launch {
                 Loader(it).load()
             }
         }
@@ -49,7 +51,8 @@ object Rsp {
             val mocs: List<Pair<String, String>>
     )
 
-    var version: String = ""
+    var version = ""
+    var sgp22Version = "2.2"
 
     private val options = mutableMapOf<String, List<Option>>()
     private val testCases = mutableMapOf<String, List<TestCase>>()
@@ -60,6 +63,17 @@ object Rsp {
     private val conditionsLiveData = mutableMapOf<String, LiveData<List<Condition>>>()
 
     private val selectedItems = MutableLiveData<MutableSet<Int>>(mutableSetOf())
+
+    @IntDef(value = [
+        OPTION,
+        CONDITION,
+        TESTCASE
+    ])
+    annotation class RspType
+    const val NOTSET = 0
+    const val OPTION = 1
+    const val CONDITION = 2
+    const val TESTCASE = 3
 
     fun resetSelection() {
         selectedItems.value?.clear()
@@ -78,6 +92,140 @@ object Rsp {
     }
 
     fun loadSelectedItems() = selectedItems
+
+    fun loadResultOptions(@RspType type: Int = NOTSET): List<Option> {
+        val options = options[version] ?: return emptyList()
+        val filter = selectedItems.value ?: return options
+
+        return when (type) {
+            CONDITION -> {
+                val source = conditions[version]?.filterIndexed { index, _ ->
+                    filter.contains(index)
+                } ?: return emptyList()
+
+                mutableListOf<Option>().apply {
+                    source.forEach condition@ { condition ->
+                        options.forEach option@ { option ->
+                            if (condition.mnemonics.contains(option.mnemonic)) {
+                                add(option)
+                            }
+                        }
+                    }
+                }
+            }
+            TESTCASE -> {
+                val source = testCases[version]?.filterIndexed { index, _ ->
+                    filter.contains(index)
+                } ?: return emptyList()
+                val conditions = conditions[version] ?: emptyList()
+
+                mutableListOf<Option>().apply {
+                    source.forEach testCase@{ testcase ->
+                        testcase.mocs.forEach condition@{ pair ->
+                            if (pair.first != "M" && pair.second == sgp22Version) {
+                                val mnemonics = conditions.find { it.id == pair.first }?.mnemonics
+                                        ?: emptyList()
+                                options.forEach option@{ option ->
+                                    if (mnemonics.contains(option.mnemonic)) {
+                                        add(option)
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            else -> throw IllegalArgumentException("Invalid type: $type")
+        }
+    }
+
+    fun loadResultConditions(@RspType type: Int): List<Condition> {
+        val conditions = conditions[version] ?: return emptyList()
+        val filter = selectedItems.value ?: return conditions
+
+        return when (type) {
+            OPTION -> {
+                val source = options[version]?.filterIndexed { index, _ ->
+                    filter.contains(index)
+                } ?: return emptyList()
+
+                mutableListOf<Condition>().apply {
+                    source.forEach option@{ option ->
+                        conditions.forEach condition@{ condition ->
+                            if (condition.mnemonics.contains(option.mnemonic)) {
+                                add(condition)
+                            }
+                        }
+                    }
+                }
+            }
+            TESTCASE -> {
+                val source = testCases[version]?.filterIndexed { index, _ ->
+                    filter.contains(index)
+                } ?: return emptyList()
+
+                mutableListOf<Condition>().apply {
+                    source.forEach testCase@{ testCase ->
+                        testCase.mocs.forEach condition@{ pair ->
+                            if (pair.first != "M" && pair.second == sgp22Version) {
+                                conditions.find { it.id == pair.first }?.let {
+                                    add(it)
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            else -> throw IllegalArgumentException("Invalid type: $type")
+        }
+    }
+
+    fun loadResultTestcases(@RspType type: Int): List<TestCase> {
+        val testCases = testCases[version] ?: return emptyList()
+        val filter = selectedItems.value ?: return testCases
+
+        return when (type) {
+            OPTION -> {
+                val source = options[version]?.filterIndexed { index, _ ->
+                    filter.contains(index)
+                } ?: return emptyList()
+
+                mutableListOf<TestCase>().apply {
+                    source.forEach option@{ option ->
+                        testCases.forEach testCase@{ testCase ->
+                            testCase.mocs.forEach condition@{ pair ->
+                                if (pair.first != "M" && pair.second == sgp22Version) {
+                                    if (pair.first == option.mnemonic) {
+                                        add(testCase)
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            CONDITION -> {
+                val source = conditions[version]?.filterIndexed { index, _ ->
+                    filter.contains(index)
+                } ?: return emptyList()
+
+                mutableListOf<TestCase>().apply {
+                    source.forEach condition@{ condition ->
+                        testCases.forEach testCase@{ testCase ->
+                            testCase.mocs.forEach condition@{ pair ->
+                                if (pair.first != "M" && pair.second == sgp22Version) {
+                                    if (pair.first == condition.id) {
+                                        add(testCase)
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            else -> throw IllegalArgumentException("Invalid type: $type")
+        }
+    }
 
     fun loadOptions(): LiveData<List<Option>> {
         return optionsLiveData[version] ?: run {
