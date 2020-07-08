@@ -15,4 +15,10 @@
         android:visible="false"
         app:showAsAction="ifRoom"
         />
+    <item
+        android:id="@+id/menu_more"
+        android:title="@string/menu_more"
+        android:icon="@drawable/ic_more"
+        app:showAsAction="ifRoom"
+        />
 </menu>
