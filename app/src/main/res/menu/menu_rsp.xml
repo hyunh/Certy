@@ -16,9 +16,12 @@
         app:showAsAction="ifRoom"
         />
     <item
-        android:id="@+id/menu_more"
-        android:title="@string/menu_more"
-        android:icon="@drawable/ic_more"
-        app:showAsAction="ifRoom"
+        android:id="@+id/menu_select_version"
+        android:title="@string/menu_select_version"
+        />
+    <item
+        android:id="@+id/menu_show_mandatory"
+        android:title="@string/menu_show_mandatory"
+        android:checkable="true"
         />
 </menu>

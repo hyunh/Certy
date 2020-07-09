@@ -78,7 +78,8 @@ class RspFragment : Fragment() {
         inflater.inflate(R.menu.menu_rsp, menu)
         model.loadSelectedItems().observe(viewLifecycleOwner, Observer {
             menu.findItem(R.id.menu_confirm).isVisible = !it.isNullOrEmpty()
-            menu.findItem(R.id.menu_more).isVisible = it.isNullOrEmpty()
+            menu.findItem(R.id.menu_select_version).isVisible = it.isNullOrEmpty()
+            menu.findItem(R.id.menu_show_mandatory).isVisible = it.isNullOrEmpty()
         })
     }
 

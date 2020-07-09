@@ -14,5 +14,6 @@
 
     <string name="menu_search">Search</string>
     <string name="menu_confirm">Confirm</string>
-    <string name="menu_more">More</string>
+    <string name="menu_select_version">Select SGP.22 version</string>
+    <string name="menu_show_mandatory">Show mandatory</string>
 </resources>

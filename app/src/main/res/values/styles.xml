@@ -5,6 +5,7 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:background">@color/colorPrimary</item>
         <item name="android:windowLightStatusBar">@bool/windowLightStatusBar</item>
+        <item name="popupMenuBackground">@color/colorForeground</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
