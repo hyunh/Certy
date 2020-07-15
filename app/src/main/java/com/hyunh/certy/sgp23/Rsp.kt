@@ -194,8 +194,8 @@ object Rsp {
                     source.forEach option@{ option ->
                         testCases.forEach testCase@{ testCase ->
                             testCase.mocs.forEach condition@{ pair ->
-                                if (pair.first != "M" && pair.second == sgp22Version) {
-                                    if (pair.first == option.mnemonic) {
+                                if (pair.second == sgp22Version) {
+                                    if (pair.first == option.mnemonic || pair.first == "M") {
                                         add(testCase)
                                     }
                                 }
@@ -213,8 +213,8 @@ object Rsp {
                     source.forEach condition@{ condition ->
                         testCases.forEach testCase@{ testCase ->
                             testCase.mocs.forEach condition@{ pair ->
-                                if (pair.first != "M" && pair.second == sgp22Version) {
-                                    if (pair.first == condition.id) {
+                                if (pair.second == sgp22Version) {
+                                    if (pair.first == condition.id || pair.first == "M") {
                                         add(testCase)
                                     }
                                 }

@@ -7,11 +7,9 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.RecyclerView
 import com.hyunh.certy.R
 import com.hyunh.certy.databinding.FragmentRspContentBinding
-import com.hyunh.certy.logd
 
 class RspResultContentFragment(
         private val target: RspViewModel.ViewType,
@@ -35,15 +33,6 @@ class RspResultContentFragment(
             layoutRoundList.recyclerview.setHasFixedSize(true)
             layoutRoundList.recyclerview.adapter = adapter
         }
-        /*
-        model.loadSelectedItems().observe(viewLifecycleOwner, Observer {
-            when (val adapter = this.adapter) {
-                is OptionRvAdapter -> adapter.updateSelectedItems(it)
-                is ConditionRvAdapter -> adapter.updateSelectedItems(it)
-                is TestCaseRvAdapter -> adapter.updateSelectedItems(it)
-            }
-        })
-        */
         return binding.root
     }
 

@@ -78,29 +78,33 @@ class RspFragment : Fragment() {
         inflater.inflate(R.menu.menu_rsp, menu)
         model.loadSelectedItems().observe(viewLifecycleOwner, Observer {
             menu.findItem(R.id.menu_confirm).isVisible = !it.isNullOrEmpty()
-            menu.findItem(R.id.menu_select_version).isVisible = it.isNullOrEmpty()
-            menu.findItem(R.id.menu_show_mandatory).isVisible = it.isNullOrEmpty()
+            menu.findItem(R.id.menu_hide_mandatory).isVisible = it.isNullOrEmpty()
+        })
+        model.hideMandatory.observe(viewLifecycleOwner, Observer {
+            menu.findItem(R.id.menu_hide_mandatory).isChecked = it
         })
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return when (item.itemId) {
-            android.R.id.home -> {
-                activity?.onBackPressed()
-                true
-            }
-            R.id.menu_search -> {
-                true
-            }
-            R.id.menu_confirm -> {
-                val action = RspFragmentDirections.actionToRspResult(
-                        tabInfos[selectedTabPosition].viewType)
-                findNavController().navigate(action)
-                true
-            }
-            else -> {
-                super.onOptionsItemSelected(item)
-            }
+    override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
+        android.R.id.home -> {
+            activity?.onBackPressed()
+            true
+        }
+        R.id.menu_search -> {
+            true
+        }
+        R.id.menu_hide_mandatory -> {
+            model.hideMandatory(!item.isChecked)
+            true
+        }
+        R.id.menu_confirm -> {
+            val action = RspFragmentDirections.actionToRspResult(
+                    tabInfos[selectedTabPosition].viewType)
+            findNavController().navigate(action)
+            true
+        }
+        else -> {
+            super.onOptionsItemSelected(item)
         }
     }
 

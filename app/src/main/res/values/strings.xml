@@ -13,7 +13,6 @@
     <string name="format_brackets">[%s]</string>
 
     <string name="menu_search">Search</string>
+    <string name="menu_hide_mandatory">Hide mandatory test case</string>
     <string name="menu_confirm">Confirm</string>
-    <string name="menu_select_version">Select SGP.22 version</string>
-    <string name="menu_show_mandatory">Show mandatory</string>
 </resources>
