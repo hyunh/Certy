@@ -83,9 +83,10 @@ class RspResultFragment : Fragment() {
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.menu_rsp_result, menu)
+        menu.findItem(R.id.menu_hide_mandatory).isVisible =
+                args.viewType != RspViewModel.ViewType.TESTCASE
         model.hideMandatory.observe(viewLifecycleOwner, Observer {
             menu.findItem(R.id.menu_hide_mandatory).isChecked = it
-
         })
     }
 
