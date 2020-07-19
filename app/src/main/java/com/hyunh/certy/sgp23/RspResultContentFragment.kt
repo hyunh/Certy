@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.RecyclerView
 import com.hyunh.certy.R
 import com.hyunh.certy.databinding.FragmentRspContentBinding
@@ -50,7 +51,17 @@ class RspResultContentFragment(
             }
             RspViewModel.ViewType.TESTCASE -> {
                 TestCaseRvAdapter(model).apply {
-                    update(model.loadResultTestCases(target))
+                    model.hideMandatory.observe(viewLifecycleOwner, Observer { hide ->
+                        if (hide == true) {
+                            update(model.loadResultTestCases(target).filter { testCase ->
+                                testCase.mocs.find { pair ->
+                                    pair.second == model.sgp22Version()
+                                }?.first != "M"
+                            })
+                        } else {
+                            update(model.loadResultTestCases(target))
+                        }
+                    })
                 }
             }
         }

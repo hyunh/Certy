@@ -11,7 +11,7 @@ class RspViewModel : ViewModel(), LifecycleObserver {
 
     val viewType: LiveData<ViewType> = MutableLiveData(ViewType.OPTION)
 
-    val hideMandatory: LiveData<Boolean> = MutableLiveData(false)
+    val hideMandatory = Rsp.hideMandatoryTestCase
 
     fun reset() = Rsp.resetSelection()
 
@@ -21,8 +21,10 @@ class RspViewModel : ViewModel(), LifecycleObserver {
         Rsp.version = version
     }
 
+    fun sgp22Version() = Rsp.sgp22Version
+
     fun hideMandatory(hide: Boolean) {
-        (hideMandatory as MutableLiveData).postValue(hide)
+        Rsp.hideMandatoryTestCase(hide)
     }
 
     fun loadSelectedItems() = Rsp.loadSelectedItems()

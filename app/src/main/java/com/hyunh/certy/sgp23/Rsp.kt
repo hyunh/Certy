@@ -53,6 +53,7 @@ object Rsp {
 
     var version = ""
     var sgp22Version = "2.2"
+    val hideMandatoryTestCase: LiveData<Boolean> = MutableLiveData(false)
 
     private val options = mutableMapOf<String, List<Option>>()
     private val testCases = mutableMapOf<String, List<TestCase>>()
@@ -74,6 +75,10 @@ object Rsp {
     const val OPTION = 1
     const val CONDITION = 2
     const val TESTCASE = 3
+
+    fun hideMandatoryTestCase(hide: Boolean) {
+        (hideMandatoryTestCase as MutableLiveData).postValue(hide)
+    }
 
     fun resetSelection() {
         selectedItems.value?.clear()
