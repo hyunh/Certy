@@ -9,12 +9,6 @@
         app:showAsAction="ifRoom"
         />
     <item
-        android:id="@+id/menu_hide_mandatory"
-        android:title="@string/menu_hide_mandatory"
-        android:checkable="true"
-        app:showAsAction="collapseActionView"
-        />
-    <item
         android:id="@+id/menu_confirm"
         android:title="@string/menu_confirm"
         android:icon="@drawable/ic_confirm"

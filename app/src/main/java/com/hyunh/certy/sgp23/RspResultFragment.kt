@@ -2,6 +2,8 @@ package com.hyunh.certy.sgp23
 
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.Menu
+import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
@@ -9,6 +11,7 @@ import android.widget.TextView
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
 import androidx.navigation.fragment.navArgs
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.google.android.material.tabs.TabLayoutMediator
@@ -78,10 +81,22 @@ class RspResultFragment : Fragment() {
         model.reset()
     }
 
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.menu_rsp_result, menu)
+        model.hideMandatory.observe(viewLifecycleOwner, Observer {
+            menu.findItem(R.id.menu_hide_mandatory).isChecked = it
+
+        })
+    }
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             android.R.id.home -> {
                 activity?.onBackPressed()
+                true
+            }
+            R.id.menu_hide_mandatory -> {
+                model.hideMandatory(!item.isChecked)
                 true
             }
             else -> {

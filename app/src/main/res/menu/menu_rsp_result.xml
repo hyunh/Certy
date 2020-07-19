@@ -1,0 +1,11 @@
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <item
+        android:id="@+id/menu_hide_mandatory"
+        android:title="@string/menu_hide_mandatory"
+        android:checkable="true"
+        app:showAsAction="collapseActionView"
+        />
+</menu>
